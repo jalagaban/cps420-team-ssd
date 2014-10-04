@@ -8,5 +8,43 @@ namespace AddressBook
 {
     class AddressEntry
     {
+        private string name;
+        private string eAddr;
+
+        public AddressEntry(string bname, string beAddr)
+        {
+            this.name = bname;
+            this.eAddr = beAddr;
+        }
+
+        public string getName() { return name; }
+        public string getAddr() { return eAddr; }
+
+        public void setName(string bname) { name = bname; }
+        public void setAddr(string beAddr) { eAddr = beAddr; }
+    }
+
+    class AddressEntryDAO
+    {
+        private static AddressEntryDAO instance;
+        private AddressEntryDAO() { }
+        public static AddressEntryDAO Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new AddressEntryDAO();
+                }
+                return instance;
+            }
+        }
+        //LoadAll records
+            //return a List of AddressEntry objects populated with data from AddressEntry database
+
+        //Update a record
+        //Create a new record
+        //Delete a record
+        //Update, Create, Delete methods uses AddressEntry parameter, extract information from instance, and issue calls
     }
 }
