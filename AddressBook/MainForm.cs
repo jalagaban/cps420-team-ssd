@@ -16,5 +16,10 @@ namespace AddressBook
         {
             InitializeComponent();
         }
+
+        private void TestBtn_Click(object sender, EventArgs e)
+        {
+            bool test = AddressEntryDAO.Instance.testConnection();
+        }
     }
 }

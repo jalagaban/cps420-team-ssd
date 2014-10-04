@@ -40,6 +40,10 @@ namespace AddressBook
                 return instance;
             }
         }
+        public bool testConnection()
+        {
+            return true; 
+        }
         //LoadAll records
         public static List<AddressEntry> LoadAll()
         {
