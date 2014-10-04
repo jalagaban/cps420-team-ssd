@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 
 namespace AddressBook
 {
@@ -40,7 +41,12 @@ namespace AddressBook
             }
         }
         //LoadAll records
+        public static List<AddressEntry> LoadAll()
+        {
             //return a List of AddressEntry objects populated with data from AddressEntry database
+            List<AddressEntry> addrBook = new List<AddressEntry>();
+            return addrBook;
+        }
 
         //Update a record
         //Create a new record
