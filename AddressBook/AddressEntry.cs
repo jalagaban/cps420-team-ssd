@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SqlClient;
+using System.Data.SqlServerCe;
 
 namespace AddressBook
 {
@@ -42,7 +42,17 @@ namespace AddressBook
         }
         public bool testConnection()
         {
-            return true; 
+            SqlCeConnection db = new SqlCeConnection("Data Source = AddressEntry.sdf");
+            try
+            {
+                db.Open();
+                db.Close();
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
         }
         //LoadAll records
         public static List<AddressEntry> LoadAll()
