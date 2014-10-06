@@ -16,18 +16,5 @@ namespace AddressBook
         {
             InitializeComponent();
         }
-
-        private void TestBtn_Click(object sender, EventArgs e)
-        {
-            bool test = AddressEntryDAO.Instance.testConnection();
-            if (test)
-            {
-                MessageBox.Show("Connected to the Database!", "Success Box", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
-            }
-            else
-            {
-                MessageBox.Show("FAILURE!!", "Failure Box", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-            }
-        }
     }
 }
