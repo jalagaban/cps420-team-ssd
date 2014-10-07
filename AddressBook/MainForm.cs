@@ -48,5 +48,15 @@ namespace AddressBook
             AddressEntryDAO.DeleteRecord(new AddressEntry(text, null));
             LoadTable();
         }
+
+        private void addButton_Click(object sender, EventArgs e)
+        {
+            AddWindow dialog = new AddWindow();
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                AddressEntryDAO.CreateRecord(new AddressEntry(dialog.name, dialog.email));
+                LoadTable();
+            }
+        }
     }
 }

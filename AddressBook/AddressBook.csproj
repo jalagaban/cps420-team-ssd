@@ -62,6 +62,12 @@
   <ItemGroup>
     <Compile Include="AddressEntry.cs" />
     <Compile Include="AddressEntryDAO.cs" />
+    <Compile Include="AddWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddWindow.Designer.cs">
+      <DependentUpon>AddWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddWindow.resx">
+      <DependentUpon>AddWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditWindow.resx">
       <DependentUpon>EditWindow.cs</DependentUpon>
     </EmbeddedResource>
