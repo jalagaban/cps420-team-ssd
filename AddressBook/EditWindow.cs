@@ -12,8 +12,6 @@ namespace AddressBook
 {
     public partial class EditWindow : Form
     {
-        public string email;
-        
         public EditWindow()
         {
             InitializeComponent();
@@ -25,5 +23,7 @@ namespace AddressBook
             DialogResult = DialogResult.OK;
             Close();
         }
+
+        public string email { get; private set; }
     }
 }
