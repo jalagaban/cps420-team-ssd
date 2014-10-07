@@ -53,10 +53,12 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "Name";
+            this.columnHeader1.Width = 200;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "E-Mail";
+            this.columnHeader2.Width = 332;
             // 
             // addButton
             // 
