@@ -18,6 +18,15 @@ namespace AddressBook
             this.eAddr = beAddr;
         }
 
+        public override bool Equals(Object obj)
+        {
+            AddressEntry entry = obj as AddressEntry;
+            if (entry == null)
+                return false;
+            else
+                return name.Equals(entry.getName()) && eAddr.Equals(entry.getAddr());
+        }
+
         public string getName() { return name; }
         public string getAddr() { return eAddr; }
 

@@ -49,14 +49,25 @@ namespace AddressBook
             {
                 while (rd.Read())
                 {
-                    string name = rd.GetString(0);
-                    string emAddr = rd.GetString(1);
+                    string name = (string)rd["name"];
+                    string emAddr = (string)rd["EmailAddr"];
                     AddressEntry entry = new AddressEntry(name, emAddr);
                     addrBook.Add(entry);
                 }
             }
             db.Close();
             return addrBook;
+        }
+
+        //CLearAll records
+        public static void ClearAll() 
+        {
+            SqlCeConnection db = new SqlCeConnection("Data Source = AddressEntry.sdf");
+            db.Open();
+            SqlCeCommand cmd = db.CreateCommand();
+            cmd.CommandText = @"Delete from AddressEntry"; //Delete SQL command
+            cmd.ExecuteNonQuery();
+            db.Close();
         }
 
         //Update a record
@@ -68,8 +79,10 @@ namespace AddressBook
                 db.Open();
                 SqlCeCommand cmd = db.CreateCommand();
                 cmd.CommandText = @"Update AddressEntry 
-                                    Set name = @ent.getName(), EmailAddr = @ent.getAddr() 
-                                    where name = @ent.getName() and EmailAddr = @ent.getAddr())"; //Update SQL command
+                                    Set EmailAddr = @addr 
+                                    where name = @name"; //Update SQL command
+                cmd.Parameters.AddWithValue("@name", ent.getName());
+                cmd.Parameters.AddWithValue("@addr", ent.getAddr());
                 cmd.ExecuteNonQuery();
                 db.Close();
                 return true;
@@ -86,7 +99,9 @@ namespace AddressBook
             {
                 SqlCeConnection db = new SqlCeConnection("Data Source = AddressEntry.sdf");
                 db.Open();
-                SqlCeCommand cmd = new SqlCeCommand("Insert into AddressEntry Values('@ent.getName()','@ent.getAddr()')", db); //Insert SQL command
+                SqlCeCommand cmd = new SqlCeCommand("Insert into AddressEntry Values(@name,@addr);", db); //Insert SQL command
+                cmd.Parameters.AddWithValue("@name", ent.getName());
+                cmd.Parameters.AddWithValue("@addr", ent.getAddr());
                 cmd.ExecuteNonQuery();
                 db.Close();
                 return true;
@@ -104,7 +119,8 @@ namespace AddressBook
                 SqlCeConnection db = new SqlCeConnection("Data Source = AddressEntry.sdf");
                 db.Open();
                 SqlCeCommand cmd = db.CreateCommand();
-                cmd.CommandText = @"Delete from AddressEntry where Name = @ent.getName() and EmailAddr = @ent.getAddr()"; //Delete SQL command
+                cmd.CommandText = @"Delete from AddressEntry where Name = @name"; //Delete SQL command
+                cmd.Parameters.AddWithValue("@name", ent.getName());
                 cmd.ExecuteNonQuery();
                 db.Close();
                 return true;

@@ -11,6 +11,8 @@ namespace AddressBookTest
         [TestMethod]
         public void TestAll()
         {
+            AddressEntryDAO.ClearAll();
+            
             AddressEntry entry = new AddressEntry("cow", "barn");
             Assert.IsTrue(AddressEntryDAO.CreateRecord(entry), "CreateRecord() failed");
 
@@ -23,7 +25,9 @@ namespace AddressBookTest
 
             Assert.IsTrue(AddressEntryDAO.DeleteRecord(modifiedEntry), "DeleteRecord() failed");
 
-            Assert.AreEqual(new List<AddressEntry> { }, AddressEntryDAO.LoadAll(), "record could not be deleted");
+            CollectionAssert.AreEqual(new List<AddressEntry> { }, AddressEntryDAO.LoadAll(), "record could not be deleted");
+
+            AddressEntryDAO.ClearAll();
         }
     }
 }
