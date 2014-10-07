@@ -40,7 +40,9 @@
             this.listView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2});
+            this.listView.FullRowSelect = true;
             this.listView.Location = new System.Drawing.Point(12, 12);
+            this.listView.MultiSelect = false;
             this.listView.Name = "listView";
             this.listView.Size = new System.Drawing.Size(536, 303);
             this.listView.TabIndex = 2;
