@@ -68,9 +68,9 @@
             this.textBox.Location = new System.Drawing.Point(57, 12);
             this.textBox.Name = "textBox";
             this.textBox.Size = new System.Drawing.Size(210, 20);
-            this.textBox.TabIndex = 3;
+            this.textBox.TabIndex = 0;
             // 
-            // DetailWindow
+            // EditWindow
             // 
             this.AcceptButton = this.saveButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -82,7 +82,7 @@
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.saveButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Name = "DetailWindow";
+            this.Name = "EditWindow";
             this.Text = "Edit Person";
             this.ResumeLayout(false);
             this.PerformLayout();
