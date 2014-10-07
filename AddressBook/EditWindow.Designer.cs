@@ -1,6 +1,6 @@
 ﻿namespace AddressBook
 {
-    partial class DetailWindow
+    partial class EditWindow
     {
         /// <summary>
         /// Required designer variable.
@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.acceptButton = new System.Windows.Forms.Button();
+            this.saveButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // acceptButton
+            // saveButton
             // 
-            this.acceptButton.Location = new System.Drawing.Point(110, 38);
-            this.acceptButton.Name = "acceptButton";
-            this.acceptButton.Size = new System.Drawing.Size(75, 23);
-            this.acceptButton.TabIndex = 0;
-            this.acceptButton.Text = "OK";
-            this.acceptButton.UseVisualStyleBackColor = true;
-            this.acceptButton.Click += new System.EventHandler(this.acceptButton_Click);
+            this.saveButton.Location = new System.Drawing.Point(110, 38);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(75, 23);
+            this.saveButton.TabIndex = 0;
+            this.saveButton.Text = "Save";
+            this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // cancelButton
             // 
@@ -72,7 +72,7 @@
             // 
             // DetailWindow
             // 
-            this.AcceptButton = this.acceptButton;
+            this.AcceptButton = this.saveButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelButton;
@@ -80,9 +80,10 @@
             this.Controls.Add(this.textBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cancelButton);
-            this.Controls.Add(this.acceptButton);
+            this.Controls.Add(this.saveButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "DetailWindow";
+            this.Text = "Edit Person";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -90,7 +91,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button acceptButton;
+        private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox;

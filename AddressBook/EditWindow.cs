@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace AddressBook
 {
-    public partial class DetailWindow : Form
+    public partial class EditWindow : Form
     {
         public string email;
         
-        public DetailWindow()
+        public EditWindow()
         {
             InitializeComponent();
         }
 
-        private void acceptButton_Click(object sender, EventArgs e)
+        private void saveButton_Click(object sender, EventArgs e)
         {
             email = textBox.Text;
             this.Close();
