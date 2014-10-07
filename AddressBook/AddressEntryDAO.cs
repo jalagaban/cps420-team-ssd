@@ -7,7 +7,7 @@ using System.Data.SqlServerCe;
 
 namespace AddressBook
 {
-    class AddressEntryDAO
+    public class AddressEntryDAO
     {
         private static AddressEntryDAO instance;
         private AddressEntryDAO() { }
