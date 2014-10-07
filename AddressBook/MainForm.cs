@@ -29,5 +29,16 @@ namespace AddressBook
         {
             LoadTable();
         }
+
+        private void editButton_Click(object sender, EventArgs e)
+        {
+            EditWindow dialog = new EditWindow();
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                string text = listView.SelectedItems[0].Text;
+                AddressEntryDAO.UpdateRecord(new AddressEntry(text, dialog.email));
+                LoadTable();
+            }
+        }
     }
 }
