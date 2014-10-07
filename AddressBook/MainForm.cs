@@ -24,6 +24,8 @@ namespace AddressBook
             {
                 listView.Items.Add(new ListViewItem(new string[] { entry.getName(), entry.getAddr() }));
             }
+            UpdateButtonState();
+
         }
 
         private void AddressBook_Load(object sender, EventArgs e)
@@ -56,6 +58,25 @@ namespace AddressBook
             {
                 AddressEntryDAO.CreateRecord(new AddressEntry(dialog.name, dialog.email));
                 LoadTable();
+            }
+        }
+
+        private void listView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            UpdateButtonState();
+        }
+
+        private void UpdateButtonState()
+        {
+            if (listView.SelectedItems.Count == 0)
+            {
+                editButton.Enabled = false;
+                deleteButton.Enabled = false;
+            }
+            else
+            {
+                editButton.Enabled = true;
+                deleteButton.Enabled = true;
             }
         }
     }
