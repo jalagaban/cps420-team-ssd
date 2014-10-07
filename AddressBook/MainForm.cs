@@ -42,6 +42,13 @@ namespace AddressBook
                 AddressEntryDAO.UpdateRecord(new AddressEntry(text, dialog.email));
                 LoadTable();
             }
+            else
+            {
+                editButton.Enabled = false;
+                deleteButton.Enabled = false;
+                editButton.Enabled = true;
+                deleteButton.Enabled = true;
+            }
         }
 
         private void deleteButton_Click(object sender, EventArgs e)
@@ -58,6 +65,10 @@ namespace AddressBook
             {
                 AddressEntryDAO.CreateRecord(new AddressEntry(dialog.name, dialog.email));
                 LoadTable();
+            }
+            else
+            {
+                UpdateButtonState();
             }
         }
 
@@ -77,6 +88,7 @@ namespace AddressBook
             {
                 editButton.Enabled = true;
                 deleteButton.Enabled = true;
+                listView.Refresh();
             }
         }
     }
