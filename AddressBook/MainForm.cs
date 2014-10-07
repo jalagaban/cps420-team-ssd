@@ -41,5 +41,12 @@ namespace AddressBook
                 LoadTable();
             }
         }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            string text = listView.SelectedItems[0].Text;
+            AddressEntryDAO.DeleteRecord(new AddressEntry(text, null));
+            LoadTable();
+        }
     }
 }
