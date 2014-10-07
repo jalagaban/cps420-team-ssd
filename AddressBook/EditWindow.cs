@@ -22,7 +22,8 @@ namespace AddressBook
         private void saveButton_Click(object sender, EventArgs e)
         {
             email = textBox.Text;
-            this.Close();
+            DialogResult = DialogResult.OK;
+            Close();
         }
     }
 }
