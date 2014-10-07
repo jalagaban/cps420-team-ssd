@@ -19,6 +19,7 @@ namespace AddressBook
 
         private void LoadTable()
         {
+            listView.Items.Clear();
             foreach (AddressEntry entry in AddressEntryDAO.LoadAll())
             {
                 listView.Items.Add(new ListViewItem(new string[] { entry.getName(), entry.getAddr() }));
