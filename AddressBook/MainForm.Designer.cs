@@ -33,6 +33,7 @@
             this.deleteButton = new System.Windows.Forms.Button();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.editButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listView
@@ -75,11 +76,21 @@
             // 
             this.columnHeader2.Text = "E-Mail";
             // 
+            // editButton
+            // 
+            this.editButton.Location = new System.Drawing.Point(175, 321);
+            this.editButton.Name = "editButton";
+            this.editButton.Size = new System.Drawing.Size(75, 23);
+            this.editButton.TabIndex = 5;
+            this.editButton.Text = "Edit";
+            this.editButton.UseVisualStyleBackColor = true;
+            // 
             // AddressBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(560, 356);
+            this.Controls.Add(this.editButton);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.listView);
@@ -98,6 +109,7 @@
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.Button editButton;
 
     }
 }
