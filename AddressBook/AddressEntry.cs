@@ -7,7 +7,7 @@ using System.Data.SqlServerCe;
 
 namespace AddressBook
 {
-    class AddressEntry
+    public class AddressEntry
     {
         private string name;
         private string eAddr;
