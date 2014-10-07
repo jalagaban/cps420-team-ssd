@@ -16,5 +16,18 @@ namespace AddressBook
         {
             InitializeComponent();
         }
+
+        private void LoadTable()
+        {
+            foreach (AddressEntry entry in AddressEntryDAO.LoadAll())
+            {
+                listView.Items.Add(new ListViewItem(new string[] { entry.getName(), entry.getAddr() }));
+            }
+        }
+
+        private void AddressBook_Load(object sender, EventArgs e)
+        {
+            LoadTable();
+        }
     }
 }
