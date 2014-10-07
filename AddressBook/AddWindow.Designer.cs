@@ -41,7 +41,7 @@
             this.emailTextBox.Location = new System.Drawing.Point(57, 36);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(210, 20);
-            this.emailTextBox.TabIndex = 3;
+            this.emailTextBox.TabIndex = 2;
             // 
             // label1
             // 
@@ -58,7 +58,7 @@
             this.cancelButton.Location = new System.Drawing.Point(192, 62);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(75, 23);
-            this.cancelButton.TabIndex = 5;
+            this.cancelButton.TabIndex = 4;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
             // 
@@ -68,7 +68,7 @@
             this.addButton.Location = new System.Drawing.Point(110, 62);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(75, 23);
-            this.addButton.TabIndex = 4;
+            this.addButton.TabIndex = 3;
             this.addButton.Text = "Add";
             this.addButton.UseVisualStyleBackColor = true;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
@@ -78,7 +78,7 @@
             this.nameTextBox.Location = new System.Drawing.Point(57, 10);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(210, 20);
-            this.nameTextBox.TabIndex = 7;
+            this.nameTextBox.TabIndex = 0;
             // 
             // label2
             // 
