@@ -1,0 +1,3 @@
+- Program has been tested on cps lab computers.
+- Requires installation of Microsoft SQL Server Compact 4.0 (http://www.microsoft.com/en-us/download/confirmation.aspx?id=17876).
+- To use open AddressBookTest/AddressBookTest.csproj in Visual Studio 2012 or later and select Debug > Start Debugging.
