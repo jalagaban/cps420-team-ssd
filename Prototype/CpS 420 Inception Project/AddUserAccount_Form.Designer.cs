@@ -1,6 +1,6 @@
 ﻿namespace CpS_420_Inception_Project
 {
-    partial class AddStore_Form
+    partial class AddUserAccount_Form
     {
         /// <summary>
         /// Required designer variable.
@@ -28,28 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.AddStore_Label = new System.Windows.Forms.Label();
+            this.UserAccounts_Label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // AddStore_Label
+            // UserAccounts_Label
             // 
-            this.AddStore_Label.AutoSize = true;
-            this.AddStore_Label.Font = new System.Drawing.Font("Segoe UI", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddStore_Label.ForeColor = System.Drawing.Color.SteelBlue;
-            this.AddStore_Label.Location = new System.Drawing.Point(12, 9);
-            this.AddStore_Label.Name = "AddStore_Label";
-            this.AddStore_Label.Size = new System.Drawing.Size(167, 45);
-            this.AddStore_Label.TabIndex = 2;
-            this.AddStore_Label.Text = "Add Store";
+            this.UserAccounts_Label.AutoSize = true;
+            this.UserAccounts_Label.Font = new System.Drawing.Font("Segoe UI", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserAccounts_Label.ForeColor = System.Drawing.Color.SteelBlue;
+            this.UserAccounts_Label.Location = new System.Drawing.Point(12, 9);
+            this.UserAccounts_Label.Name = "UserAccounts_Label";
+            this.UserAccounts_Label.Size = new System.Drawing.Size(231, 45);
+            this.UserAccounts_Label.TabIndex = 1;
+            this.UserAccounts_Label.Text = "User Accounts";
             // 
-            // AddStore_Form
+            // AddUserAccount_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(682, 363);
-            this.Controls.Add(this.AddStore_Label);
-            this.Name = "AddStore_Form";
-            this.Text = "Add Store";
+            this.ClientSize = new System.Drawing.Size(780, 378);
+            this.Controls.Add(this.UserAccounts_Label);
+            this.Name = "AddUserAccount_Form";
+            this.Text = "Create/Modify User Account";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -57,6 +57,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label AddStore_Label;
+        private System.Windows.Forms.Label UserAccounts_Label;
     }
 }

@@ -28,11 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.AddCashier_Label = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // AddCashier_Label
+            // 
+            this.AddCashier_Label.AutoSize = true;
+            this.AddCashier_Label.Font = new System.Drawing.Font("Segoe UI", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddCashier_Label.ForeColor = System.Drawing.Color.SteelBlue;
+            this.AddCashier_Label.Location = new System.Drawing.Point(12, 9);
+            this.AddCashier_Label.Name = "AddCashier_Label";
+            this.AddCashier_Label.Size = new System.Drawing.Size(202, 45);
+            this.AddCashier_Label.TabIndex = 2;
+            this.AddCashier_Label.Text = "Add Cashier";
+            // 
+            // AddCashier_Form
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "AddCashier_Form";
+            this.ClientSize = new System.Drawing.Size(769, 342);
+            this.Controls.Add(this.AddCashier_Label);
+            this.Name = "AddCashier_Form";
+            this.Text = "Add Cashier";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Label AddCashier_Label;
     }
 }

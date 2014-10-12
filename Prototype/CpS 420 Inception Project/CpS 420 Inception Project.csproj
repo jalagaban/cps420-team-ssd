@@ -74,6 +74,12 @@
     <Compile Include="AddStore_Form.Designer.cs">
       <DependentUpon>AddStore_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddUserAccount_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddUserAccount_Form.Designer.cs">
+      <DependentUpon>AddUserAccount_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,8 +94,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddAccount_Form.resx">
+      <DependentUpon>AddAccount_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCashier_Form.resx">
+      <DependentUpon>AddCashier_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCheck_Form.resx">
+      <DependentUpon>AddCheck_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddCompany_Form.resx">
       <DependentUpon>AddCompany_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddStore_Form.resx">
+      <DependentUpon>AddStore_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddUserAccount_Form.resx">
+      <DependentUpon>AddUserAccount_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main_Form.resx">
       <DependentUpon>Main_Form.cs</DependentUpon>

@@ -144,6 +144,12 @@ namespace CpS_420_Inception_Project
             AddCompany_Form newcomp = new AddCompany_Form();
             newcomp.ShowDialog();
         }
+
+        private void newbadcheck_Button_Click(object sender, EventArgs e)
+        {
+            AddCheck_Form acf = new AddCheck_Form();
+            acf.ShowDialog();
+        }
     }
 
     class variables

@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace CpS_420_Inception_Project
 {
-    public partial class AddCheck_Form : Form
+    public partial class AddUserAccount_Form : Form
     {
-        public AddCheck_Form()
+        public AddUserAccount_Form()
         {
             InitializeComponent();
-        }
-
-        private void AddCheck_Form_Load(object sender, EventArgs e)
-        {
-            CheckAmount_Textbox.BringToFront();
         }
     }
 }

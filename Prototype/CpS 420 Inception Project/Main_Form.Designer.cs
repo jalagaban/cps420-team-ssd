@@ -91,50 +91,50 @@
             this.companyToolStripMenuItem,
             this.storeToolStripMenuItem});
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.newToolStripMenuItem.Text = "&New";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // accountToolStripMenuItem
             // 
             this.accountToolStripMenuItem.Name = "accountToolStripMenuItem";
-            this.accountToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.accountToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.accountToolStripMenuItem.Text = "Account";
             // 
             // checkToolStripMenuItem
             // 
             this.checkToolStripMenuItem.Name = "checkToolStripMenuItem";
-            this.checkToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.checkToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.checkToolStripMenuItem.Text = "Check";
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(123, 6);
             // 
             // cashierToolStripMenuItem
             // 
             this.cashierToolStripMenuItem.Name = "cashierToolStripMenuItem";
-            this.cashierToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cashierToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.cashierToolStripMenuItem.Text = "Cashier";
             // 
             // companyToolStripMenuItem
             // 
             this.companyToolStripMenuItem.Name = "companyToolStripMenuItem";
-            this.companyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.companyToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.companyToolStripMenuItem.Text = "Company";
             this.companyToolStripMenuItem.Click += new System.EventHandler(this.companyToolStripMenuItem_Click);
             // 
             // storeToolStripMenuItem
             // 
             this.storeToolStripMenuItem.Name = "storeToolStripMenuItem";
-            this.storeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.storeToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.storeToolStripMenuItem.Text = "Store";
             // 
             // editRecentToolStripMenuItem
             // 
             this.editRecentToolStripMenuItem.Name = "editRecentToolStripMenuItem";
-            this.editRecentToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.editRecentToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.editRecentToolStripMenuItem.Text = "Edit Recent";
             // 
             // editToolStripMenuItem
@@ -147,7 +147,7 @@
             this.companyToolStripMenuItem1,
             this.storeToolStripMenuItem1});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.editToolStripMenuItem.Text = "&Edit";
             // 
             // accountToolStripMenuItem1
@@ -189,19 +189,19 @@
             // 
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
             this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.printToolStripMenuItem.Text = "&Print";
             this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(137, 6);
             // 
             // switchUserToolStripMenuItem
             // 
             this.switchUserToolStripMenuItem.Name = "switchUserToolStripMenuItem";
-            this.switchUserToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.switchUserToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.switchUserToolStripMenuItem.Text = "&Switch User";
             this.switchUserToolStripMenuItem.Click += new System.EventHandler(this.switchUserToolStripMenuItem_Click);
             // 
@@ -209,7 +209,7 @@
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -229,15 +229,20 @@
             // 
             // newbadcheck_Button
             // 
+            this.newbadcheck_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newbadcheck_Button.ForeColor = System.Drawing.Color.SteelBlue;
             this.newbadcheck_Button.Location = new System.Drawing.Point(52, 47);
             this.newbadcheck_Button.Name = "newbadcheck_Button";
             this.newbadcheck_Button.Size = new System.Drawing.Size(189, 44);
             this.newbadcheck_Button.TabIndex = 1;
             this.newbadcheck_Button.Text = "New Bad Check";
             this.newbadcheck_Button.UseVisualStyleBackColor = true;
+            this.newbadcheck_Button.Click += new System.EventHandler(this.newbadcheck_Button_Click);
             // 
             // editexistingcheck_Button
             // 
+            this.editexistingcheck_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editexistingcheck_Button.ForeColor = System.Drawing.Color.SteelBlue;
             this.editexistingcheck_Button.Location = new System.Drawing.Point(52, 116);
             this.editexistingcheck_Button.Name = "editexistingcheck_Button";
             this.editexistingcheck_Button.Size = new System.Drawing.Size(189, 44);
