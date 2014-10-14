@@ -222,6 +222,12 @@ namespace CpS_420_Inception_Project
             ChangePassword_Form cpf = new ChangePassword_Form();
             cpf.ShowDialog();
         }
+
+        private void accountToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            AddAccount_Form aaf = new AddAccount_Form();
+            aaf.ShowDialog();
+        }
     }
 
     class variables
