@@ -38,13 +38,21 @@ namespace CpS_420_Inception_Project
                 if (variables.admin == true)
                 {
                     CreateAdminInterface();
+                    MessageBox.Show("User authenticated.", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                MessageBox.Show("User authenticated.", "Success!", MessageBoxButtons.OK);
-            }
-            else
-            {
-                variables.loginstatus = false;
-                MessageBox.Show("Somehow you didn't choose any options....", "BUG!!!");
+                else if (variables.user == true)
+                {
+                    editToolStripMenuItem.Enabled = false;
+                    editRecentToolStripMenuItem.Enabled = false;
+                    MessageBox.Show("User authenticated.", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    variables.loginstatus = false;
+                    MessageBox.Show("You failed to login. Please either use 'admin' as the username and password to access the adminstrator interface, or use 'user' as the username and password to access the user interface.", "Failure to login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    UserAuthentication();
+                }
+                
             }
         }
 
@@ -56,11 +64,22 @@ namespace CpS_420_Inception_Project
 
         private void CreateAdminInterface()
         {
+            //Add user accounts menu option
             ToolStripMenuItem userAccounts = new ToolStripMenuItem("User Accounts");
-            //fileToolStripMenuItem.DropDownItems.Add(userAccounts);
             fileToolStripMenuItem.DropDownItems.Insert(6, userAccounts);
             fileToolStripMenuItem.DropDownItems.Insert(7, (new ToolStripSeparator()));
             userAccounts.Click += new EventHandler(userAccounts_Click);
+
+            ////Add user accounts submenus
+            //ToolStripMenuItem addUserAccount = new ToolStripMenuItem("Add User Account");
+            //ToolStripMenuItem editUserAccount = new ToolStripMenuItem("Edit Existing Account");
+            //userAccounts.DropDownItems.Add(addUserAccount);
+            //userAccounts.DropDownItems.Add(editUserAccount);
+
+            ////Create handler events for the two user account menu items
+            //addUserAccount.Click += new EventHandler(addUserAccount_Click);
+            //editUserAccount.Click += new EventHandler(editUserAccount_Click);
+
         }
 
         private void AddRecent()
@@ -87,34 +106,46 @@ namespace CpS_420_Inception_Project
             recentitem5.Click += new EventHandler(recentitem5_Click);           
         }
 
-        public void recentitem1_Click(object sender, EventArgs e)
+        private void recentitem1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("You opened the most recent item", "Success!", MessageBoxButtons.OK);
+            MessageBox.Show("You opened the most recent item", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        public void recentitem2_Click(object sender, EventArgs e)
+        private void recentitem2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("You opened the second most recent item", "Success!", MessageBoxButtons.OK);
+            MessageBox.Show("You opened the second most recent item", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        public void recentitem3_Click(object sender, EventArgs e)
+        private void recentitem3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("You opened the third most recent item", "Success!", MessageBoxButtons.OK);
+            MessageBox.Show("You opened the third most recent item", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        public void recentitem4_Click(object sender, EventArgs e)
+        private void recentitem4_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("You opened the fourth most recent item", "Success!", MessageBoxButtons.OK);
+            MessageBox.Show("You opened the fourth most recent item", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        public void recentitem5_Click(object sender, EventArgs e)
+        private void recentitem5_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("You opened the fifth most recent item", "Success!", MessageBoxButtons.OK);
+            MessageBox.Show("You opened the fifth most recent item", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        public void userAccounts_Click(object sender, EventArgs e)
+        private void userAccounts_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Create and modify user accounts here");
+            //Open user accounts dialog
+            AddUserAccount_Form auaf = new AddUserAccount_Form();
+            auaf.ShowDialog();
+        }
+
+        private void addUserAccount_Click(object sender, EventArgs e)
+        {
+            //Handles adding user accounts to the software
+        }
+
+        private void editUserAccount_Click(object sender, EventArgs e)
+        {
+            //Handles editing existing user accounts
         }
 
 
@@ -139,16 +170,57 @@ namespace CpS_420_Inception_Project
             //Insert code to print reports
         }
 
-        private void companyToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            AddCompany_Form newcomp = new AddCompany_Form();
-            newcomp.ShowDialog();
-        }
-
         private void newbadcheck_Button_Click(object sender, EventArgs e)
         {
             AddCheck_Form acf = new AddCheck_Form();
             acf.ShowDialog();
+        }
+
+        private void checkToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            EditCheck_Form ecf = new EditCheck_Form();
+            ecf.ShowDialog();
+        }
+
+        private void ManagePayments_Button_Click(object sender, EventArgs e)
+        {
+            ManagePayment_Form mpf = new ManagePayment_Form();
+            mpf.ShowDialog();
+        }
+
+        private void manageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void ManageLetters_Button_Click(object sender, EventArgs e)
+        {
+            ManageLetters_Form mlf = new ManageLetters_Form();
+            mlf.ShowDialog();
+        }
+
+        private void accountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddAccount_Form aaf = new AddAccount_Form();
+            aaf.ShowDialog();
+        }
+
+        private void paymentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManagePayment_Form mpf = new ManagePayment_Form();
+            mpf.ShowDialog();
+        }
+
+        private void lettersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManageLetters_Form mlf = new ManageLetters_Form();
+            mlf.ShowDialog();
+        }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChangePassword_Form cpf = new ChangePassword_Form();
+            cpf.ShowDialog();
         }
     }
 
@@ -156,5 +228,6 @@ namespace CpS_420_Inception_Project
     {
         public static bool loginstatus = false;
         public static bool admin = false;
+        public static bool user = false;
     }
 }

@@ -23,9 +23,9 @@ namespace CpS_420_Inception_Project
             {
                 variables.admin = true;
             }
-            else
+            else if (UserName_Textbox.Text == "user" & Password_Textbox.Text == "user")
             {
-                variables.admin = false;
+                variables.user = true;
             }
             this.DialogResult = DialogResult.OK;        
             this.Close();

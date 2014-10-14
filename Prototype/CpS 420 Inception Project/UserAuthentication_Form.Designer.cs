@@ -118,6 +118,8 @@
             this.Controls.Add(this.UserName_Textbox);
             this.Controls.Add(this.Password_Label);
             this.Controls.Add(this.UserName_Label);
+            this.MaximumSize = new System.Drawing.Size(443, 250);
+            this.MinimumSize = new System.Drawing.Size(443, 250);
             this.Name = "UserAuthentication_Form";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

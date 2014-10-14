@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace CpS_420_Inception_Project
 {
-    public partial class AddCashier_Form : Form
+    public partial class ChangePassword_Form : Form
     {
-        public AddCashier_Form()
+        public ChangePassword_Form()
         {
             InitializeComponent();
+        }
+
+        private void Submit_Button_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Password successfully changed", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CpS_420_Inception_Project
 {
-    public partial class AddStore_Form : Form
+    public partial class ManageLetters_Form : Form
     {
-        public AddStore_Form()
+        public ManageLetters_Form()
         {
             InitializeComponent();
         }

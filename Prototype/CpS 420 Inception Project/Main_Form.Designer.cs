@@ -28,31 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm_Form));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.accountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.checkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.cashierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.companyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.storeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editRecentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.accountToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.checkToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.cashierToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.companyToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.storeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.managePaymentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lettersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.paymentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.switchUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newbadcheck_Button = new System.Windows.Forms.Button();
-            this.editexistingcheck_Button = new System.Windows.Forms.Button();
+            this.ManagePayments_Button = new System.Windows.Forms.Button();
+            this.ManageLetters_Button = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,6 +69,7 @@
             this.newToolStripMenuItem,
             this.editRecentToolStripMenuItem,
             this.editToolStripMenuItem,
+            this.managePaymentsToolStripMenuItem,
             this.printToolStripMenuItem,
             this.toolStripSeparator1,
             this.switchUserToolStripMenuItem,
@@ -83,53 +80,10 @@
             // 
             // newToolStripMenuItem
             // 
-            this.newToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.accountToolStripMenuItem,
-            this.checkToolStripMenuItem,
-            this.toolStripSeparator3,
-            this.cashierToolStripMenuItem,
-            this.companyToolStripMenuItem,
-            this.storeToolStripMenuItem});
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
             this.newToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
-            this.newToolStripMenuItem.Text = "&New";
+            this.newToolStripMenuItem.Text = "&New Check";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
-            // 
-            // accountToolStripMenuItem
-            // 
-            this.accountToolStripMenuItem.Name = "accountToolStripMenuItem";
-            this.accountToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
-            this.accountToolStripMenuItem.Text = "Account";
-            // 
-            // checkToolStripMenuItem
-            // 
-            this.checkToolStripMenuItem.Name = "checkToolStripMenuItem";
-            this.checkToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
-            this.checkToolStripMenuItem.Text = "Check";
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(123, 6);
-            // 
-            // cashierToolStripMenuItem
-            // 
-            this.cashierToolStripMenuItem.Name = "cashierToolStripMenuItem";
-            this.cashierToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
-            this.cashierToolStripMenuItem.Text = "Cashier";
-            // 
-            // companyToolStripMenuItem
-            // 
-            this.companyToolStripMenuItem.Name = "companyToolStripMenuItem";
-            this.companyToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
-            this.companyToolStripMenuItem.Text = "Company";
-            this.companyToolStripMenuItem.Click += new System.EventHandler(this.companyToolStripMenuItem_Click);
-            // 
-            // storeToolStripMenuItem
-            // 
-            this.storeToolStripMenuItem.Name = "storeToolStripMenuItem";
-            this.storeToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
-            this.storeToolStripMenuItem.Text = "Store";
             // 
             // editRecentToolStripMenuItem
             // 
@@ -141,11 +95,7 @@
             // 
             this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.accountToolStripMenuItem1,
-            this.checkToolStripMenuItem1,
-            this.toolStripSeparator2,
-            this.cashierToolStripMenuItem1,
-            this.companyToolStripMenuItem1,
-            this.storeToolStripMenuItem1});
+            this.checkToolStripMenuItem1});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.editToolStripMenuItem.Text = "&Edit";
@@ -153,37 +103,39 @@
             // accountToolStripMenuItem1
             // 
             this.accountToolStripMenuItem1.Name = "accountToolStripMenuItem1";
-            this.accountToolStripMenuItem1.Size = new System.Drawing.Size(126, 22);
+            this.accountToolStripMenuItem1.Size = new System.Drawing.Size(119, 22);
             this.accountToolStripMenuItem1.Text = "Account";
             // 
             // checkToolStripMenuItem1
             // 
             this.checkToolStripMenuItem1.Name = "checkToolStripMenuItem1";
-            this.checkToolStripMenuItem1.Size = new System.Drawing.Size(126, 22);
+            this.checkToolStripMenuItem1.Size = new System.Drawing.Size(119, 22);
             this.checkToolStripMenuItem1.Text = "Check";
+            this.checkToolStripMenuItem1.Click += new System.EventHandler(this.checkToolStripMenuItem1_Click);
             // 
-            // toolStripSeparator2
+            // managePaymentsToolStripMenuItem
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(123, 6);
+            this.managePaymentsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lettersToolStripMenuItem,
+            this.paymentsToolStripMenuItem});
+            this.managePaymentsToolStripMenuItem.Name = "managePaymentsToolStripMenuItem";
+            this.managePaymentsToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.managePaymentsToolStripMenuItem.Text = "Manage";
+            this.managePaymentsToolStripMenuItem.Click += new System.EventHandler(this.manageToolStripMenuItem_Click);
             // 
-            // cashierToolStripMenuItem1
+            // lettersToolStripMenuItem
             // 
-            this.cashierToolStripMenuItem1.Name = "cashierToolStripMenuItem1";
-            this.cashierToolStripMenuItem1.Size = new System.Drawing.Size(126, 22);
-            this.cashierToolStripMenuItem1.Text = "Cashier";
+            this.lettersToolStripMenuItem.Name = "lettersToolStripMenuItem";
+            this.lettersToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.lettersToolStripMenuItem.Text = "Letters";
+            this.lettersToolStripMenuItem.Click += new System.EventHandler(this.lettersToolStripMenuItem_Click);
             // 
-            // companyToolStripMenuItem1
+            // paymentsToolStripMenuItem
             // 
-            this.companyToolStripMenuItem1.Name = "companyToolStripMenuItem1";
-            this.companyToolStripMenuItem1.Size = new System.Drawing.Size(126, 22);
-            this.companyToolStripMenuItem1.Text = "Company";
-            // 
-            // storeToolStripMenuItem1
-            // 
-            this.storeToolStripMenuItem1.Name = "storeToolStripMenuItem1";
-            this.storeToolStripMenuItem1.Size = new System.Drawing.Size(126, 22);
-            this.storeToolStripMenuItem1.Text = "Store";
+            this.paymentsToolStripMenuItem.Name = "paymentsToolStripMenuItem";
+            this.paymentsToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.paymentsToolStripMenuItem.Text = "Payments";
+            this.paymentsToolStripMenuItem.Click += new System.EventHandler(this.paymentsToolStripMenuItem_Click);
             // 
             // printToolStripMenuItem
             // 
@@ -216,7 +168,8 @@
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutToolStripMenuItem});
+            this.aboutToolStripMenuItem,
+            this.changePasswordToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "&Help";
@@ -224,8 +177,15 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.aboutToolStripMenuItem.Text = "&About";
+            // 
+            // changePasswordToolStripMenuItem
+            // 
+            this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.changePasswordToolStripMenuItem.Text = "Change Password";
+            this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
             // newbadcheck_Button
             // 
@@ -239,26 +199,43 @@
             this.newbadcheck_Button.UseVisualStyleBackColor = true;
             this.newbadcheck_Button.Click += new System.EventHandler(this.newbadcheck_Button_Click);
             // 
-            // editexistingcheck_Button
+            // ManagePayments_Button
             // 
-            this.editexistingcheck_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editexistingcheck_Button.ForeColor = System.Drawing.Color.SteelBlue;
-            this.editexistingcheck_Button.Location = new System.Drawing.Point(52, 116);
-            this.editexistingcheck_Button.Name = "editexistingcheck_Button";
-            this.editexistingcheck_Button.Size = new System.Drawing.Size(189, 44);
-            this.editexistingcheck_Button.TabIndex = 2;
-            this.editexistingcheck_Button.Text = "Edit Existing Check";
-            this.editexistingcheck_Button.UseVisualStyleBackColor = true;
+            this.ManagePayments_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ManagePayments_Button.ForeColor = System.Drawing.Color.SteelBlue;
+            this.ManagePayments_Button.Location = new System.Drawing.Point(52, 116);
+            this.ManagePayments_Button.Name = "ManagePayments_Button";
+            this.ManagePayments_Button.Size = new System.Drawing.Size(189, 44);
+            this.ManagePayments_Button.TabIndex = 2;
+            this.ManagePayments_Button.Text = "Manage Payments";
+            this.ManagePayments_Button.UseVisualStyleBackColor = true;
+            this.ManagePayments_Button.Click += new System.EventHandler(this.ManagePayments_Button_Click);
+            // 
+            // ManageLetters_Button
+            // 
+            this.ManageLetters_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ManageLetters_Button.ForeColor = System.Drawing.Color.SteelBlue;
+            this.ManageLetters_Button.Location = new System.Drawing.Point(52, 185);
+            this.ManageLetters_Button.Name = "ManageLetters_Button";
+            this.ManageLetters_Button.Size = new System.Drawing.Size(189, 44);
+            this.ManageLetters_Button.TabIndex = 3;
+            this.ManageLetters_Button.Text = "Manage Letters";
+            this.ManageLetters_Button.UseVisualStyleBackColor = true;
+            this.ManageLetters_Button.Click += new System.EventHandler(this.ManageLetters_Button_Click);
             // 
             // MainForm_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(291, 183);
-            this.Controls.Add(this.editexistingcheck_Button);
+            this.ClientSize = new System.Drawing.Size(291, 248);
+            this.Controls.Add(this.ManageLetters_Button);
+            this.Controls.Add(this.ManagePayments_Button);
             this.Controls.Add(this.newbadcheck_Button);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximumSize = new System.Drawing.Size(307, 287);
+            this.MinimumSize = new System.Drawing.Size(307, 287);
             this.Name = "MainForm_Form";
             this.Text = "Bad Check Tracker";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -279,23 +256,18 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem accountToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem checkToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripMenuItem cashierToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem companyToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem storeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem accountToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem checkToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripMenuItem cashierToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem companyToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem storeToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.Button newbadcheck_Button;
-        private System.Windows.Forms.Button editexistingcheck_Button;
+        private System.Windows.Forms.Button ManagePayments_Button;
         private System.Windows.Forms.ToolStripMenuItem switchUserToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem managePaymentsToolStripMenuItem;
+        private System.Windows.Forms.Button ManageLetters_Button;
+        private System.Windows.Forms.ToolStripMenuItem lettersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem paymentsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
     }
 }
 

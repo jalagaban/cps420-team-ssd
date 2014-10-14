@@ -50,29 +50,11 @@
     <Compile Include="AddAccount_Form.Designer.cs">
       <DependentUpon>AddAccount_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddCashier_Form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddCashier_Form.Designer.cs">
-      <DependentUpon>AddCashier_Form.cs</DependentUpon>
-    </Compile>
     <Compile Include="AddCheck_Form.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddCheck_Form.Designer.cs">
       <DependentUpon>AddCheck_Form.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AddCompany_Form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddCompany_Form.Designer.cs">
-      <DependentUpon>AddCompany_Form.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AddStore_Form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddStore_Form.Designer.cs">
-      <DependentUpon>AddStore_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="AddUserAccount_Form.cs">
       <SubType>Form</SubType>
@@ -80,11 +62,35 @@
     <Compile Include="AddUserAccount_Form.Designer.cs">
       <DependentUpon>AddUserAccount_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChangePassword_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePassword_Form.Designer.cs">
+      <DependentUpon>ChangePassword_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditCheck_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditCheck_Form.Designer.cs">
+      <DependentUpon>EditCheck_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main_Form.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Main_Form.Designer.cs">
       <DependentUpon>Main_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageLetters_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageLetters_Form.Designer.cs">
+      <DependentUpon>ManageLetters_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagePayment_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagePayment_Form.Designer.cs">
+      <DependentUpon>ManagePayment_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="UserAuthentication_Form.cs">
       <SubType>Form</SubType>
@@ -97,23 +103,26 @@
     <EmbeddedResource Include="AddAccount_Form.resx">
       <DependentUpon>AddAccount_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddCashier_Form.resx">
-      <DependentUpon>AddCashier_Form.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AddCheck_Form.resx">
       <DependentUpon>AddCheck_Form.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AddCompany_Form.resx">
-      <DependentUpon>AddCompany_Form.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AddStore_Form.resx">
-      <DependentUpon>AddStore_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddUserAccount_Form.resx">
       <DependentUpon>AddUserAccount_Form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChangePassword_Form.resx">
+      <DependentUpon>ChangePassword_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditCheck_Form.resx">
+      <DependentUpon>EditCheck_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main_Form.resx">
       <DependentUpon>Main_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageLetters_Form.resx">
+      <DependentUpon>ManageLetters_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagePayment_Form.resx">
+      <DependentUpon>ManagePayment_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserAuthentication_Form.resx">
       <DependentUpon>UserAuthentication_Form.cs</DependentUpon>
