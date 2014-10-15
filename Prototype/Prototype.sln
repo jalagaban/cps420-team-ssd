@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CpS 420 Inception Project", "CpS 420 Inception Project\CpS 420 Inception Project.csproj", "{2A95C12B-CBDB-4C6D-A20A-4265980D760C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prototype", "CpS 420 Inception Project\Prototype.csproj", "{2A95C12B-CBDB-4C6D-A20A-4265980D760C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
