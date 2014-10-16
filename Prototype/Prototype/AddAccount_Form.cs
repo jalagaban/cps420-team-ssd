@@ -16,5 +16,10 @@ namespace CpS_420_Inception_Project
         {
             InitializeComponent();
         }
+
+        private void Submit_Button_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -362,6 +362,7 @@
             this.Submit_Button.TabIndex = 10;
             this.Submit_Button.Text = "Submit";
             this.Submit_Button.UseVisualStyleBackColor = true;
+            this.Submit_Button.Click += new System.EventHandler(this.Submit_Button_Click);
             // 
             // AddAccount_Form
             // 
@@ -369,7 +370,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.Cancel_Button;
-            this.ClientSize = new System.Drawing.Size(475, 470);
+            this.ClientSize = new System.Drawing.Size(475, 471);
             this.Controls.Add(this.Cancel_Button);
             this.Controls.Add(this.Submit_Button);
             this.Controls.Add(this.State_Combobox);
