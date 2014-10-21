@@ -20,6 +20,7 @@ namespace CpS_420_Inception_Project
         private void Submit_Button_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Account successfully edited", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
         }
     }
 }
