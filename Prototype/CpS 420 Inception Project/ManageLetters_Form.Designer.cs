@@ -211,7 +211,7 @@
             this.MaximumSize = new System.Drawing.Size(422, 473);
             this.MinimumSize = new System.Drawing.Size(422, 473);
             this.Name = "ManageLetters_Form";
-            this.Text = "ManageLetters_Form";
+            this.Text = "Manage Letters";
             this.LetterSent_Groupbox.ResumeLayout(false);
             this.LetterSent_Groupbox.PerformLayout();
             this.ResumeLayout(false);

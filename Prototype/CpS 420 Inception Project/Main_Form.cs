@@ -225,8 +225,8 @@ namespace CpS_420_Inception_Project
 
         private void accountToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            AddAccount_Form aaf = new AddAccount_Form();
-            aaf.ShowDialog();
+            EditAccount_Form eaf = new EditAccount_Form();
+            eaf.ShowDialog();
         }
     }
 

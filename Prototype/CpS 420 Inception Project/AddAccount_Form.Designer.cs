@@ -30,7 +30,7 @@
         {
             this.RoutingNumber_Label = new System.Windows.Forms.Label();
             this.AccountNumber_Label = new System.Windows.Forms.Label();
-            this.AddNewCheck_Label = new System.Windows.Forms.Label();
+            this.AddAccount_Label = new System.Windows.Forms.Label();
             this.AccountNumber_Textbox = new System.Windows.Forms.TextBox();
             this.RoutingNumber_Textbox = new System.Windows.Forms.TextBox();
             this.FirstName_Textbox = new System.Windows.Forms.TextBox();
@@ -77,16 +77,16 @@
             this.AccountNumber_Label.TabIndex = 26;
             this.AccountNumber_Label.Text = "Account Number:";
             // 
-            // AddNewCheck_Label
+            // AddAccount_Label
             // 
-            this.AddNewCheck_Label.AutoSize = true;
-            this.AddNewCheck_Label.Font = new System.Drawing.Font("Segoe UI", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddNewCheck_Label.ForeColor = System.Drawing.Color.SteelBlue;
-            this.AddNewCheck_Label.Location = new System.Drawing.Point(12, 9);
-            this.AddNewCheck_Label.Name = "AddNewCheck_Label";
-            this.AddNewCheck_Label.Size = new System.Drawing.Size(211, 45);
-            this.AddNewCheck_Label.TabIndex = 23;
-            this.AddNewCheck_Label.Text = "Add Account";
+            this.AddAccount_Label.AutoSize = true;
+            this.AddAccount_Label.Font = new System.Drawing.Font("Segoe UI", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddAccount_Label.ForeColor = System.Drawing.Color.SteelBlue;
+            this.AddAccount_Label.Location = new System.Drawing.Point(12, 9);
+            this.AddAccount_Label.Name = "AddAccount_Label";
+            this.AddAccount_Label.Size = new System.Drawing.Size(211, 45);
+            this.AddAccount_Label.TabIndex = 23;
+            this.AddAccount_Label.Text = "Add Account";
             // 
             // AccountNumber_Textbox
             // 
@@ -362,6 +362,7 @@
             this.Submit_Button.TabIndex = 10;
             this.Submit_Button.Text = "Submit";
             this.Submit_Button.UseVisualStyleBackColor = true;
+            this.Submit_Button.Click += new System.EventHandler(this.Submit_Button_Click);
             // 
             // AddAccount_Form
             // 
@@ -394,7 +395,7 @@
             this.Controls.Add(this.AccountNumber_Textbox);
             this.Controls.Add(this.RoutingNumber_Label);
             this.Controls.Add(this.AccountNumber_Label);
-            this.Controls.Add(this.AddNewCheck_Label);
+            this.Controls.Add(this.AddAccount_Label);
             this.MaximumSize = new System.Drawing.Size(491, 509);
             this.MinimumSize = new System.Drawing.Size(491, 509);
             this.Name = "AddAccount_Form";
@@ -408,7 +409,7 @@
 
         private System.Windows.Forms.Label RoutingNumber_Label;
         private System.Windows.Forms.Label AccountNumber_Label;
-        private System.Windows.Forms.Label AddNewCheck_Label;
+        private System.Windows.Forms.Label AddAccount_Label;
         private System.Windows.Forms.TextBox AccountNumber_Textbox;
         private System.Windows.Forms.TextBox RoutingNumber_Textbox;
         private System.Windows.Forms.TextBox FirstName_Textbox;

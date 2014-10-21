@@ -37,12 +37,8 @@
             this.AccountNumber_Label = new System.Windows.Forms.Label();
             this.Payments_Label = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.DollarSign_Label = new System.Windows.Forms.Label();
-            this.PaymentAmount_Textbox = new System.Windows.Forms.TextBox();
-            this.PaymentAmount_Label = new System.Windows.Forms.Label();
-            this.RemainderOwed_Textbox = new System.Windows.Forms.TextBox();
-            this.RemainderOwed_Label = new System.Windows.Forms.Label();
-            this.DollarSign2_Label = new System.Windows.Forms.Label();
+            this.Paid_Label = new System.Windows.Forms.Label();
+            this.Paid_Checkbox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // RoutingNumber_Combobox
@@ -83,7 +79,7 @@
             this.Cancel_Button.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Cancel_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cancel_Button.ForeColor = System.Drawing.Color.SteelBlue;
-            this.Cancel_Button.Location = new System.Drawing.Point(274, 342);
+            this.Cancel_Button.Location = new System.Drawing.Point(274, 292);
             this.Cancel_Button.Name = "Cancel_Button";
             this.Cancel_Button.Size = new System.Drawing.Size(120, 40);
             this.Cancel_Button.TabIndex = 52;
@@ -95,7 +91,7 @@
             this.Submit_Button.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.Submit_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Submit_Button.ForeColor = System.Drawing.Color.SteelBlue;
-            this.Submit_Button.Location = new System.Drawing.Point(132, 342);
+            this.Submit_Button.Location = new System.Drawing.Point(132, 292);
             this.Submit_Button.Name = "Submit_Button";
             this.Submit_Button.Size = new System.Drawing.Size(121, 40);
             this.Submit_Button.TabIndex = 51;
@@ -144,78 +140,35 @@
             this.comboBox1.Size = new System.Drawing.Size(63, 21);
             this.comboBox1.TabIndex = 55;
             // 
-            // DollarSign_Label
+            // Paid_Label
             // 
-            this.DollarSign_Label.AutoSize = true;
-            this.DollarSign_Label.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DollarSign_Label.ForeColor = System.Drawing.Color.Black;
-            this.DollarSign_Label.Location = new System.Drawing.Point(128, 233);
-            this.DollarSign_Label.Name = "DollarSign_Label";
-            this.DollarSign_Label.Size = new System.Drawing.Size(19, 21);
-            this.DollarSign_Label.TabIndex = 58;
-            this.DollarSign_Label.Text = "$";
+            this.Paid_Label.AutoSize = true;
+            this.Paid_Label.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Paid_Label.ForeColor = System.Drawing.Color.SteelBlue;
+            this.Paid_Label.Location = new System.Drawing.Point(95, 235);
+            this.Paid_Label.Name = "Paid_Label";
+            this.Paid_Label.Size = new System.Drawing.Size(41, 20);
+            this.Paid_Label.TabIndex = 57;
+            this.Paid_Label.Text = "Paid:";
+            this.Paid_Label.Click += new System.EventHandler(this.Paid_Label_Click);
             // 
-            // PaymentAmount_Textbox
+            // Paid_Checkbox
             // 
-            this.PaymentAmount_Textbox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PaymentAmount_Textbox.Location = new System.Drawing.Point(142, 233);
-            this.PaymentAmount_Textbox.Name = "PaymentAmount_Textbox";
-            this.PaymentAmount_Textbox.Size = new System.Drawing.Size(83, 22);
-            this.PaymentAmount_Textbox.TabIndex = 56;
-            // 
-            // PaymentAmount_Label
-            // 
-            this.PaymentAmount_Label.AutoSize = true;
-            this.PaymentAmount_Label.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PaymentAmount_Label.ForeColor = System.Drawing.Color.SteelBlue;
-            this.PaymentAmount_Label.Location = new System.Drawing.Point(12, 235);
-            this.PaymentAmount_Label.Name = "PaymentAmount_Label";
-            this.PaymentAmount_Label.Size = new System.Drawing.Size(124, 20);
-            this.PaymentAmount_Label.TabIndex = 57;
-            this.PaymentAmount_Label.Text = "Payment Amount:";
-            // 
-            // RemainderOwed_Textbox
-            // 
-            this.RemainderOwed_Textbox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RemainderOwed_Textbox.Location = new System.Drawing.Point(142, 284);
-            this.RemainderOwed_Textbox.Name = "RemainderOwed_Textbox";
-            this.RemainderOwed_Textbox.ReadOnly = true;
-            this.RemainderOwed_Textbox.Size = new System.Drawing.Size(83, 22);
-            this.RemainderOwed_Textbox.TabIndex = 59;
-            // 
-            // RemainderOwed_Label
-            // 
-            this.RemainderOwed_Label.AutoSize = true;
-            this.RemainderOwed_Label.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RemainderOwed_Label.ForeColor = System.Drawing.Color.SteelBlue;
-            this.RemainderOwed_Label.Location = new System.Drawing.Point(12, 286);
-            this.RemainderOwed_Label.Name = "RemainderOwed_Label";
-            this.RemainderOwed_Label.Size = new System.Drawing.Size(122, 20);
-            this.RemainderOwed_Label.TabIndex = 60;
-            this.RemainderOwed_Label.Text = "Remainder Owed:";
-            // 
-            // DollarSign2_Label
-            // 
-            this.DollarSign2_Label.AutoSize = true;
-            this.DollarSign2_Label.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DollarSign2_Label.ForeColor = System.Drawing.Color.Black;
-            this.DollarSign2_Label.Location = new System.Drawing.Point(128, 284);
-            this.DollarSign2_Label.Name = "DollarSign2_Label";
-            this.DollarSign2_Label.Size = new System.Drawing.Size(19, 21);
-            this.DollarSign2_Label.TabIndex = 61;
-            this.DollarSign2_Label.Text = "$";
+            this.Paid_Checkbox.AutoSize = true;
+            this.Paid_Checkbox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Paid_Checkbox.Location = new System.Drawing.Point(143, 241);
+            this.Paid_Checkbox.Name = "Paid_Checkbox";
+            this.Paid_Checkbox.Size = new System.Drawing.Size(15, 14);
+            this.Paid_Checkbox.TabIndex = 58;
+            this.Paid_Checkbox.UseVisualStyleBackColor = true;
             // 
             // ManagePayment_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(411, 396);
-            this.Controls.Add(this.DollarSign2_Label);
-            this.Controls.Add(this.RemainderOwed_Textbox);
-            this.Controls.Add(this.RemainderOwed_Label);
-            this.Controls.Add(this.DollarSign_Label);
-            this.Controls.Add(this.PaymentAmount_Textbox);
-            this.Controls.Add(this.PaymentAmount_Label);
+            this.ClientSize = new System.Drawing.Size(411, 346);
+            this.Controls.Add(this.Paid_Checkbox);
+            this.Controls.Add(this.Paid_Label);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.RoutingNumber_Combobox);
             this.Controls.Add(this.AccountNumber_Combobox);
@@ -225,8 +178,8 @@
             this.Controls.Add(this.CheckNumber_Label);
             this.Controls.Add(this.AccountNumber_Label);
             this.Controls.Add(this.Payments_Label);
-            this.MaximumSize = new System.Drawing.Size(427, 435);
-            this.MinimumSize = new System.Drawing.Size(427, 435);
+            this.MaximumSize = new System.Drawing.Size(427, 385);
+            this.MinimumSize = new System.Drawing.Size(427, 385);
             this.Name = "ManagePayment_Form";
             this.Text = "Manage Payments";
             this.Load += new System.EventHandler(this.ManagePayment_Form_Load);
@@ -246,11 +199,7 @@
         private System.Windows.Forms.Label AccountNumber_Label;
         private System.Windows.Forms.Label Payments_Label;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label DollarSign_Label;
-        private System.Windows.Forms.TextBox PaymentAmount_Textbox;
-        private System.Windows.Forms.Label PaymentAmount_Label;
-        private System.Windows.Forms.TextBox RemainderOwed_Textbox;
-        private System.Windows.Forms.Label RemainderOwed_Label;
-        private System.Windows.Forms.Label DollarSign2_Label;
+        private System.Windows.Forms.Label Paid_Label;
+        private System.Windows.Forms.CheckBox Paid_Checkbox;
     }
 }

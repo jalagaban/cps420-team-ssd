@@ -41,12 +41,12 @@
             this.Submit_Button = new System.Windows.Forms.Button();
             this.CheckAmount_Textbox = new System.Windows.Forms.TextBox();
             this.CheckAmount_Label = new System.Windows.Forms.Label();
-            this.CheckNumber_Textbox = new System.Windows.Forms.TextBox();
             this.CheckNumber_Label = new System.Windows.Forms.Label();
             this.CheckDate_Label = new System.Windows.Forms.Label();
             this.AccountNumber_Label = new System.Windows.Forms.Label();
             this.AddNewCheck_Label = new System.Windows.Forms.Label();
             this.Delete_Button = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // CashierNumber_Textbox
@@ -162,6 +162,7 @@
             this.Submit_Button.TabIndex = 40;
             this.Submit_Button.Text = "Submit";
             this.Submit_Button.UseVisualStyleBackColor = true;
+            this.Submit_Button.Click += new System.EventHandler(this.Submit_Button_Click);
             // 
             // CheckAmount_Textbox
             // 
@@ -181,14 +182,6 @@
             this.CheckAmount_Label.Size = new System.Drawing.Size(106, 20);
             this.CheckAmount_Label.TabIndex = 42;
             this.CheckAmount_Label.Text = "Check Amount:";
-            // 
-            // CheckNumber_Textbox
-            // 
-            this.CheckNumber_Textbox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CheckNumber_Textbox.Location = new System.Drawing.Point(142, 183);
-            this.CheckNumber_Textbox.Name = "CheckNumber_Textbox";
-            this.CheckNumber_Textbox.Size = new System.Drawing.Size(64, 22);
-            this.CheckNumber_Textbox.TabIndex = 3;
             // 
             // CheckNumber_Label
             // 
@@ -246,6 +239,16 @@
             this.Delete_Button.UseVisualStyleBackColor = true;
             this.Delete_Button.Click += new System.EventHandler(this.Delete_Button_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(142, 184);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(64, 21);
+            this.comboBox1.TabIndex = 50;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // EditCheck_Form
             // 
             this.AcceptButton = this.Submit_Button;
@@ -253,6 +256,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.Cancel_Button;
             this.ClientSize = new System.Drawing.Size(418, 501);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.Delete_Button);
             this.Controls.Add(this.CashierNumber_Textbox);
             this.Controls.Add(this.CashierNumber_Label);
@@ -267,7 +271,6 @@
             this.Controls.Add(this.Submit_Button);
             this.Controls.Add(this.CheckAmount_Textbox);
             this.Controls.Add(this.CheckAmount_Label);
-            this.Controls.Add(this.CheckNumber_Textbox);
             this.Controls.Add(this.CheckNumber_Label);
             this.Controls.Add(this.CheckDate_Label);
             this.Controls.Add(this.AccountNumber_Label);
@@ -296,11 +299,11 @@
         private System.Windows.Forms.Button Submit_Button;
         private System.Windows.Forms.TextBox CheckAmount_Textbox;
         private System.Windows.Forms.Label CheckAmount_Label;
-        private System.Windows.Forms.TextBox CheckNumber_Textbox;
         private System.Windows.Forms.Label CheckNumber_Label;
         private System.Windows.Forms.Label CheckDate_Label;
         private System.Windows.Forms.Label AccountNumber_Label;
         private System.Windows.Forms.Label AddNewCheck_Label;
         private System.Windows.Forms.Button Delete_Button;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

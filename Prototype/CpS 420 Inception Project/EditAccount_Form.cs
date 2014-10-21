@@ -10,21 +10,16 @@ using System.Windows.Forms;
 
 namespace CpS_420_Inception_Project
 {
-    public partial class ManagePayment_Form : Form
+    public partial class EditAccount_Form : Form
     {
-        public ManagePayment_Form()
+        public EditAccount_Form()
         {
             InitializeComponent();
         }
 
-        private void ManagePayment_Form_Load(object sender, EventArgs e)
+        private void Submit_Button_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void Paid_Label_Click(object sender, EventArgs e)
-        {
-
+            MessageBox.Show("Account successfully edited", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

@@ -33,5 +33,15 @@ namespace CpS_420_Inception_Project
                 // Don't delete the check
             }
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Submit_Button_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
