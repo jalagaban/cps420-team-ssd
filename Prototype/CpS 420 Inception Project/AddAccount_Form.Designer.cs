@@ -370,7 +370,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.Cancel_Button;
-            this.ClientSize = new System.Drawing.Size(475, 471);
+            this.ClientSize = new System.Drawing.Size(475, 470);
             this.Controls.Add(this.Cancel_Button);
             this.Controls.Add(this.Submit_Button);
             this.Controls.Add(this.State_Combobox);

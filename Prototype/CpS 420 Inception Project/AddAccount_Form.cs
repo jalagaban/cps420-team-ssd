@@ -19,11 +19,7 @@ namespace CpS_420_Inception_Project
 
         private void Submit_Button_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD:Prototype/CpS 420 Inception Project/AddAccount_Form.cs
             MessageBox.Show("Account successfully added", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-=======
-            this.Close();
->>>>>>> 27f12aaea198f2f4299c410f4bcfb1e518c05806:Prototype/Prototype/AddAccount_Form.cs
         }
     }
 }
