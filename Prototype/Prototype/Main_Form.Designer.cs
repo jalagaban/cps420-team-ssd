@@ -117,6 +117,7 @@
             this.managePaymentsToolStripMenuItem.Name = "managePaymentsToolStripMenuItem";
             this.managePaymentsToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.managePaymentsToolStripMenuItem.Text = "Manage Payments";
+            this.managePaymentsToolStripMenuItem.Click += new System.EventHandler(this.managePaymentsToolStripMenuItem_Click);
             // 
             // printToolStripMenuItem
             // 

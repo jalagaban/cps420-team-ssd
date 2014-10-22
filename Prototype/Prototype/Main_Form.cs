@@ -195,12 +195,6 @@ namespace CpS_420_Inception_Project
             aaf.ShowDialog();
         }
 
-        private void paymentsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ManagePayment_Form mpf = new ManagePayment_Form();
-            mpf.ShowDialog();
-        }
-
         private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ChangePassword_Form cpf = new ChangePassword_Form();
@@ -216,6 +210,12 @@ namespace CpS_420_Inception_Project
         private void PrintLetters_Button_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Printing...", "Print Letters", MessageBoxButtons.OK);
+        }
+
+        private void managePaymentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManagePayment_Form mpf = new ManagePayment_Form();
+            mpf.ShowDialog();
         }
     }
 
