@@ -37,8 +37,6 @@
             this.accountToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.checkToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.managePaymentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lettersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.paymentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.switchUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -81,14 +79,14 @@
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.newToolStripMenuItem.Text = "&New Check";
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.newToolStripMenuItem.Text = "&New Bad Check";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // editRecentToolStripMenuItem
             // 
             this.editRecentToolStripMenuItem.Name = "editRecentToolStripMenuItem";
-            this.editRecentToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.editRecentToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.editRecentToolStripMenuItem.Text = "Edit Recent";
             // 
             // editToolStripMenuItem
@@ -97,7 +95,7 @@
             this.accountToolStripMenuItem1,
             this.checkToolStripMenuItem1});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.editToolStripMenuItem.Text = "&Edit";
             // 
             // accountToolStripMenuItem1
@@ -116,53 +114,36 @@
             // 
             // managePaymentsToolStripMenuItem
             // 
-            this.managePaymentsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lettersToolStripMenuItem,
-            this.paymentsToolStripMenuItem});
             this.managePaymentsToolStripMenuItem.Name = "managePaymentsToolStripMenuItem";
-            this.managePaymentsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.managePaymentsToolStripMenuItem.Text = "Manage";
+            this.managePaymentsToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.managePaymentsToolStripMenuItem.Text = "Manage Payments";
             this.managePaymentsToolStripMenuItem.Click += new System.EventHandler(this.manageToolStripMenuItem_Click);
-            // 
-            // lettersToolStripMenuItem
-            // 
-            this.lettersToolStripMenuItem.Name = "lettersToolStripMenuItem";
-            this.lettersToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
-            this.lettersToolStripMenuItem.Text = "Letters";
-            this.lettersToolStripMenuItem.Click += new System.EventHandler(this.lettersToolStripMenuItem_Click);
-            // 
-            // paymentsToolStripMenuItem
-            // 
-            this.paymentsToolStripMenuItem.Name = "paymentsToolStripMenuItem";
-            this.paymentsToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
-            this.paymentsToolStripMenuItem.Text = "Payments";
-            this.paymentsToolStripMenuItem.Click += new System.EventHandler(this.paymentsToolStripMenuItem_Click);
             // 
             // printToolStripMenuItem
             // 
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
             this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.printToolStripMenuItem.Text = "&Print";
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.printToolStripMenuItem.Text = "&Print Letters";
             this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(175, 6);
             // 
             // switchUserToolStripMenuItem
             // 
             this.switchUserToolStripMenuItem.Name = "switchUserToolStripMenuItem";
-            this.switchUserToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.switchUserToolStripMenuItem.Text = "&Switch User";
+            this.switchUserToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.switchUserToolStripMenuItem.Text = "&Log Out";
             this.switchUserToolStripMenuItem.Click += new System.EventHandler(this.switchUserToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -220,7 +201,7 @@
             this.ManageLetters_Button.Name = "ManageLetters_Button";
             this.ManageLetters_Button.Size = new System.Drawing.Size(189, 44);
             this.ManageLetters_Button.TabIndex = 3;
-            this.ManageLetters_Button.Text = "Manage Letters";
+            this.ManageLetters_Button.Text = "Print Letters";
             this.ManageLetters_Button.UseVisualStyleBackColor = true;
             this.ManageLetters_Button.Click += new System.EventHandler(this.ManageLetters_Button_Click);
             // 
@@ -228,7 +209,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(291, 248);
+            this.ClientSize = new System.Drawing.Size(291, 249);
             this.Controls.Add(this.ManageLetters_Button);
             this.Controls.Add(this.ManagePayments_Button);
             this.Controls.Add(this.newbadcheck_Button);
@@ -266,8 +247,6 @@
         private System.Windows.Forms.ToolStripMenuItem switchUserToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem managePaymentsToolStripMenuItem;
         private System.Windows.Forms.Button ManageLetters_Button;
-        private System.Windows.Forms.ToolStripMenuItem lettersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem paymentsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
     }
 }
