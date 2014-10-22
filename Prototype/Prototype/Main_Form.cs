@@ -67,7 +67,7 @@ namespace CpS_420_Inception_Project
         private void CreateAdminInterface()
         {
             //Add user accounts menu option
-            ToolStripMenuItem userAccounts = new ToolStripMenuItem("User Accounts");
+            ToolStripMenuItem userAccounts = new ToolStripMenuItem("Manage Users");
             fileToolStripMenuItem.DropDownItems.Insert(6, userAccounts);
             fileToolStripMenuItem.DropDownItems.Insert(7, (new ToolStripSeparator()));
             userAccounts.Click += new EventHandler(userAccounts_Click);
