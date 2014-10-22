@@ -46,7 +46,7 @@
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newbadcheck_Button = new System.Windows.Forms.Button();
             this.ManagePayments_Button = new System.Windows.Forms.Button();
-            this.ManageLetters_Button = new System.Windows.Forms.Button();
+            this.PrintLetters_Button = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -101,14 +101,14 @@
             // accountToolStripMenuItem1
             // 
             this.accountToolStripMenuItem1.Name = "accountToolStripMenuItem1";
-            this.accountToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.accountToolStripMenuItem1.Size = new System.Drawing.Size(119, 22);
             this.accountToolStripMenuItem1.Text = "Account";
             this.accountToolStripMenuItem1.Click += new System.EventHandler(this.accountToolStripMenuItem1_Click);
             // 
             // checkToolStripMenuItem1
             // 
             this.checkToolStripMenuItem1.Name = "checkToolStripMenuItem1";
-            this.checkToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.checkToolStripMenuItem1.Size = new System.Drawing.Size(119, 22);
             this.checkToolStripMenuItem1.Text = "Check";
             this.checkToolStripMenuItem1.Click += new System.EventHandler(this.checkToolStripMenuItem1_Click);
             // 
@@ -117,7 +117,6 @@
             this.managePaymentsToolStripMenuItem.Name = "managePaymentsToolStripMenuItem";
             this.managePaymentsToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.managePaymentsToolStripMenuItem.Text = "Manage Payments";
-            this.managePaymentsToolStripMenuItem.Click += new System.EventHandler(this.manageToolStripMenuItem_Click);
             // 
             // printToolStripMenuItem
             // 
@@ -193,24 +192,24 @@
             this.ManagePayments_Button.UseVisualStyleBackColor = true;
             this.ManagePayments_Button.Click += new System.EventHandler(this.ManagePayments_Button_Click);
             // 
-            // ManageLetters_Button
+            // PrintLetters_Button
             // 
-            this.ManageLetters_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ManageLetters_Button.ForeColor = System.Drawing.Color.SteelBlue;
-            this.ManageLetters_Button.Location = new System.Drawing.Point(52, 185);
-            this.ManageLetters_Button.Name = "ManageLetters_Button";
-            this.ManageLetters_Button.Size = new System.Drawing.Size(189, 44);
-            this.ManageLetters_Button.TabIndex = 3;
-            this.ManageLetters_Button.Text = "Print Letters";
-            this.ManageLetters_Button.UseVisualStyleBackColor = true;
-            this.ManageLetters_Button.Click += new System.EventHandler(this.ManageLetters_Button_Click);
+            this.PrintLetters_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PrintLetters_Button.ForeColor = System.Drawing.Color.SteelBlue;
+            this.PrintLetters_Button.Location = new System.Drawing.Point(52, 185);
+            this.PrintLetters_Button.Name = "PrintLetters_Button";
+            this.PrintLetters_Button.Size = new System.Drawing.Size(189, 44);
+            this.PrintLetters_Button.TabIndex = 3;
+            this.PrintLetters_Button.Text = "Print Letters";
+            this.PrintLetters_Button.UseVisualStyleBackColor = true;
+            this.PrintLetters_Button.Click += new System.EventHandler(this.PrintLetters_Button_Click);
             // 
             // MainForm_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(291, 249);
-            this.Controls.Add(this.ManageLetters_Button);
+            this.Controls.Add(this.PrintLetters_Button);
             this.Controls.Add(this.ManagePayments_Button);
             this.Controls.Add(this.newbadcheck_Button);
             this.Controls.Add(this.menuStrip1);
@@ -246,7 +245,7 @@
         private System.Windows.Forms.Button ManagePayments_Button;
         private System.Windows.Forms.ToolStripMenuItem switchUserToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem managePaymentsToolStripMenuItem;
-        private System.Windows.Forms.Button ManageLetters_Button;
+        private System.Windows.Forms.Button PrintLetters_Button;
         private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
     }
 }

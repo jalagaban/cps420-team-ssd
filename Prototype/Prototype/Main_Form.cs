@@ -167,7 +167,7 @@ namespace CpS_420_Inception_Project
 
         private void printToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Insert code to print reports
+            MessageBox.Show("Printing...", "Print Letters", MessageBoxButtons.OK);
         }
 
         private void newbadcheck_Button_Click(object sender, EventArgs e)
@@ -188,16 +188,6 @@ namespace CpS_420_Inception_Project
             mpf.ShowDialog();
         }
 
-        private void manageToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void ManageLetters_Button_Click(object sender, EventArgs e)
-        {
-            ManageLetters_Form mlf = new ManageLetters_Form();
-            mlf.ShowDialog();
-        }
 
         private void accountToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -211,12 +201,6 @@ namespace CpS_420_Inception_Project
             mpf.ShowDialog();
         }
 
-        private void lettersToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ManageLetters_Form mlf = new ManageLetters_Form();
-            mlf.ShowDialog();
-        }
-
         private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ChangePassword_Form cpf = new ChangePassword_Form();
@@ -227,6 +211,11 @@ namespace CpS_420_Inception_Project
         {
             EditAccount_Form eaf = new EditAccount_Form();
             eaf.ShowDialog();
+        }
+
+        private void PrintLetters_Button_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Printing...", "Print Letters", MessageBoxButtons.OK);
         }
     }
 
