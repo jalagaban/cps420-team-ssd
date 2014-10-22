@@ -44,6 +44,8 @@ namespace CpS_420_Inception_Project
                 {
                     editToolStripMenuItem.Enabled = false;
                     editRecentToolStripMenuItem.Enabled = false;
+                    managePaymentsToolStripMenuItem.Enabled = false;
+                    ManagePayments_Button.Enabled = false;
                     MessageBox.Show("User authenticated.", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
