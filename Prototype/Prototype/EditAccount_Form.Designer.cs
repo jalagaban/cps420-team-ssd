@@ -33,8 +33,6 @@
             this.State_Combobox = new System.Windows.Forms.ComboBox();
             this.PhoneNumber_Textbox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.StateIDNumber_Textbox = new System.Windows.Forms.TextBox();
-            this.StateID_Label = new System.Windows.Forms.Label();
             this.ZipCode_Textbox = new System.Windows.Forms.TextBox();
             this.Zip_Label = new System.Windows.Forms.Label();
             this.State_Label = new System.Windows.Forms.Label();
@@ -44,8 +42,6 @@
             this.StreetAddress_Label = new System.Windows.Forms.Label();
             this.LastName_Textbox = new System.Windows.Forms.TextBox();
             this.LastName_Label = new System.Windows.Forms.Label();
-            this.MiddleName_Textbox = new System.Windows.Forms.TextBox();
-            this.MiddleName_Label = new System.Windows.Forms.Label();
             this.FirstName_Textbox = new System.Windows.Forms.TextBox();
             this.FirstName_Label = new System.Windows.Forms.Label();
             this.RoutingNumber_Label = new System.Windows.Forms.Label();
@@ -150,9 +146,9 @@
             // PhoneNumber_Textbox
             // 
             this.PhoneNumber_Textbox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PhoneNumber_Textbox.Location = new System.Drawing.Point(333, 335);
+            this.PhoneNumber_Textbox.Location = new System.Drawing.Point(162, 335);
             this.PhoneNumber_Textbox.Name = "PhoneNumber_Textbox";
-            this.PhoneNumber_Textbox.Size = new System.Drawing.Size(122, 22);
+            this.PhoneNumber_Textbox.Size = new System.Drawing.Size(190, 22);
             this.PhoneNumber_Textbox.TabIndex = 55;
             // 
             // label8
@@ -160,30 +156,11 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label8.Location = new System.Drawing.Point(329, 360);
+            this.label8.Location = new System.Drawing.Point(158, 360);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(105, 20);
             this.label8.TabIndex = 71;
             this.label8.Text = "Phone Number";
-            // 
-            // StateIDNumber_Textbox
-            // 
-            this.StateIDNumber_Textbox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StateIDNumber_Textbox.Location = new System.Drawing.Point(160, 335);
-            this.StateIDNumber_Textbox.Name = "StateIDNumber_Textbox";
-            this.StateIDNumber_Textbox.Size = new System.Drawing.Size(151, 22);
-            this.StateIDNumber_Textbox.TabIndex = 54;
-            // 
-            // StateID_Label
-            // 
-            this.StateID_Label.AutoSize = true;
-            this.StateID_Label.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StateID_Label.ForeColor = System.Drawing.Color.SteelBlue;
-            this.StateID_Label.Location = new System.Drawing.Point(156, 360);
-            this.StateID_Label.Name = "StateID_Label";
-            this.StateID_Label.Size = new System.Drawing.Size(116, 20);
-            this.StateID_Label.TabIndex = 70;
-            this.StateID_Label.Text = "State ID Number";
             // 
             // ZipCode_Textbox
             // 
@@ -257,9 +234,9 @@
             // LastName_Textbox
             // 
             this.LastName_Textbox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LastName_Textbox.Location = new System.Drawing.Point(263, 184);
+            this.LastName_Textbox.Location = new System.Drawing.Point(237, 184);
             this.LastName_Textbox.Name = "LastName_Textbox";
-            this.LastName_Textbox.Size = new System.Drawing.Size(122, 22);
+            this.LastName_Textbox.Size = new System.Drawing.Size(198, 22);
             this.LastName_Textbox.TabIndex = 49;
             // 
             // LastName_Label
@@ -267,37 +244,18 @@
             this.LastName_Label.AutoSize = true;
             this.LastName_Label.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LastName_Label.ForeColor = System.Drawing.Color.SteelBlue;
-            this.LastName_Label.Location = new System.Drawing.Point(259, 209);
+            this.LastName_Label.Location = new System.Drawing.Point(233, 209);
             this.LastName_Label.Name = "LastName_Label";
             this.LastName_Label.Size = new System.Drawing.Size(87, 20);
             this.LastName_Label.TabIndex = 65;
             this.LastName_Label.Text = "*Last Name:";
-            // 
-            // MiddleName_Textbox
-            // 
-            this.MiddleName_Textbox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MiddleName_Textbox.Location = new System.Drawing.Point(142, 184);
-            this.MiddleName_Textbox.Name = "MiddleName_Textbox";
-            this.MiddleName_Textbox.Size = new System.Drawing.Size(99, 22);
-            this.MiddleName_Textbox.TabIndex = 48;
-            // 
-            // MiddleName_Label
-            // 
-            this.MiddleName_Label.AutoSize = true;
-            this.MiddleName_Label.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MiddleName_Label.ForeColor = System.Drawing.Color.SteelBlue;
-            this.MiddleName_Label.Location = new System.Drawing.Point(138, 209);
-            this.MiddleName_Label.Name = "MiddleName_Label";
-            this.MiddleName_Label.Size = new System.Drawing.Size(98, 20);
-            this.MiddleName_Label.TabIndex = 64;
-            this.MiddleName_Label.Text = "Middle Name:";
             // 
             // FirstName_Textbox
             // 
             this.FirstName_Textbox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FirstName_Textbox.Location = new System.Drawing.Point(22, 184);
             this.FirstName_Textbox.Name = "FirstName_Textbox";
-            this.FirstName_Textbox.Size = new System.Drawing.Size(99, 22);
+            this.FirstName_Textbox.Size = new System.Drawing.Size(198, 22);
             this.FirstName_Textbox.TabIndex = 47;
             // 
             // FirstName_Label
@@ -369,7 +327,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.Cancel_Button;
-            this.ClientSize = new System.Drawing.Size(475, 470);
+            this.ClientSize = new System.Drawing.Size(475, 471);
             this.Controls.Add(this.RoutingNumber_Combobox);
             this.Controls.Add(this.AccountNumber_Combobox);
             this.Controls.Add(this.Cancel_Button);
@@ -377,8 +335,6 @@
             this.Controls.Add(this.State_Combobox);
             this.Controls.Add(this.PhoneNumber_Textbox);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.StateIDNumber_Textbox);
-            this.Controls.Add(this.StateID_Label);
             this.Controls.Add(this.ZipCode_Textbox);
             this.Controls.Add(this.Zip_Label);
             this.Controls.Add(this.State_Label);
@@ -388,8 +344,6 @@
             this.Controls.Add(this.StreetAddress_Label);
             this.Controls.Add(this.LastName_Textbox);
             this.Controls.Add(this.LastName_Label);
-            this.Controls.Add(this.MiddleName_Textbox);
-            this.Controls.Add(this.MiddleName_Label);
             this.Controls.Add(this.FirstName_Textbox);
             this.Controls.Add(this.FirstName_Label);
             this.Controls.Add(this.RoutingNumber_Label);
@@ -411,8 +365,6 @@
         private System.Windows.Forms.ComboBox State_Combobox;
         private System.Windows.Forms.TextBox PhoneNumber_Textbox;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox StateIDNumber_Textbox;
-        private System.Windows.Forms.Label StateID_Label;
         private System.Windows.Forms.TextBox ZipCode_Textbox;
         private System.Windows.Forms.Label Zip_Label;
         private System.Windows.Forms.Label State_Label;
@@ -422,8 +374,6 @@
         private System.Windows.Forms.Label StreetAddress_Label;
         private System.Windows.Forms.TextBox LastName_Textbox;
         private System.Windows.Forms.Label LastName_Label;
-        private System.Windows.Forms.TextBox MiddleName_Textbox;
-        private System.Windows.Forms.Label MiddleName_Label;
         private System.Windows.Forms.TextBox FirstName_Textbox;
         private System.Windows.Forms.Label FirstName_Label;
         private System.Windows.Forms.Label RoutingNumber_Label;
