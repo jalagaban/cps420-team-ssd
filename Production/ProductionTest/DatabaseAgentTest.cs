@@ -10,7 +10,19 @@ namespace ProductionTest
         [TestMethod]
         public void TestCheckManagement()
         {
-            
+            // Create DatabaseAgent
+
+            // Initialize database test data
+
+            // Test DatabaseAgent.ChecksPrimaryKeys property
+
+            // Test DatabaseAgent.GetCheck() method
+
+            // Test DatabaseAgent.AddCheck() method
+
+            // Test DataseAgent.UpdateCheck() method
+
+            // Test DatabaseAgent.DeleteCheck() method
         }
     }
 }
