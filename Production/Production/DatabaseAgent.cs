@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Production
 {
-    class DatabaseAgent
+    public class DatabaseAgent
     {
     }
 }

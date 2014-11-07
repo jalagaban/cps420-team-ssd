@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Production
 {
-    class Check
+    public class Check
     {
     }
 }

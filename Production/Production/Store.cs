@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Production
 {
-    class Store
+    public class Store
     {
     }
 }

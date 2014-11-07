@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Production;
 
 namespace ProductionTest
 {
@@ -7,8 +8,9 @@ namespace ProductionTest
     public class DatabaseAgentTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestCheckManagement()
         {
+            
         }
     }
 }
