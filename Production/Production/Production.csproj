@@ -59,6 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account.cs" />
     <Compile Include="AddAccount_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,12 +78,15 @@
     <Compile Include="AddUserAccount_Form.Designer.cs">
       <DependentUpon>AddUserAccount_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="AuthenticationManager.cs" />
     <Compile Include="ChangePassword_Form.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ChangePassword_Form.Designer.cs">
       <DependentUpon>ChangePassword_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Check.cs" />
+    <Compile Include="DatabaseAgent.cs" />
     <Compile Include="EditAccount_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +117,8 @@
     <Compile Include="ManagePayment_Form.Designer.cs">
       <DependentUpon>ManagePayment_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Store.cs" />
+    <Compile Include="User.cs" />
     <Compile Include="UserAuthentication_Form.cs">
       <SubType>Form</SubType>
     </Compile>
