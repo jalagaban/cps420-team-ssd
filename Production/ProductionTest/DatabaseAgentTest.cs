@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace ProductionTest
 {
     [TestClass]
-    public class UnitTest1
+    public class DatabaseAgentTest
     {
         [TestMethod]
         public void TestMethod1()
