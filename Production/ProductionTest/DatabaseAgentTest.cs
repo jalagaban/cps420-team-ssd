@@ -14,7 +14,7 @@ namespace ProductionTest
 
             // Initialize database test data
 
-            // Test DatabaseAgent.ChecksPrimaryKeys property
+            // Test DatabaseAgent.CheckKeys property
 
             // Test DatabaseAgent.GetCheck() method
 
