@@ -98,6 +98,7 @@
             // 
             // accountToolStripMenuItem1
             // 
+            this.accountToolStripMenuItem1.Enabled = false;
             this.accountToolStripMenuItem1.Name = "accountToolStripMenuItem1";
             this.accountToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.accountToolStripMenuItem1.Text = "Accounts...";
@@ -173,7 +174,7 @@
             this.aboutToolStripMenuItem,
             this.changePasswordToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "&Help";
             // 
             // aboutToolStripMenuItem

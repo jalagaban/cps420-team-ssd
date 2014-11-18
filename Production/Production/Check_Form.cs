@@ -81,7 +81,10 @@ namespace CpS_420_Inception_Project
             else
             {
                 acceptButton1.Enabled = noneEmptyFields && validCheck;
-                acceptButton2.Enabled = validCheck;
+                if (acceptButton2.Enabled = validCheck)
+                {
+                    UpdateFields();
+                }
             }
         }
 
@@ -118,6 +121,17 @@ namespace CpS_420_Inception_Project
             check.IsPaid = false;
             check.StoreID = storeNumComboBox.Text;
             check.CashierID = cashierNumTextBox.Text;
+        }
+
+        private void UpdateFields()
+        {
+            check = DatabaseAgent.DefaultAgent.GetCheck(Tuple.Create(routingNumComboBox.Text,
+                                                                    accountNumComboBox.Text,
+                                                                    checkNumComboBox.Text));
+            amountField.Value = (decimal)(check.Amount / 100.0);
+            datePicker.Value = check.Date;
+            storeNumComboBox.Text = check.StoreID;
+            cashierNumTextBox.Text = check.CashierID;
         }
     }
 }
