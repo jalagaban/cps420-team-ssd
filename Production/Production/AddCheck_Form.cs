@@ -14,7 +14,7 @@ namespace CpS_420_Inception_Project
     public partial class AddCheck_Form : Form
     {
         public Check check { get; set; }
-        
+
         public AddCheck_Form()
         {
             InitializeComponent();
@@ -24,6 +24,22 @@ namespace CpS_420_Inception_Project
         {
             ComposeCheck();
             Close();
+        }
+
+        private void fieldsChanged(object sender, EventArgs e)
+        {
+            if (routingNumComboBox.Text.Length > 0 &&
+                accountNumComboBox.Text.Length > 0 &&
+                checkNumComboBox.Text.Length > 0 &&
+                storeNumComboBox.Text.Length > 0 &&
+                cashierNumTextBox.Text.Length > 0)
+            {
+                createButton.Enabled = true;
+            }
+            else
+            {
+                createButton.Enabled = false;
+            }
         }
 
         private void ComposeCheck()

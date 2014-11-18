@@ -61,6 +61,7 @@
             // 
             // createButton
             // 
+            this.createButton.Enabled = false;
             this.createButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createButton.ForeColor = System.Drawing.Color.SteelBlue;
             this.createButton.Location = new System.Drawing.Point(93, 236);
@@ -89,6 +90,7 @@
             this.cashierNumTextBox.Name = "cashierNumTextBox";
             this.cashierNumTextBox.Size = new System.Drawing.Size(204, 22);
             this.cashierNumTextBox.TabIndex = 7;
+            this.cashierNumTextBox.TextChanged += new System.EventHandler(this.fieldsChanged);
             // 
             // CheckNumber_Label
             // 
@@ -144,6 +146,7 @@
             this.accountNumComboBox.Name = "accountNumComboBox";
             this.accountNumComboBox.Size = new System.Drawing.Size(204, 21);
             this.accountNumComboBox.TabIndex = 2;
+            this.accountNumComboBox.TextChanged += new System.EventHandler(this.fieldsChanged);
             // 
             // routingNumComboBox
             // 
@@ -155,6 +158,7 @@
             this.routingNumComboBox.Name = "routingNumComboBox";
             this.routingNumComboBox.Size = new System.Drawing.Size(204, 21);
             this.routingNumComboBox.TabIndex = 1;
+            this.routingNumComboBox.TextChanged += new System.EventHandler(this.fieldsChanged);
             // 
             // datePicker
             // 
@@ -196,6 +200,7 @@
             this.storeNumComboBox.Name = "storeNumComboBox";
             this.storeNumComboBox.Size = new System.Drawing.Size(204, 21);
             this.storeNumComboBox.TabIndex = 6;
+            this.storeNumComboBox.TextChanged += new System.EventHandler(this.fieldsChanged);
             // 
             // checkNumComboBox
             // 
@@ -207,6 +212,7 @@
             this.checkNumComboBox.Name = "checkNumComboBox";
             this.checkNumComboBox.Size = new System.Drawing.Size(204, 21);
             this.checkNumComboBox.TabIndex = 3;
+            this.checkNumComboBox.TextChanged += new System.EventHandler(this.fieldsChanged);
             // 
             // amountField
             // 
