@@ -83,39 +83,39 @@
             // newBadCheckMenuItem
             // 
             this.newBadCheckMenuItem.Name = "newBadCheckMenuItem";
-            this.newBadCheckMenuItem.Size = new System.Drawing.Size(178, 22);
-            this.newBadCheckMenuItem.Text = "&New Bad Check";
+            this.newBadCheckMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.newBadCheckMenuItem.Text = "&New Bad Check...";
             this.newBadCheckMenuItem.Click += new System.EventHandler(this.newBadCheckMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.accountToolStripMenuItem1,
-            this.editChecksMenuItem});
+            this.editChecksMenuItem,
+            this.accountToolStripMenuItem1});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.editToolStripMenuItem.Text = "&Edit";
             // 
             // accountToolStripMenuItem1
             // 
             this.accountToolStripMenuItem1.Name = "accountToolStripMenuItem1";
             this.accountToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.accountToolStripMenuItem1.Text = "Account";
+            this.accountToolStripMenuItem1.Text = "Accounts...";
             this.accountToolStripMenuItem1.Click += new System.EventHandler(this.accountToolStripMenuItem1_Click);
             // 
             // editChecksMenuItem
             // 
             this.editChecksMenuItem.Name = "editChecksMenuItem";
             this.editChecksMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.editChecksMenuItem.Text = "Check";
+            this.editChecksMenuItem.Text = "Checks...";
             this.editChecksMenuItem.Click += new System.EventHandler(this.editChecksMenuItem_Click);
             // 
             // managePaymentsToolStripMenuItem
             // 
             this.managePaymentsToolStripMenuItem.Enabled = false;
             this.managePaymentsToolStripMenuItem.Name = "managePaymentsToolStripMenuItem";
-            this.managePaymentsToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
-            this.managePaymentsToolStripMenuItem.Text = "Manage Payments";
+            this.managePaymentsToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.managePaymentsToolStripMenuItem.Text = "Manage Payments...";
             this.managePaymentsToolStripMenuItem.Click += new System.EventHandler(this.managePaymentsToolStripMenuItem_Click);
             // 
             // printToolStripMenuItem
@@ -123,20 +123,20 @@
             this.printToolStripMenuItem.Enabled = false;
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
             this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
-            this.printToolStripMenuItem.Text = "&Print Letters";
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.printToolStripMenuItem.Text = "&Print Letters...";
             this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(175, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(184, 6);
             // 
             // switchUserToolStripMenuItem
             // 
             this.switchUserToolStripMenuItem.Enabled = false;
             this.switchUserToolStripMenuItem.Name = "switchUserToolStripMenuItem";
-            this.switchUserToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.switchUserToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.switchUserToolStripMenuItem.Text = "&Log Out";
             this.switchUserToolStripMenuItem.Click += new System.EventHandler(this.switchUserToolStripMenuItem_Click);
             // 
@@ -144,18 +144,18 @@
             // 
             this.manageUsersMenuItem.Enabled = false;
             this.manageUsersMenuItem.Name = "manageUsersMenuItem";
-            this.manageUsersMenuItem.Size = new System.Drawing.Size(178, 22);
-            this.manageUsersMenuItem.Text = "Manage Users";
+            this.manageUsersMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.manageUsersMenuItem.Text = "Manage Users...";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(175, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(184, 6);
             // 
             // resetDatabaseMenuItem
             // 
             this.resetDatabaseMenuItem.Name = "resetDatabaseMenuItem";
-            this.resetDatabaseMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.resetDatabaseMenuItem.Size = new System.Drawing.Size(187, 22);
             this.resetDatabaseMenuItem.Text = "&Reset Database";
             this.resetDatabaseMenuItem.Click += new System.EventHandler(this.resetDatabaseMenuItem_Click);
             // 
@@ -163,7 +163,7 @@
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -173,22 +173,22 @@
             this.aboutToolStripMenuItem,
             this.changePasswordToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
             this.helpToolStripMenuItem.Text = "&Help";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Enabled = false;
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.aboutToolStripMenuItem.Text = "&About";
             // 
             // changePasswordToolStripMenuItem
             // 
             this.changePasswordToolStripMenuItem.Enabled = false;
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
-            this.changePasswordToolStripMenuItem.Text = "Change Password";
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.changePasswordToolStripMenuItem.Text = "Change Password...";
             this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
             // newBadCheckButton
