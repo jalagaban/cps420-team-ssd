@@ -18,6 +18,7 @@ namespace Production
             // Check user.Password against given password
                 // If equal, set CurrentUser to user and return true
                 // else return false
+            return false;
         }
 
         public void LogOut()
@@ -31,6 +32,7 @@ namespace Production
         public User GetUser(string username)
         {
             // Get user from database where user.username == username
+            return null;
         }
 
         public void AddUser(User user)
