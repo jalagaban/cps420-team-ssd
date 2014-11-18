@@ -11,9 +11,23 @@ namespace Production
 {
     public class DatabaseAgent
     {
-        private readonly string connectionString = "server=158.158.143.243, 1434\teamssd; database=CheckPasser; Integrated Security=false; PWD=Te@m$$D; UID=sa";
+        private static readonly string connectionString = "server=158.158.143.243, 1434\teamssd; database=CheckPasser; Integrated Security=false; PWD=Te@m$$D; UID=sa";
 
-       /* Clears the database and repopulates it with a standard set of test data */
+        private static DatabaseAgent defaultAgent;
+
+        public static DatabaseAgent DefaultAgent
+        {
+           get 
+           {
+               if (defaultAgent == null)
+               {
+                   defaultAgent = new DatabaseAgent();
+               }
+               return defaultAgent;
+           }
+        }
+        
+        /* Clears the database and repopulates it with a standard set of test data */
         public void ResetTestData()
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
