@@ -46,6 +46,7 @@
             this.newBadCheckButton = new System.Windows.Forms.Button();
             this.ManagePayments_Button = new System.Windows.Forms.Button();
             this.PrintLetters_Button = new System.Windows.Forms.Button();
+            this.resetDatabaseMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,6 +70,7 @@
             this.printToolStripMenuItem,
             this.toolStripSeparator1,
             this.switchUserToolStripMenuItem,
+            this.resetDatabaseMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
@@ -93,14 +95,14 @@
             // accountToolStripMenuItem1
             // 
             this.accountToolStripMenuItem1.Name = "accountToolStripMenuItem1";
-            this.accountToolStripMenuItem1.Size = new System.Drawing.Size(119, 22);
+            this.accountToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.accountToolStripMenuItem1.Text = "Account";
             this.accountToolStripMenuItem1.Click += new System.EventHandler(this.accountToolStripMenuItem1_Click);
             // 
             // checkToolStripMenuItem1
             // 
             this.checkToolStripMenuItem1.Name = "checkToolStripMenuItem1";
-            this.checkToolStripMenuItem1.Size = new System.Drawing.Size(119, 22);
+            this.checkToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.checkToolStripMenuItem1.Text = "Check";
             this.checkToolStripMenuItem1.Click += new System.EventHandler(this.checkToolStripMenuItem1_Click);
             // 
@@ -204,6 +206,13 @@
             this.PrintLetters_Button.UseVisualStyleBackColor = true;
             this.PrintLetters_Button.Click += new System.EventHandler(this.PrintLetters_Button_Click);
             // 
+            // resetDatabaseMenuItem
+            // 
+            this.resetDatabaseMenuItem.Name = "resetDatabaseMenuItem";
+            this.resetDatabaseMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.resetDatabaseMenuItem.Text = "&Reset Database";
+            this.resetDatabaseMenuItem.Click += new System.EventHandler(this.resetDatabaseMenuItem_Click);
+            // 
             // MainForm_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -246,6 +255,7 @@
         private System.Windows.Forms.ToolStripMenuItem managePaymentsToolStripMenuItem;
         private System.Windows.Forms.Button PrintLetters_Button;
         private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem resetDatabaseMenuItem;
     }
 }
 

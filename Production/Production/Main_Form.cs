@@ -43,6 +43,11 @@ namespace CpS_420_Inception_Project
             ShowNewBadCheckWindow();
         }
 
+        private void resetDatabaseMenuItem_Click(object sender, EventArgs e)
+        {
+            DatabaseAgent.DefaultAgent.ResetTestData();
+        }
+
 
 
 
