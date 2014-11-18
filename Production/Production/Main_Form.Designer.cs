@@ -34,11 +34,13 @@
             this.newBadCheckMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.accountToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.checkToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.editChecksMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.managePaymentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.switchUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manageUsersMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.resetDatabaseMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,8 +49,6 @@
             this.newBadCheckButton = new System.Windows.Forms.Button();
             this.ManagePayments_Button = new System.Windows.Forms.Button();
             this.PrintLetters_Button = new System.Windows.Forms.Button();
-            this.manageUsersMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,7 +91,7 @@
             // 
             this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.accountToolStripMenuItem1,
-            this.checkToolStripMenuItem1});
+            this.editChecksMenuItem});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.editToolStripMenuItem.Text = "&Edit";
@@ -99,16 +99,16 @@
             // accountToolStripMenuItem1
             // 
             this.accountToolStripMenuItem1.Name = "accountToolStripMenuItem1";
-            this.accountToolStripMenuItem1.Size = new System.Drawing.Size(119, 22);
+            this.accountToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.accountToolStripMenuItem1.Text = "Account";
             this.accountToolStripMenuItem1.Click += new System.EventHandler(this.accountToolStripMenuItem1_Click);
             // 
-            // checkToolStripMenuItem1
+            // editChecksMenuItem
             // 
-            this.checkToolStripMenuItem1.Name = "checkToolStripMenuItem1";
-            this.checkToolStripMenuItem1.Size = new System.Drawing.Size(119, 22);
-            this.checkToolStripMenuItem1.Text = "Check";
-            this.checkToolStripMenuItem1.Click += new System.EventHandler(this.checkToolStripMenuItem1_Click);
+            this.editChecksMenuItem.Name = "editChecksMenuItem";
+            this.editChecksMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.editChecksMenuItem.Text = "Check";
+            this.editChecksMenuItem.Click += new System.EventHandler(this.editChecksMenuItem_Click);
             // 
             // managePaymentsToolStripMenuItem
             // 
@@ -139,6 +139,18 @@
             this.switchUserToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.switchUserToolStripMenuItem.Text = "&Log Out";
             this.switchUserToolStripMenuItem.Click += new System.EventHandler(this.switchUserToolStripMenuItem_Click);
+            // 
+            // manageUsersMenuItem
+            // 
+            this.manageUsersMenuItem.Enabled = false;
+            this.manageUsersMenuItem.Name = "manageUsersMenuItem";
+            this.manageUsersMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.manageUsersMenuItem.Text = "Manage Users";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(175, 6);
             // 
             // resetDatabaseMenuItem
             // 
@@ -217,18 +229,6 @@
             this.PrintLetters_Button.UseVisualStyleBackColor = true;
             this.PrintLetters_Button.Click += new System.EventHandler(this.PrintLetters_Button_Click);
             // 
-            // manageUsersMenuItem
-            // 
-            this.manageUsersMenuItem.Enabled = false;
-            this.manageUsersMenuItem.Name = "manageUsersMenuItem";
-            this.manageUsersMenuItem.Size = new System.Drawing.Size(178, 22);
-            this.manageUsersMenuItem.Text = "Manage Users";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(175, 6);
-            // 
             // MainForm_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -263,7 +263,7 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem accountToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem checkToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem editChecksMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.Button newBadCheckButton;
         private System.Windows.Forms.Button ManagePayments_Button;

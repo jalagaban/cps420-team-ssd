@@ -66,11 +66,11 @@
     <Compile Include="AddAccount_Form.Designer.cs">
       <DependentUpon>AddAccount_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddCheck_Form.cs">
+    <Compile Include="Check_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddCheck_Form.Designer.cs">
-      <DependentUpon>AddCheck_Form.cs</DependentUpon>
+    <Compile Include="Check_Form.Designer.cs">
+      <DependentUpon>Check_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="AddUserAccount_Form.cs">
       <SubType>Form</SubType>
@@ -92,12 +92,6 @@
     </Compile>
     <Compile Include="EditAccount_Form.Designer.cs">
       <DependentUpon>EditAccount_Form.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EditCheck_Form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EditCheck_Form.Designer.cs">
-      <DependentUpon>EditCheck_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Main_Form.cs">
       <SubType>Form</SubType>
@@ -130,8 +124,8 @@
     <EmbeddedResource Include="AddAccount_Form.resx">
       <DependentUpon>AddAccount_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddCheck_Form.resx">
-      <DependentUpon>AddCheck_Form.cs</DependentUpon>
+    <EmbeddedResource Include="Check_Form.resx">
+      <DependentUpon>Check_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddUserAccount_Form.resx">
       <DependentUpon>AddUserAccount_Form.cs</DependentUpon>
@@ -141,9 +135,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditAccount_Form.resx">
       <DependentUpon>EditAccount_Form.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EditCheck_Form.resx">
-      <DependentUpon>EditCheck_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main_Form.resx">
       <DependentUpon>Main_Form.cs</DependentUpon>

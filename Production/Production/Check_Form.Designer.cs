@@ -1,6 +1,6 @@
 ﻿namespace CpS_420_Inception_Project
 {
-    partial class AddCheck_Form
+    partial class Check_Form
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.cancelButton = new System.Windows.Forms.Button();
-            this.createButton = new System.Windows.Forms.Button();
+            this.acceptButton2 = new System.Windows.Forms.Button();
             this.CheckAmount_Label = new System.Windows.Forms.Label();
             this.cashierNumTextBox = new System.Windows.Forms.TextBox();
             this.CheckNumber_Label = new System.Windows.Forms.Label();
@@ -44,6 +44,7 @@
             this.storeNumComboBox = new System.Windows.Forms.ComboBox();
             this.checkNumComboBox = new System.Windows.Forms.ComboBox();
             this.amountField = new System.Windows.Forms.NumericUpDown();
+            this.acceptButton1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.amountField)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,25 +53,25 @@
             this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.cancelButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelButton.ForeColor = System.Drawing.Color.SteelBlue;
-            this.cancelButton.Location = new System.Drawing.Point(220, 236);
+            this.cancelButton.Location = new System.Drawing.Point(242, 236);
             this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(120, 40);
-            this.cancelButton.TabIndex = 9;
+            this.cancelButton.Size = new System.Drawing.Size(98, 40);
+            this.cancelButton.TabIndex = 10;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
             // 
-            // createButton
+            // acceptButton2
             // 
-            this.createButton.Enabled = false;
-            this.createButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createButton.ForeColor = System.Drawing.Color.SteelBlue;
-            this.createButton.Location = new System.Drawing.Point(93, 236);
-            this.createButton.Name = "createButton";
-            this.createButton.Size = new System.Drawing.Size(121, 40);
-            this.createButton.TabIndex = 8;
-            this.createButton.Text = "Create";
-            this.createButton.UseVisualStyleBackColor = true;
-            this.createButton.Click += new System.EventHandler(this.createButton_Click);
+            this.acceptButton2.Enabled = false;
+            this.acceptButton2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.acceptButton2.ForeColor = System.Drawing.Color.SteelBlue;
+            this.acceptButton2.Location = new System.Drawing.Point(138, 236);
+            this.acceptButton2.Name = "acceptButton2";
+            this.acceptButton2.Size = new System.Drawing.Size(98, 40);
+            this.acceptButton2.TabIndex = 9;
+            this.acceptButton2.Text = "Create";
+            this.acceptButton2.UseVisualStyleBackColor = true;
+            this.acceptButton2.Click += new System.EventHandler(this.acceptButton2_Click);
             // 
             // CheckAmount_Label
             // 
@@ -223,13 +224,28 @@
             this.amountField.TabIndex = 5;
             this.amountField.Tag = "";
             // 
-            // AddCheck_Form
+            // acceptButton1
             // 
-            this.AcceptButton = this.createButton;
+            this.acceptButton1.Enabled = false;
+            this.acceptButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.acceptButton1.ForeColor = System.Drawing.Color.SteelBlue;
+            this.acceptButton1.Location = new System.Drawing.Point(34, 236);
+            this.acceptButton1.Name = "acceptButton1";
+            this.acceptButton1.Size = new System.Drawing.Size(98, 40);
+            this.acceptButton1.TabIndex = 8;
+            this.acceptButton1.Text = "Create";
+            this.acceptButton1.UseVisualStyleBackColor = true;
+            this.acceptButton1.Visible = false;
+            this.acceptButton1.Click += new System.EventHandler(this.acceptButton1_Click);
+            // 
+            // Check_Form
+            // 
+            this.AcceptButton = this.acceptButton2;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelButton;
             this.ClientSize = new System.Drawing.Size(352, 288);
+            this.Controls.Add(this.acceptButton1);
             this.Controls.Add(this.amountField);
             this.Controls.Add(this.checkNumComboBox);
             this.Controls.Add(this.storeNumComboBox);
@@ -240,13 +256,13 @@
             this.Controls.Add(this.accountNumComboBox);
             this.Controls.Add(this.RoutingNumber_Label);
             this.Controls.Add(this.cancelButton);
-            this.Controls.Add(this.createButton);
+            this.Controls.Add(this.acceptButton2);
             this.Controls.Add(this.CheckAmount_Label);
             this.Controls.Add(this.cashierNumTextBox);
             this.Controls.Add(this.CheckNumber_Label);
             this.Controls.Add(this.CheckDate_Label);
             this.Controls.Add(this.AccountNumber_Label);
-            this.Name = "AddCheck_Form";
+            this.Name = "Check_Form";
             this.Text = "New Bad Check";
             ((System.ComponentModel.ISupportInitialize)(this.amountField)).EndInit();
             this.ResumeLayout(false);
@@ -257,7 +273,7 @@
         #endregion
 
         private System.Windows.Forms.Button cancelButton;
-        private System.Windows.Forms.Button createButton;
+        private System.Windows.Forms.Button acceptButton2;
         private System.Windows.Forms.Label CheckAmount_Label;
         private System.Windows.Forms.TextBox cashierNumTextBox;
         private System.Windows.Forms.Label CheckNumber_Label;
@@ -272,5 +288,6 @@
         private System.Windows.Forms.ComboBox storeNumComboBox;
         private System.Windows.Forms.ComboBox checkNumComboBox;
         private System.Windows.Forms.NumericUpDown amountField;
+        private System.Windows.Forms.Button acceptButton1;
     }
 }

@@ -24,13 +24,8 @@ namespace CpS_420_Inception_Project
 
         private void ShowNewBadCheckWindow()
         {
-            AddCheck_Form form = new AddCheck_Form();
+            Check_Form form = new Check_Form(Check_Form.ActionMode.Create);
             form.ShowDialog();
-            Check check = form.check;
-            if (check != null)
-            {
-                DatabaseAgent.DefaultAgent.AddCheck(check);
-            }
         }
         private void newBadCheckButton_Click(object sender, EventArgs e)
         {
@@ -40,6 +35,12 @@ namespace CpS_420_Inception_Project
         private void newBadCheckMenuItem_Click(object sender, EventArgs e)
         {
             ShowNewBadCheckWindow();
+        }
+
+        private void editChecksMenuItem_Click(object sender, EventArgs e)
+        {
+            Check_Form form = new Check_Form(Check_Form.ActionMode.Edit);
+            form.ShowDialog();
         }
 
         private void resetDatabaseMenuItem_Click(object sender, EventArgs e)
@@ -120,12 +121,6 @@ namespace CpS_420_Inception_Project
         private void printToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Printing...", "Print Letters", MessageBoxButtons.OK);
-        }
-
-        private void checkToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            EditCheck_Form ecf = new EditCheck_Form();
-            ecf.ShowDialog();
         }
 
         private void ManagePayments_Button_Click(object sender, EventArgs e)
