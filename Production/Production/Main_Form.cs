@@ -17,11 +17,9 @@ namespace CpS_420_Inception_Project
         {
             InitializeComponent();
         }
-
-        private void Form1_Load(object sender, EventArgs e)
+        private void MainForm_Form_Load(object sender, EventArgs e)
         {
-            UserAuthentication();
-            AddRecent();
+            CreateAdminInterface();
         }
 
        private void UserAuthentication()

@@ -220,7 +220,7 @@
             this.MinimumSize = new System.Drawing.Size(307, 287);
             this.Name = "MainForm_Form";
             this.Text = "Bad Check Tracker";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.MainForm_Form_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
