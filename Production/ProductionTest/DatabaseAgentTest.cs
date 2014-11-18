@@ -13,7 +13,7 @@ namespace ProductionTest
         [TestMethod]
         public void TestCheckKeys()
         {
-            DatabaseAgent db = new DatabaseAgent();
+            DatabaseAgent db = DatabaseAgent.DefaultAgent;
 
             db.ResetTestData();
 
@@ -27,7 +27,7 @@ namespace ProductionTest
         [TestMethod]
         public void TestCheckExists()
         {
-            DatabaseAgent db = new DatabaseAgent();
+            DatabaseAgent db = DatabaseAgent.DefaultAgent;
 
             db.ResetTestData();
 
@@ -40,7 +40,7 @@ namespace ProductionTest
         [TestMethod]
         public void TestGetCheck()
         {
-            DatabaseAgent db = new DatabaseAgent();
+            DatabaseAgent db = DatabaseAgent.DefaultAgent;
 
             db.ResetTestData();
 
@@ -59,7 +59,7 @@ namespace ProductionTest
         [TestMethod]
         public void TestAddCheck()
         {
-            DatabaseAgent db = new DatabaseAgent();
+            DatabaseAgent db = DatabaseAgent.DefaultAgent;
 
             db.ResetTestData();
 
@@ -80,7 +80,7 @@ namespace ProductionTest
         [TestMethod]
         public void TestUpdateCheck()
         {
-            DatabaseAgent db = new DatabaseAgent();
+            DatabaseAgent db = DatabaseAgent.DefaultAgent;
 
             db.ResetTestData();
 
@@ -103,7 +103,7 @@ namespace ProductionTest
         [TestMethod]
         public void TestDeleteCheck()
         {
-            DatabaseAgent db = new DatabaseAgent();
+            DatabaseAgent db = DatabaseAgent.DefaultAgent;
 
             db.ResetTestData();
 
@@ -117,7 +117,7 @@ namespace ProductionTest
         [TestMethod]
         public void TestAccountKeys()
         {
-            DatabaseAgent db = new DatabaseAgent();
+            DatabaseAgent db = DatabaseAgent.DefaultAgent;
 
             db.ResetTestData();
 
@@ -132,7 +132,7 @@ namespace ProductionTest
         [TestMethod]
         public void TestAccountExists()
         {
-            DatabaseAgent db = new DatabaseAgent();
+            DatabaseAgent db = DatabaseAgent.DefaultAgent;
 
             db.ResetTestData();
 
@@ -145,7 +145,7 @@ namespace ProductionTest
         [TestMethod]
         public void TestGetAccount()
         {
-            DatabaseAgent db = new DatabaseAgent();
+            DatabaseAgent db = DatabaseAgent.DefaultAgent;
 
             db.ResetTestData();
 
@@ -165,7 +165,7 @@ namespace ProductionTest
         [TestMethod]
         public void TestAddAccount()
         {
-            DatabaseAgent db = new DatabaseAgent();
+            DatabaseAgent db = DatabaseAgent.DefaultAgent;
 
             db.ResetTestData();
 
@@ -187,7 +187,7 @@ namespace ProductionTest
         [TestMethod]
         public void TestUpdateAccount()
         {
-            DatabaseAgent db = new DatabaseAgent();
+            DatabaseAgent db = DatabaseAgent.DefaultAgent;
 
             db.ResetTestData();
 
@@ -211,7 +211,7 @@ namespace ProductionTest
         [TestMethod]
         public void TestDeleteAccount()
         {
-            DatabaseAgent db = new DatabaseAgent();
+            DatabaseAgent db = DatabaseAgent.DefaultAgent;
 
             db.ResetTestData();
 
@@ -225,7 +225,7 @@ namespace ProductionTest
         [TestMethod]
         public void TestGetStore()
         {
-            DatabaseAgent db = new DatabaseAgent();
+            DatabaseAgent db = DatabaseAgent.DefaultAgent;
 
             db.ResetTestData();
 
@@ -242,7 +242,7 @@ namespace ProductionTest
         [TestMethod]
         public void TestAddStore()
         {
-            DatabaseAgent db = new DatabaseAgent();
+            DatabaseAgent db = DatabaseAgent.DefaultAgent;
 
             db.ResetTestData();
 
