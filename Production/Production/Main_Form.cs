@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Production;
 
 namespace CpS_420_Inception_Project
 {
@@ -21,6 +22,29 @@ namespace CpS_420_Inception_Project
         {
             CreateAdminInterface();
         }
+
+        private void ShowNewBadCheckWindow()
+        {
+            AddCheck_Form form = new AddCheck_Form();
+            form.ShowDialog();
+            Check check = form.check;
+            if (check != null)
+            {
+                DatabaseAgent.DefaultAgent.AddCheck(check);
+            }
+        }
+        private void newBadCheckButton_Click(object sender, EventArgs e)
+        {
+            ShowNewBadCheckWindow();
+        }
+
+        private void newBadCheckMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowNewBadCheckWindow();
+        }
+
+
+
 
        private void UserAuthentication()
         {
@@ -104,11 +128,6 @@ namespace CpS_420_Inception_Project
             this.Close();
         }
 
-        private void newToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void switchUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Restart();
@@ -118,12 +137,6 @@ namespace CpS_420_Inception_Project
         private void printToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Printing...", "Print Letters", MessageBoxButtons.OK);
-        }
-
-        private void newbadcheck_Button_Click(object sender, EventArgs e)
-        {
-            AddCheck_Form acf = new AddCheck_Form();
-            acf.ShowDialog();
         }
 
         private void checkToolStripMenuItem1_Click(object sender, EventArgs e)

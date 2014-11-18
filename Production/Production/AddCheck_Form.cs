@@ -7,19 +7,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Production;
 
 namespace CpS_420_Inception_Project
 {
     public partial class AddCheck_Form : Form
     {
+        public Check check { get; set; }
+        
         public AddCheck_Form()
         {
             InitializeComponent();
         }
 
-        private void AddCheck_Form_Load(object sender, EventArgs e)
+        private void createButton_Click(object sender, EventArgs e)
         {
-            CheckAmount_Textbox.BringToFront();
+            ComposeCheck();
+            Close();
+        }
+
+        private void ComposeCheck()
+        {
+            check = new Check();
+            check.RoutingNum = routingNumComboBox.Text;
+            check.AccountNum = accountNumComboBox.Text;
+            check.CheckNum = checkNumComboBox.Text;
+            check.Amount = (int)(100 * (float)amountField.Value);
+            check.Date = datePicker.Value;
+            check.IsPaid = false;
+            check.StoreID = storeNumComboBox.Text;
+            check.CashierID = cashierNumTextBox.Text;
         }
     }
 }
