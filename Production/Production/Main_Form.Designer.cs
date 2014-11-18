@@ -32,7 +32,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editRecentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.accountToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.checkToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -65,7 +64,6 @@
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newToolStripMenuItem,
-            this.editRecentToolStripMenuItem,
             this.editToolStripMenuItem,
             this.managePaymentsToolStripMenuItem,
             this.printToolStripMenuItem,
@@ -83,12 +81,6 @@
             this.newToolStripMenuItem.Text = "&New Bad Check";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
-            // editRecentToolStripMenuItem
-            // 
-            this.editRecentToolStripMenuItem.Name = "editRecentToolStripMenuItem";
-            this.editRecentToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
-            this.editRecentToolStripMenuItem.Text = "Edit Recent";
-            // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -101,19 +93,20 @@
             // accountToolStripMenuItem1
             // 
             this.accountToolStripMenuItem1.Name = "accountToolStripMenuItem1";
-            this.accountToolStripMenuItem1.Size = new System.Drawing.Size(119, 22);
+            this.accountToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.accountToolStripMenuItem1.Text = "Account";
             this.accountToolStripMenuItem1.Click += new System.EventHandler(this.accountToolStripMenuItem1_Click);
             // 
             // checkToolStripMenuItem1
             // 
             this.checkToolStripMenuItem1.Name = "checkToolStripMenuItem1";
-            this.checkToolStripMenuItem1.Size = new System.Drawing.Size(119, 22);
+            this.checkToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.checkToolStripMenuItem1.Text = "Check";
             this.checkToolStripMenuItem1.Click += new System.EventHandler(this.checkToolStripMenuItem1_Click);
             // 
             // managePaymentsToolStripMenuItem
             // 
+            this.managePaymentsToolStripMenuItem.Enabled = false;
             this.managePaymentsToolStripMenuItem.Name = "managePaymentsToolStripMenuItem";
             this.managePaymentsToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.managePaymentsToolStripMenuItem.Text = "Manage Payments";
@@ -121,6 +114,7 @@
             // 
             // printToolStripMenuItem
             // 
+            this.printToolStripMenuItem.Enabled = false;
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
             this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
             this.printToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
@@ -134,6 +128,7 @@
             // 
             // switchUserToolStripMenuItem
             // 
+            this.switchUserToolStripMenuItem.Enabled = false;
             this.switchUserToolStripMenuItem.Name = "switchUserToolStripMenuItem";
             this.switchUserToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.switchUserToolStripMenuItem.Text = "&Log Out";
@@ -158,12 +153,14 @@
             // 
             // aboutToolStripMenuItem
             // 
+            this.aboutToolStripMenuItem.Enabled = false;
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.aboutToolStripMenuItem.Text = "&About";
             // 
             // changePasswordToolStripMenuItem
             // 
+            this.changePasswordToolStripMenuItem.Enabled = false;
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
             this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.changePasswordToolStripMenuItem.Text = "Change Password";
@@ -183,6 +180,7 @@
             // 
             // ManagePayments_Button
             // 
+            this.ManagePayments_Button.Enabled = false;
             this.ManagePayments_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ManagePayments_Button.ForeColor = System.Drawing.Color.SteelBlue;
             this.ManagePayments_Button.Location = new System.Drawing.Point(52, 116);
@@ -195,6 +193,7 @@
             // 
             // PrintLetters_Button
             // 
+            this.PrintLetters_Button.Enabled = false;
             this.PrintLetters_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PrintLetters_Button.ForeColor = System.Drawing.Color.SteelBlue;
             this.PrintLetters_Button.Location = new System.Drawing.Point(52, 185);
@@ -233,7 +232,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editRecentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem printToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;

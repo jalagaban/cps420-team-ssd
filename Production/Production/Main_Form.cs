@@ -41,7 +41,6 @@ namespace CpS_420_Inception_Project
                 else if (variables.user == true)
                 {
                     editToolStripMenuItem.Enabled = false;
-                    editRecentToolStripMenuItem.Enabled = false;
                     managePaymentsToolStripMenuItem.Enabled = false;
                     ManagePayments_Button.Enabled = false;
                     MessageBox.Show("User authenticated.", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -80,55 +79,6 @@ namespace CpS_420_Inception_Project
             //addUserAccount.Click += new EventHandler(addUserAccount_Click);
             //editUserAccount.Click += new EventHandler(editUserAccount_Click);
 
-        }
-
-        private void AddRecent()
-        {
-            //Create the tool strip items
-            ToolStripMenuItem recentitem1 = new ToolStripMenuItem("Recent Item 1");
-            ToolStripMenuItem recentitem2 = new ToolStripMenuItem("Recent Item 2");
-            ToolStripMenuItem recentitem3 = new ToolStripMenuItem("Recent Item 3");
-            ToolStripMenuItem recentitem4 = new ToolStripMenuItem("Recent Item 4");
-            ToolStripMenuItem recentitem5 = new ToolStripMenuItem("Recent Item 5");
-
-            //Add the tool strip items to existing menu
-            editRecentToolStripMenuItem.DropDownItems.Add(recentitem1);
-            editRecentToolStripMenuItem.DropDownItems.Add(recentitem2);
-            editRecentToolStripMenuItem.DropDownItems.Add(recentitem3);
-            editRecentToolStripMenuItem.DropDownItems.Add(recentitem4);
-            editRecentToolStripMenuItem.DropDownItems.Add(recentitem5);
-
-            //Create handlers for the click event of the created buttons
-            recentitem1.Click += new EventHandler(recentitem1_Click);
-            recentitem2.Click += new EventHandler(recentitem2_Click);
-            recentitem3.Click += new EventHandler(recentitem3_Click);
-            recentitem4.Click += new EventHandler(recentitem4_Click);
-            recentitem5.Click += new EventHandler(recentitem5_Click);           
-        }
-
-        private void recentitem1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("You opened the most recent item", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void recentitem2_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("You opened the second most recent item", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void recentitem3_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("You opened the third most recent item", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void recentitem4_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("You opened the fourth most recent item", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void recentitem5_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("You opened the fifth most recent item", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void userAccounts_Click(object sender, EventArgs e)
