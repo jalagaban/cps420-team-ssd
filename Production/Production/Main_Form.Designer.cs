@@ -39,6 +39,7 @@
             this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.switchUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.resetDatabaseMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,7 +47,8 @@
             this.newBadCheckButton = new System.Windows.Forms.Button();
             this.ManagePayments_Button = new System.Windows.Forms.Button();
             this.PrintLetters_Button = new System.Windows.Forms.Button();
-            this.resetDatabaseMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manageUsersMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,6 +72,8 @@
             this.printToolStripMenuItem,
             this.toolStripSeparator1,
             this.switchUserToolStripMenuItem,
+            this.manageUsersMenuItem,
+            this.toolStripSeparator2,
             this.resetDatabaseMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
@@ -95,14 +99,14 @@
             // accountToolStripMenuItem1
             // 
             this.accountToolStripMenuItem1.Name = "accountToolStripMenuItem1";
-            this.accountToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.accountToolStripMenuItem1.Size = new System.Drawing.Size(119, 22);
             this.accountToolStripMenuItem1.Text = "Account";
             this.accountToolStripMenuItem1.Click += new System.EventHandler(this.accountToolStripMenuItem1_Click);
             // 
             // checkToolStripMenuItem1
             // 
             this.checkToolStripMenuItem1.Name = "checkToolStripMenuItem1";
-            this.checkToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.checkToolStripMenuItem1.Size = new System.Drawing.Size(119, 22);
             this.checkToolStripMenuItem1.Text = "Check";
             this.checkToolStripMenuItem1.Click += new System.EventHandler(this.checkToolStripMenuItem1_Click);
             // 
@@ -135,6 +139,13 @@
             this.switchUserToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.switchUserToolStripMenuItem.Text = "&Log Out";
             this.switchUserToolStripMenuItem.Click += new System.EventHandler(this.switchUserToolStripMenuItem_Click);
+            // 
+            // resetDatabaseMenuItem
+            // 
+            this.resetDatabaseMenuItem.Name = "resetDatabaseMenuItem";
+            this.resetDatabaseMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.resetDatabaseMenuItem.Text = "&Reset Database";
+            this.resetDatabaseMenuItem.Click += new System.EventHandler(this.resetDatabaseMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -206,12 +217,17 @@
             this.PrintLetters_Button.UseVisualStyleBackColor = true;
             this.PrintLetters_Button.Click += new System.EventHandler(this.PrintLetters_Button_Click);
             // 
-            // resetDatabaseMenuItem
+            // manageUsersMenuItem
             // 
-            this.resetDatabaseMenuItem.Name = "resetDatabaseMenuItem";
-            this.resetDatabaseMenuItem.Size = new System.Drawing.Size(178, 22);
-            this.resetDatabaseMenuItem.Text = "&Reset Database";
-            this.resetDatabaseMenuItem.Click += new System.EventHandler(this.resetDatabaseMenuItem_Click);
+            this.manageUsersMenuItem.Enabled = false;
+            this.manageUsersMenuItem.Name = "manageUsersMenuItem";
+            this.manageUsersMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.manageUsersMenuItem.Text = "Manage Users";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(175, 6);
             // 
             // MainForm_Form
             // 
@@ -256,6 +272,8 @@
         private System.Windows.Forms.Button PrintLetters_Button;
         private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem resetDatabaseMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem manageUsersMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
     }
 }
 

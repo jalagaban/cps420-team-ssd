@@ -20,7 +20,6 @@ namespace CpS_420_Inception_Project
         }
         private void MainForm_Form_Load(object sender, EventArgs e)
         {
-            CreateAdminInterface();
         }
 
         private void ShowNewBadCheckWindow()
@@ -64,7 +63,6 @@ namespace CpS_420_Inception_Project
             {
                 if (variables.admin == true)
                 {
-                    CreateAdminInterface();
                     MessageBox.Show("User authenticated.", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else if (variables.user == true)
@@ -89,26 +87,6 @@ namespace CpS_420_Inception_Project
            variables.loginstatus = true;
            return true;
        }
-
-        private void CreateAdminInterface()
-        {
-            //Add user accounts menu option
-            ToolStripMenuItem userAccounts = new ToolStripMenuItem("Manage Users");
-            fileToolStripMenuItem.DropDownItems.Insert(6, userAccounts);
-            fileToolStripMenuItem.DropDownItems.Insert(7, (new ToolStripSeparator()));
-            userAccounts.Click += new EventHandler(userAccounts_Click);
-
-            ////Add user accounts submenus
-            //ToolStripMenuItem addUserAccount = new ToolStripMenuItem("Add User Account");
-            //ToolStripMenuItem editUserAccount = new ToolStripMenuItem("Edit Existing Account");
-            //userAccounts.DropDownItems.Add(addUserAccount);
-            //userAccounts.DropDownItems.Add(editUserAccount);
-
-            ////Create handler events for the two user account menu items
-            //addUserAccount.Click += new EventHandler(addUserAccount_Click);
-            //editUserAccount.Click += new EventHandler(editUserAccount_Click);
-
-        }
 
         private void userAccounts_Click(object sender, EventArgs e)
         {
