@@ -76,7 +76,7 @@ namespace CpS_420_Inception_Project
             
             if (mode == ActionMode.Create)
             {
-                acceptButton2.Enabled = noneEmptyFields;
+                acceptButton2.Enabled = noneEmptyFields && !validCheck;
             }
             else
             {
