@@ -334,6 +334,29 @@ namespace Production
          The primary key for a store is equivalent to its StoreNum. */
         public string StoreKeys;
 
+        public bool StoreExists(string ID)
+        {
+            bool result = false;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                SqlCommand cmd = new SqlCommand("select 1 from [CheckPasser].[dbo].[Store] where [StoreID] = @ID", connection);
+
+                cmd.Parameters.AddWithValue("@ID", ID);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    result = true;
+                }
+            }
+
+            return result;
+        }
+
         public Store GetStore(string ID)
         {
             Store result = null;
@@ -383,13 +406,37 @@ namespace Production
 
         public void UpdateStore(Store store)
         {
-            // Replace STore table row in database with store where StoreID column == store.ID
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                SqlCommand cmd = new SqlCommand("UPDATE [CheckPasser].[dbo].[Store]" +
+                                                "SET StoreName = @Name, Street = @Street, City = @City, State = @State, Zipcode = @Zipcode " +
+                                                "where [StoreID] = @ID", connection);
+                cmd.Parameters.AddWithValue("@ID", store.ID);
+                cmd.Parameters.AddWithValue("@Name", store.Name);
+                cmd.Parameters.AddWithValue("@Street", store.Street);
+                cmd.Parameters.AddWithValue("@City", store.City);
+                cmd.Parameters.AddWithValue("@State", store.State);
+                cmd.Parameters.AddWithValue("@Zipcode", store.Zipcode);
+
+                cmd.ExecuteNonQuery();
+            }
         }
 
-        public void DeleteStore(string storeNum)
+        public void DeleteStore(string ID)
         {
             // Delete store from database where store.ID == storeNum
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
 
+                SqlCommand cmd = new SqlCommand("DELETE FROM [CheckPasser].[dbo].[Store]" +
+                                                "where [StoreID] = @ID", connection);
+                cmd.Parameters.AddWithValue("@ID", ID);
+
+                cmd.ExecuteNonQuery();
+            }
         }
     }
 }

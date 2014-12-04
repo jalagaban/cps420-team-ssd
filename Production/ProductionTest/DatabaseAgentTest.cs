@@ -223,6 +223,20 @@ namespace ProductionTest
         // Store
 
         [TestMethod]
+        public void TestStoreExists()
+        {
+            DatabaseAgent db = DatabaseAgent.DefaultAgent;
+
+            db.ResetTestData();
+
+            Assert.IsTrue(db.StoreExists("StrWalm225"), "expected store not found");
+            Assert.IsTrue(db.StoreExists("StrWalg337"), "expected store not found");
+            Assert.IsFalse(db.StoreExists("StrWalg231"), "unexpected store found");
+            Assert.IsFalse(db.StoreExists("StrTar535"), "unexpected store found");
+            Assert.IsFalse(db.StoreExists("a"), "unexpected store found");
+        }
+
+        [TestMethod]
         public void TestGetStore()
         {
             DatabaseAgent db = DatabaseAgent.DefaultAgent;
@@ -256,6 +270,39 @@ namespace ProductionTest
 
             db.AddStore(store);
             Assert.AreEqual<Store>(store, db.GetStore(store.ID), "store not added to database");
+        }
+
+        [TestMethod]
+        public void TestUpdateStore()
+        {
+            DatabaseAgent db = DatabaseAgent.DefaultAgent;
+
+            db.ResetTestData();
+
+            Store store = new Store();
+            store.ID = "StrWalg337";
+            store.Name = "Walgoro";
+            store.Street = "34 Apple Ln.";
+            store.City = "Moscow";
+            store.State = "RU";
+            store.Zipcode = "64737";
+
+            Assert.IsTrue(db.StoreExists(store.ID), "no store to update");
+
+            db.UpdateStore(store);
+            Assert.AreEqual<Store>(store, db.GetStore(store.ID), "store not updated");
+        }
+
+        [TestMethod]
+        public void TestDeleteStore()
+        {
+            DatabaseAgent db = DatabaseAgent.DefaultAgent;
+
+            db.ResetTestData();
+
+            String ID = "StrWalm225";
+            db.DeleteStore(ID);
+            Assert.IsFalse(db.StoreExists(ID), "store not deleted");
         }
     }
 }
