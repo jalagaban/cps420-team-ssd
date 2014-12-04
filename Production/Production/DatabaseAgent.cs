@@ -332,7 +332,26 @@ namespace Production
 
         /* A list containing the primary keys of all stores in the database. 
          The primary key for a store is equivalent to its StoreNum. */
-        public string StoreKeys;
+        public List<string> StoreKeys
+        {
+            get
+            {
+                List<string> result = new List<string>();
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    SqlCommand cmd = new SqlCommand("SELECT [StoreID] FROM [CheckPasser].[dbo].[Store]", connection);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        result.Add((String)reader["StoreID"]);
+                    }
+                }
+
+                return result;
+            }
+        }
 
         public bool StoreExists(string ID)
         {

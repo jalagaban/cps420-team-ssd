@@ -221,7 +221,19 @@ namespace ProductionTest
         }
 
         // Store
+        [TestMethod]
+        public void TestStoreKeys()
+        {
+            DatabaseAgent db = DatabaseAgent.DefaultAgent;
 
+            db.ResetTestData();
+
+            List<string> keys = db.StoreKeys;
+            Assert.AreEqual<int>(2, keys.Count, "invalid number of keys");
+            Assert.IsTrue(keys.Contains("StrWalm225"), "expected key not present");
+            Assert.IsTrue(keys.Contains("StrWalg337"), "expected key not present");
+        }
+        
         [TestMethod]
         public void TestStoreExists()
         {
