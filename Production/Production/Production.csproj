@@ -7,8 +7,8 @@
     <ProjectGuid>{2A95C12B-CBDB-4C6D-A20A-4265980D760C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Production</RootNamespace>
-    <AssemblyName>Production</AssemblyName>
+    <RootNamespace>cps</RootNamespace>
+    <AssemblyName>cps</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <PublishUrl>publish\</PublishUrl>

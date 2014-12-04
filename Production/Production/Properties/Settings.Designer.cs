@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Production.Properties {
+namespace cps.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
