@@ -36,6 +36,8 @@ namespace CpS_420_Inception_Project
             } 
         }
 
+        private bool SuppressFieldsChangedEvents { get; set; }
+
         private Check check { get; set; }
 
         public Check_Form(ActionMode mode)
@@ -50,7 +52,7 @@ namespace CpS_420_Inception_Project
 
         private void Check_Form_Load(object sender, EventArgs e)
         {
-            PopulateRoutingNumDropDown();
+            PopulateRoutingNumDropdown();
             PopulateStoreNumDropdown();
         }
 
@@ -74,34 +76,69 @@ namespace CpS_420_Inception_Project
 
         private void fieldsChanged(object sender, EventArgs e)
         {
-            bool noneEmptyFields = (routingNumComboBox.Text.Length > 0 &&
+            if (SuppressFieldsChangedEvents)
+            {
+                SuppressFieldsChangedEvents = false;
+            }
+            else
+            {
+                bool noneEmptyFields = (routingNumComboBox.Text.Length > 0 &&
                 accountNumComboBox.Text.Length > 0 &&
                 checkNumComboBox.Text.Length > 0 &&
                 storeNumComboBox.Text.Length > 0 &&
                 cashierNumTextBox.Text.Length > 0);
 
-            bool validCheck = DatabaseAgent.DefaultAgent.CheckExists(Tuple.Create(routingNumComboBox.Text,
-                                                                                  accountNumComboBox.Text,
-                                                                                  checkNumComboBox.Text));
-            
-            if (mode == ActionMode.Create)
-            {
-                acceptButton2.Enabled = noneEmptyFields && !validCheck;
-            }
-            else
-            {
-                acceptButton1.Enabled = noneEmptyFields && validCheck;
-                if (acceptButton2.Enabled = validCheck)
+                bool validCheck = DatabaseAgent.DefaultAgent.CheckExists(Tuple.Create(routingNumComboBox.Text,
+                                                                                      accountNumComboBox.Text,
+                                                                                      checkNumComboBox.Text));
+
+                if (mode == ActionMode.Create)
                 {
-                    UpdateFields();
+                    acceptButton2.Enabled = noneEmptyFields && !validCheck;
+                }
+                else
+                {
+                    acceptButton1.Enabled = noneEmptyFields && validCheck;
+                    if (acceptButton2.Enabled = validCheck)
+                    {
+                        UpdateFields();
+                    }
                 }
             }
+        }
+
+        private void UpdateFields()
+        {
+            check = DatabaseAgent.DefaultAgent.GetCheck(Tuple.Create(routingNumComboBox.Text,
+                                                                    accountNumComboBox.Text,
+                                                                    checkNumComboBox.Text));
+            amountField.Value = (decimal)(check.Amount / 100.0);
+            datePicker.Value = check.Date;
+            storeNumComboBox.Text = check.StoreID;
+            cashierNumTextBox.Text = check.CashierID;
         }
 
         private void AddCheck()
         {
             ComposeCheck();
-            DatabaseAgent.DefaultAgent.AddCheck(check);
+
+            bool validAccount = DatabaseAgent.DefaultAgent.AccountExists(check.AccountKey);
+            Account_Form form = new Account_Form(Account_Form.ActionMode.Create);
+            if (!validAccount)
+            {
+                form.ShowDialog();
+            }
+
+            if (form.DialogResult == DialogResult.Cancel)
+            {
+                this.DialogResult = DialogResult.Cancel;
+            }
+            else
+            {
+                DatabaseAgent.DefaultAgent.AddCheck(check);
+                this.DialogResult = DialogResult.OK;
+            }
+            
             Close();
         }
 
@@ -109,6 +146,8 @@ namespace CpS_420_Inception_Project
         {
             ComposeCheck();
             DatabaseAgent.DefaultAgent.UpdateCheck(check);
+
+            this.DialogResult = DialogResult.OK;
             Close();
         }
 
@@ -117,6 +156,8 @@ namespace CpS_420_Inception_Project
             DatabaseAgent.DefaultAgent.DeleteCheck(Tuple.Create(routingNumComboBox.Text,
                                                                 accountNumComboBox.Text,
                                                                 checkNumComboBox.Text));
+
+            this.DialogResult = DialogResult.OK;
             Close();
         }
 
@@ -133,18 +174,7 @@ namespace CpS_420_Inception_Project
             check.CashierID = cashierNumTextBox.Text;
         }
 
-        private void UpdateFields()
-        {
-            check = DatabaseAgent.DefaultAgent.GetCheck(Tuple.Create(routingNumComboBox.Text,
-                                                                    accountNumComboBox.Text,
-                                                                    checkNumComboBox.Text));
-            amountField.Value = (decimal)(check.Amount / 100.0);
-            datePicker.Value = check.Date;
-            storeNumComboBox.Text = check.StoreID;
-            cashierNumTextBox.Text = check.CashierID;
-        }
-
-        private void PopulateRoutingNumDropDown()
+        private void PopulateRoutingNumDropdown()
         {
             routingNumComboBox.Items.Clear();            
             
@@ -187,7 +217,7 @@ namespace CpS_420_Inception_Project
             accountNumComboBox.Items.AddRange(accountNums);
         }
 
-        private void PopulateCheckNumDropDown()
+        private void PopulateCheckNumDropdown()
         {
             if (mode == ActionMode.Edit)
             {
@@ -217,12 +247,12 @@ namespace CpS_420_Inception_Project
         private void routingNumComboBox_Leave(object sender, EventArgs e)
         {
             PopulateAccountNumDropdown();
-            PopulateCheckNumDropDown();
+            PopulateCheckNumDropdown();
         }
 
         private void accountNumComboBox_Leave(object sender, EventArgs e)
         {
-            PopulateCheckNumDropDown();
+            PopulateCheckNumDropdown();
         }
 
         private void amountField_Enter(object sender, EventArgs e)
