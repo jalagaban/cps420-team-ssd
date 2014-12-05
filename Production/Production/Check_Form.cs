@@ -42,6 +42,16 @@ namespace CpS_420_Inception_Project
         {
             InitializeComponent();
             Mode = mode;
+            if (Mode == ActionMode.Create)
+            {
+                checkNumComboBox.DropDownStyle = ComboBoxStyle.Simple;
+            }
+        }
+
+        private void Check_Form_Load(object sender, EventArgs e)
+        {
+            PopulateRoutingNumDropDown();
+            PopulateStoreNumDropdown();
         }
 
         private void acceptButton1_Click(object sender, EventArgs e)
@@ -132,6 +142,92 @@ namespace CpS_420_Inception_Project
             datePicker.Value = check.Date;
             storeNumComboBox.Text = check.StoreID;
             cashierNumTextBox.Text = check.CashierID;
+        }
+
+        private void PopulateRoutingNumDropDown()
+        {
+            routingNumComboBox.Items.Clear();            
+            
+            DatabaseAgent db = DatabaseAgent.DefaultAgent;
+            string[] routingNums;
+
+            if (mode == ActionMode.Create)
+            {
+                List<Tuple<string, string>> keys = db.AccountKeys;
+                routingNums = keys.Select(x => x.Item1).ToArray();
+            }
+            else
+            {
+                List<Tuple<string, string, string>> keys = db.CheckKeys;
+                routingNums = keys.Select(x => x.Item1).ToArray();
+            }
+            
+            routingNumComboBox.Items.AddRange(routingNums);
+        }
+
+        private void PopulateAccountNumDropdown()
+        {
+            accountNumComboBox.Items.Clear();            
+
+            DatabaseAgent db = DatabaseAgent.DefaultAgent;
+            string routingNum = (string)routingNumComboBox.Text;
+            string[] accountNums;
+
+            if (mode == ActionMode.Create)
+            {
+                List<Tuple<string, string>> keys = db.AccountKeys;
+                accountNums = keys.Where(x => x.Item1.Equals(routingNum)).Select(x => x.Item2).ToArray();
+            }
+            else
+            {
+                List<Tuple<string, string, string>> keys = db.CheckKeys;
+                accountNums = keys.Where(x => x.Item1.Equals(routingNum)).Select(x => x.Item2).ToArray();
+            }
+
+            accountNumComboBox.Items.AddRange(accountNums);
+        }
+
+        private void PopulateCheckNumDropDown()
+        {
+            if (mode == ActionMode.Edit)
+            {
+                checkNumComboBox.Items.Clear();
+
+                DatabaseAgent db = DatabaseAgent.DefaultAgent;
+                List<Tuple<string, string, string>> checkKeys = db.CheckKeys;
+
+                string routingNum = (string)routingNumComboBox.Text;
+                string accountNum = (string)accountNumComboBox.Text;
+                string[] checkNums = checkKeys.Where(x => x.Item1.Equals(routingNum) && x.Item2.Equals(accountNum)).Select(x => x.Item3).ToArray();
+
+                checkNumComboBox.Items.AddRange(checkNums);
+            }
+        }
+
+        private void PopulateStoreNumDropdown()
+        {
+            storeNumComboBox.Items.Clear();
+            
+            DatabaseAgent db = DatabaseAgent.DefaultAgent;
+
+            string[] storeNums = db.StoreKeys.ToArray();
+            storeNumComboBox.Items.AddRange(storeNums);
+        }
+
+        private void routingNumComboBox_Leave(object sender, EventArgs e)
+        {
+            PopulateAccountNumDropdown();
+            PopulateCheckNumDropDown();
+        }
+
+        private void accountNumComboBox_Leave(object sender, EventArgs e)
+        {
+            PopulateCheckNumDropDown();
+        }
+
+        private void amountField_Enter(object sender, EventArgs e)
+        {
+            amountField.Select(0, amountField.Text.Length);
         }
     }
 }

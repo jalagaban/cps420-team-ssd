@@ -139,27 +139,31 @@
             // 
             // accountNumComboBox
             // 
-            this.accountNumComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.accountNumComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.accountNumComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.accountNumComboBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accountNumComboBox.FormattingEnabled = true;
             this.accountNumComboBox.Location = new System.Drawing.Point(136, 39);
             this.accountNumComboBox.Name = "accountNumComboBox";
             this.accountNumComboBox.Size = new System.Drawing.Size(204, 21);
+            this.accountNumComboBox.Sorted = true;
             this.accountNumComboBox.TabIndex = 2;
             this.accountNumComboBox.TextChanged += new System.EventHandler(this.fieldsChanged);
+            this.accountNumComboBox.Leave += new System.EventHandler(this.accountNumComboBox_Leave);
             // 
             // routingNumComboBox
             // 
-            this.routingNumComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.routingNumComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.routingNumComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.routingNumComboBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.routingNumComboBox.FormattingEnabled = true;
             this.routingNumComboBox.Location = new System.Drawing.Point(136, 12);
             this.routingNumComboBox.Name = "routingNumComboBox";
             this.routingNumComboBox.Size = new System.Drawing.Size(204, 21);
+            this.routingNumComboBox.Sorted = true;
             this.routingNumComboBox.TabIndex = 1;
             this.routingNumComboBox.TextChanged += new System.EventHandler(this.fieldsChanged);
+            this.routingNumComboBox.Leave += new System.EventHandler(this.routingNumComboBox_Leave);
             // 
             // datePicker
             // 
@@ -193,25 +197,27 @@
             // 
             // storeNumComboBox
             // 
-            this.storeNumComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.storeNumComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.storeNumComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.storeNumComboBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.storeNumComboBox.FormattingEnabled = true;
             this.storeNumComboBox.Location = new System.Drawing.Point(136, 151);
             this.storeNumComboBox.Name = "storeNumComboBox";
             this.storeNumComboBox.Size = new System.Drawing.Size(204, 21);
+            this.storeNumComboBox.Sorted = true;
             this.storeNumComboBox.TabIndex = 6;
             this.storeNumComboBox.TextChanged += new System.EventHandler(this.fieldsChanged);
             // 
             // checkNumComboBox
             // 
-            this.checkNumComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.checkNumComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.checkNumComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.checkNumComboBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkNumComboBox.FormattingEnabled = true;
             this.checkNumComboBox.Location = new System.Drawing.Point(136, 67);
             this.checkNumComboBox.Name = "checkNumComboBox";
             this.checkNumComboBox.Size = new System.Drawing.Size(204, 21);
+            this.checkNumComboBox.Sorted = true;
             this.checkNumComboBox.TabIndex = 3;
             this.checkNumComboBox.TextChanged += new System.EventHandler(this.fieldsChanged);
             // 
@@ -223,6 +229,7 @@
             this.amountField.Size = new System.Drawing.Size(204, 20);
             this.amountField.TabIndex = 5;
             this.amountField.Tag = "";
+            this.amountField.Enter += new System.EventHandler(this.amountField_Enter);
             // 
             // acceptButton1
             // 
@@ -264,6 +271,7 @@
             this.Controls.Add(this.AccountNumber_Label);
             this.Name = "Check_Form";
             this.Text = "New Bad Check";
+            this.Load += new System.EventHandler(this.Check_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.amountField)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
