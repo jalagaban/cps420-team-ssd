@@ -269,6 +269,8 @@
             this.Controls.Add(this.CheckNumber_Label);
             this.Controls.Add(this.CheckDate_Label);
             this.Controls.Add(this.AccountNumber_Label);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "Check_Form";
             this.Text = "New Bad Check";
             this.Load += new System.EventHandler(this.Check_Form_Load);
