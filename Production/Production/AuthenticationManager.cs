@@ -13,6 +13,21 @@ namespace Production
     public class AuthenticationManager
     {
         private static readonly string connectionString = "server=158.158.143.243, 1434\teamssd; database=CheckPasser; Integrated Security=false; PWD=Te@m$$D; UID=sa";
+
+        private static AuthenticationManager defaultAuthenticationManager;
+
+        public static AuthenticationManager DefaultAuthenticationManager
+        {
+            get
+            {
+                if (defaultAuthenticationManager == null)
+                {
+                    defaultAuthenticationManager = new AuthenticationManager();
+                }
+                return defaultAuthenticationManager;
+            }
+        }
+        
         // Attempts to log in using the provided credentials. Returns true if login was successful and false if login failed.
         public bool AttemptLogin(string username, string password)
         {
