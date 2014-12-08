@@ -86,24 +86,13 @@
       <DependentUpon>ChangePassword_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Check.cs" />
+    <Compile Include="Config.cs" />
     <Compile Include="DatabaseAgent.cs" />
-    <Compile Include="EditAccount_Form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EditAccount_Form.Designer.cs">
-      <DependentUpon>EditAccount_Form.cs</DependentUpon>
-    </Compile>
     <Compile Include="Main_Form.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Main_Form.Designer.cs">
       <DependentUpon>Main_Form.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ManageLetters_Form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ManageLetters_Form.Designer.cs">
-      <DependentUpon>ManageLetters_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="ManagePayment_Form.cs">
       <SubType>Form</SubType>
@@ -133,14 +122,8 @@
     <EmbeddedResource Include="ChangePassword_Form.resx">
       <DependentUpon>ChangePassword_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditAccount_Form.resx">
-      <DependentUpon>EditAccount_Form.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Main_Form.resx">
       <DependentUpon>Main_Form.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ManageLetters_Form.resx">
-      <DependentUpon>ManageLetters_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagePayment_Form.resx">
       <DependentUpon>ManagePayment_Form.cs</DependentUpon>
