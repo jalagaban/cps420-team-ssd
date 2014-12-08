@@ -102,11 +102,11 @@
     </Compile>
     <Compile Include="Store.cs" />
     <Compile Include="User.cs" />
-    <Compile Include="UserAuthentication_Form.cs">
+    <Compile Include="Authentication_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserAuthentication_Form.Designer.cs">
-      <DependentUpon>UserAuthentication_Form.cs</DependentUpon>
+    <Compile Include="Authentication_Form.Designer.cs">
+      <DependentUpon>Authentication_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -128,8 +128,8 @@
     <EmbeddedResource Include="ManagePayment_Form.resx">
       <DependentUpon>ManagePayment_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserAuthentication_Form.resx">
-      <DependentUpon>UserAuthentication_Form.cs</DependentUpon>
+    <EmbeddedResource Include="Authentication_Form.resx">
+      <DependentUpon>Authentication_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

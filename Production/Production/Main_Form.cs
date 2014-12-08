@@ -12,14 +12,16 @@ using Production;
 namespace CpS_420_Inception_Project
 {
    
-    public partial class MainForm_Form : Form
+    public partial class Main_Form : Form
     {
-        public MainForm_Form()
+        public Main_Form()
         {
             InitializeComponent();
         }
-        private void MainForm_Form_Load(object sender, EventArgs e)
+
+        private void Main_Form_Shown(object sender, EventArgs e)
         {
+            ShowAuthenticationDialog();
         }
 
         private void ShowNewBadCheckWindow()
@@ -27,6 +29,32 @@ namespace CpS_420_Inception_Project
             Check_Form form = new Check_Form(Check_Form.ActionMode.Create);
             form.ShowDialog();
         }
+
+        private void ShowAuthenticationDialog()
+        {
+            Authentication_Form form = new Authentication_Form();
+            form.ShowDialog();
+
+            if (form.DialogResult == DialogResult.Cancel)
+            {
+                this.Close();
+            } 
+            else if (!AuthenticationManager.DefaultAuthenticationManager.CurrentUser.IsAdmin)
+            {
+                DisableAdmin();
+            }
+        }
+
+        private void DisableAdmin()
+        {
+            ManagePayments_Button.Enabled = false;
+            managePaymentsToolStripMenuItem.Enabled = false;
+            PrintLetters_Button.Enabled = false;
+            printToolStripMenuItem.Enabled = false;
+            manageUsersMenuItem.Enabled = false;
+            editMenuItem.Enabled = false;
+        }
+
         private void newBadCheckButton_Click(object sender, EventArgs e)
         {
             ShowNewBadCheckWindow();
@@ -57,6 +85,16 @@ namespace CpS_420_Inception_Project
         private void exitMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void logOutMenuItem_Click(object sender, EventArgs e)
+        {
+            AuthenticationManager.DefaultAuthenticationManager.LogOut();
+            this.Hide();
+            this.Controls.Clear();
+            this.InitializeComponent();
+            this.Show();
+            ShowAuthenticationDialog();
         }
     }
 

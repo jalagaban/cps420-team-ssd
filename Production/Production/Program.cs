@@ -16,7 +16,7 @@ namespace CpS_420_Inception_Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm_Form());
+            Application.Run(new Main_Form());
         }
     }
 }
