@@ -53,6 +53,48 @@ namespace Production
         // The currently logged-in user
         public User CurrentUser { get; set; }
 
+        public List<string> UserNames
+        {
+            get
+            {
+                List<string> result = new List<string>();
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    SqlCommand cmd = new SqlCommand("SELECT [UserID] FROM [CheckPasser].[dbo].[User]", connection);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        result.Add((String)reader["UserID"]);
+                    }
+                }
+
+                return result;
+            }
+        }
+
+        public bool UserExists(string username)
+        {
+            bool result = false;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                SqlCommand cmd = new SqlCommand("select 1 from [CheckPasser].[dbo].[User] where [UserID] = @UserID", connection);
+                cmd.Parameters.AddWithValue("@UserID", username);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    result = true;
+                }
+            }
+
+            return result;
+        }
+
         public User GetUser(string username)
         {
             // Get user from database where user.username == username
@@ -105,7 +147,7 @@ namespace Production
             {
                 connection.Open();
                 SqlCommand cmd = new SqlCommand("Update [CheckPasser].[dbo].[User]" +
-                                                "Set FirstName = @FirstName, LastName = @LastName, IsAdmin = @IsAdmin, Passwrd = @Passwrd" +
+                                                "Set FirstName = @FirstName, LastName = @LastName, IsAdmin = @IsAdmin, Passwrd = @Passwrd " +
                                                 "where [UserID] = @UserID", connection);
 
                 cmd.Parameters.AddWithValue("@UserID", user.Username);

@@ -53,6 +53,7 @@
     <Compile Include="DatabaseAgentTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ConfigTest.cs" />
+    <Compile Include="AuthenticationManagerTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Production\Production.csproj">
