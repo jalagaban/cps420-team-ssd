@@ -119,6 +119,13 @@ namespace Production
                     result.IsPaid = (bool)reader["Paid"];
                     result.StoreID = (String)reader["StoreID"];
                     result.CashierID = (String)reader["CashID"];
+
+                    int ord = reader.GetOrdinal("LetterA");
+                    result.LetterADate = reader.IsDBNull(ord) ? (DateTime?)null : reader.GetDateTime(ord);
+                    ord = reader.GetOrdinal("LetterB");
+                    result.LetterBDate = reader.IsDBNull(ord) ? (DateTime?)null : reader.GetDateTime(ord);
+                    ord = reader.GetOrdinal("LetterC");
+                    result.LetterCDate = reader.IsDBNull(ord) ? (DateTime?)null : reader.GetDateTime(ord);
                 }
             }
 
@@ -131,8 +138,8 @@ namespace Production
             {
                 connection.Open();
 
-                SqlCommand cmd = new SqlCommand("INSERT INTO [CheckPasser].[dbo].[Check] (RoutNum, AcctNum, ChkNum, ChkAmt, ChkDate, Paid, StoreID, CashID)" +
-                                                "VALUES (@Rout, @Acct, @Chk, @Amount, @Date, @Paid, @Store, @Cashier)", connection);
+                SqlCommand cmd = new SqlCommand("INSERT INTO [CheckPasser].[dbo].[Check] (RoutNum, AcctNum, ChkNum, ChkAmt, ChkDate, Paid, StoreID, CashID, LetterA, LetterB, LetterC)" +
+                                                "VALUES (@Rout, @Acct, @Chk, @Amount, @Date, @Paid, @Store, @Cashier, @LetterA, @LetterB, @LetterC)", connection);
                 cmd.Parameters.AddWithValue("@Rout", check.RoutingNum);
                 cmd.Parameters.AddWithValue("@Acct", check.AccountNum);
                 cmd.Parameters.AddWithValue("@Chk", check.CheckNum);
@@ -141,6 +148,9 @@ namespace Production
                 cmd.Parameters.AddWithValue("@Paid", check.IsPaid);
                 cmd.Parameters.AddWithValue("@Store", check.StoreID);
                 cmd.Parameters.AddWithValue("@Cashier", check.CashierID);
+                cmd.Parameters.AddWithValue("@LetterA", (object)check.LetterADate ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@LetterB", (object)check.LetterBDate ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@LetterC", (object)check.LetterCDate ?? DBNull.Value);
           
                 cmd.ExecuteNonQuery();
             }
@@ -153,7 +163,7 @@ namespace Production
                 connection.Open();
 
                 SqlCommand cmd = new SqlCommand("UPDATE [CheckPasser].[dbo].[Check]" +
-                                                "SET ChkAmt = @Amount, ChkDate = @Date, Paid = @Paid, StoreID = @Store, CashID = @Cashier " +
+                                                "SET ChkAmt = @Amount, ChkDate = @Date, Paid = @Paid, StoreID = @Store, CashID = @Cashier, LetterA = @LetterA, LetterB = @LetterB, LetterC = @LetterC " +
                                                 "where [RoutNum] = @Rout AND [AcctNum] = @Acct AND [ChkNum] = @Chk", connection);
                 cmd.Parameters.AddWithValue("@Rout", check.RoutingNum);
                 cmd.Parameters.AddWithValue("@Acct", check.AccountNum);
@@ -163,6 +173,9 @@ namespace Production
                 cmd.Parameters.AddWithValue("@Paid", check.IsPaid);
                 cmd.Parameters.AddWithValue("@Store", check.StoreID);
                 cmd.Parameters.AddWithValue("@Cashier", check.CashierID);
+                cmd.Parameters.AddWithValue("@LetterA", (object)check.LetterADate ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@LetterB", (object)check.LetterBDate ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@LetterC", (object)check.LetterCDate ?? DBNull.Value);
 
                 cmd.ExecuteNonQuery();
             }    

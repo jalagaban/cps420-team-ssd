@@ -45,14 +45,17 @@ namespace ProductionTest
             db.ResetTestData();
 
             Check check = new Check();
-            check.RoutingNum = "1111111111111111";
-            check.AccountNum = "111111111111111";
+            check.RoutingNum = "1111111111111112";
+            check.AccountNum = "111111111111112";
             check.CheckNum = "11";
-            check.Amount = 1550;
+            check.Amount = 1650;
             check.Date = new DateTime(2014, 10, 31);
             check.IsPaid = true;
             check.StoreID = "StrWalm225";
             check.CashierID = "CshJTrot245";
+            check.LetterADate = new DateTime(2014, 11, 2);
+            check.LetterBDate = new DateTime(2014, 11, 22);
+            check.LetterCDate = null;
             Assert.AreEqual<Check>(check, db.GetCheck(check.Key), "expected check not fetched from database");
         }
 
@@ -72,7 +75,9 @@ namespace ProductionTest
             check.IsPaid = false;
             check.StoreID = "StrWalm225";
             check.CashierID = "CshNPal301";
-
+            check.LetterADate = new DateTime(2014, 11, 2);
+            check.LetterBDate = null;
+            check.LetterCDate = new DateTime(2014, 12, 15);
             db.AddCheck(check);
             Assert.AreEqual<Check>(check, db.GetCheck(check.Key), "check not added to database");
         }
@@ -93,6 +98,9 @@ namespace ProductionTest
             check.IsPaid = false;
             check.StoreID = "StrWalm225";
             check.CashierID = "CshNPal301";
+            check.LetterADate = new DateTime(2011, 5, 2);
+            check.LetterBDate = new DateTime(2014, 6, 11);
+            check.LetterCDate = null;
 
             Assert.IsTrue(db.CheckExists(check.Key), "no account to update");
 

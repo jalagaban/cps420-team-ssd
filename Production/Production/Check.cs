@@ -26,6 +26,12 @@ namespace Production
 
         public string CashierID { get; set; }
 
+        public DateTime? LetterADate { get; set; }
+
+        public DateTime? LetterBDate { get; set; }
+
+        public DateTime? LetterCDate { get; set; }
+
         /* A tuple containing the three identifiying attributes of the check.
          These attributes as ordered in the tuple are the RoutingNum, AccountNum, and CheckNum. */
         public Tuple<string, string, string> Key
@@ -59,7 +65,10 @@ namespace Production
                        (IsPaid.Equals(check.IsPaid)) &&
                        (Date.Equals(check.Date)) &&
                        (StoreID.Equals(check.StoreID)) &&
-                       (CashierID.Equals(check.CashierID));
+                       (CashierID.Equals(check.CashierID)) &&
+                       (LetterADate.Equals(check.LetterADate)) &&
+                       (LetterBDate.Equals(check.LetterBDate)) &&
+                       (LetterCDate.Equals(check.LetterCDate));
 
             }
             else
