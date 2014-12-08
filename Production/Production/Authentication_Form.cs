@@ -38,7 +38,7 @@ namespace CpS_420_Inception_Project
             }
             else
             {
-                ;
+                MessageBox.Show("Couldn't login", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
