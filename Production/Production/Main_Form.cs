@@ -107,6 +107,16 @@ namespace CpS_420_Inception_Project
         {
             PrintLetters pl = PrintLetters.PrintAgent;
             pl.PrintDocuments();
+        private void changePwdMenuItem_Click(object sender, EventArgs e)
+        {
+            ChangePassword_Form form = new ChangePassword_Form();
+            form.ShowDialog();
+        }
+
+        private void manageUsersMenuItem_Click(object sender, EventArgs e)
+        {
+            UserAccount_Form form = new UserAccount_Form();
+            form.ShowDialog();
         }
     }
 

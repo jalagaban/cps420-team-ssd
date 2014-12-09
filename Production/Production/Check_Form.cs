@@ -126,7 +126,7 @@ namespace CpS_420_Inception_Project
             ComposeCheck();
 
             bool validAccount = DatabaseAgent.DefaultAgent.AccountExists(check.AccountKey);
-            Account_Form form = new Account_Form(Account_Form.ActionMode.Create);
+            Account_Form form = new Account_Form(Account_Form.ActionMode.Create, routingNumComboBox.Text, accountNumComboBox.Text);
             if (!validAccount)
             {
                 form.ShowDialog();

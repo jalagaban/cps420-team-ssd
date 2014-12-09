@@ -72,11 +72,11 @@
     <Compile Include="Check_Form.Designer.cs">
       <DependentUpon>Check_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddUserAccount_Form.cs">
+    <Compile Include="UserAccount_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddUserAccount_Form.Designer.cs">
-      <DependentUpon>AddUserAccount_Form.cs</DependentUpon>
+    <Compile Include="UserAccount_Form.Designer.cs">
+      <DependentUpon>UserAccount_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="AuthenticationManager.cs" />
     <Compile Include="ChangePassword_Form.cs">
@@ -119,8 +119,8 @@
     <EmbeddedResource Include="Check_Form.resx">
       <DependentUpon>Check_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddUserAccount_Form.resx">
-      <DependentUpon>AddUserAccount_Form.cs</DependentUpon>
+    <EmbeddedResource Include="UserAccount_Form.resx">
+      <DependentUpon>UserAccount_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChangePassword_Form.resx">
       <DependentUpon>ChangePassword_Form.cs</DependentUpon>
