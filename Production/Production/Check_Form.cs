@@ -98,8 +98,11 @@ namespace CpS_420_Inception_Project
                 }
                 else
                 {
+                    bool keyFieldsChanged = sender == routingNumComboBox ||
+                                            sender == accountNumComboBox ||
+                                            sender == checkNumComboBox;
                     acceptButton1.Enabled = noneEmptyFields && validCheck;
-                    if (acceptButton2.Enabled = validCheck)
+                    if ((acceptButton2.Enabled = validCheck) && keyFieldsChanged)
                     {
                         UpdateFields();
                     }
