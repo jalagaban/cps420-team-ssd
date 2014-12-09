@@ -28,82 +28,86 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.RoutingNumber_Combobox = new System.Windows.Forms.ComboBox();
-            this.AccountNumber_Combobox = new System.Windows.Forms.ComboBox();
+            this.accountNumComboBox = new System.Windows.Forms.ComboBox();
+            this.routingNumComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.Cancel_Button = new System.Windows.Forms.Button();
-            this.Submit_Button = new System.Windows.Forms.Button();
+            this.cancelButton = new System.Windows.Forms.Button();
+            this.saveButton = new System.Windows.Forms.Button();
             this.CheckNumber_Label = new System.Windows.Forms.Label();
             this.AccountNumber_Label = new System.Windows.Forms.Label();
-            this.Payments_Label = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.Paid_Label = new System.Windows.Forms.Label();
-            this.Paid_Checkbox = new System.Windows.Forms.CheckBox();
+            this.checkNumComboBox = new System.Windows.Forms.ComboBox();
+            this.paidCheckBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
-            // RoutingNumber_Combobox
+            // accountNumComboBox
             // 
-            this.RoutingNumber_Combobox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.RoutingNumber_Combobox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.RoutingNumber_Combobox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RoutingNumber_Combobox.FormattingEnabled = true;
-            this.RoutingNumber_Combobox.Location = new System.Drawing.Point(142, 128);
-            this.RoutingNumber_Combobox.Name = "RoutingNumber_Combobox";
-            this.RoutingNumber_Combobox.Size = new System.Drawing.Size(200, 21);
-            this.RoutingNumber_Combobox.TabIndex = 45;
+            this.accountNumComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.accountNumComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.accountNumComboBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accountNumComboBox.FormattingEnabled = true;
+            this.accountNumComboBox.Location = new System.Drawing.Point(136, 39);
+            this.accountNumComboBox.Name = "accountNumComboBox";
+            this.accountNumComboBox.Size = new System.Drawing.Size(204, 21);
+            this.accountNumComboBox.TabIndex = 2;
+            this.accountNumComboBox.TextChanged += new System.EventHandler(this.fieldsChanged);
+            this.accountNumComboBox.Leave += new System.EventHandler(this.accountNumComboBox_Leave);
             // 
-            // AccountNumber_Combobox
+            // routingNumComboBox
             // 
-            this.AccountNumber_Combobox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.AccountNumber_Combobox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.AccountNumber_Combobox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AccountNumber_Combobox.FormattingEnabled = true;
-            this.AccountNumber_Combobox.Location = new System.Drawing.Point(143, 78);
-            this.AccountNumber_Combobox.Name = "AccountNumber_Combobox";
-            this.AccountNumber_Combobox.Size = new System.Drawing.Size(251, 21);
-            this.AccountNumber_Combobox.TabIndex = 44;
+            this.routingNumComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.routingNumComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.routingNumComboBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.routingNumComboBox.FormattingEnabled = true;
+            this.routingNumComboBox.Location = new System.Drawing.Point(136, 12);
+            this.routingNumComboBox.Name = "routingNumComboBox";
+            this.routingNumComboBox.Size = new System.Drawing.Size(204, 21);
+            this.routingNumComboBox.TabIndex = 1;
+            this.routingNumComboBox.TextChanged += new System.EventHandler(this.fieldsChanged);
+            this.routingNumComboBox.Leave += new System.EventHandler(this.routingNumComboBox_Leave);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label1.Location = new System.Drawing.Point(18, 130);
+            this.label1.Location = new System.Drawing.Point(12, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 20);
+            this.label1.Size = new System.Drawing.Size(120, 20);
             this.label1.TabIndex = 54;
-            this.label1.Text = "Routing Number:";
+            this.label1.Text = "Account Number:";
             // 
-            // Cancel_Button
+            // cancelButton
             // 
-            this.Cancel_Button.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.Cancel_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cancel_Button.ForeColor = System.Drawing.Color.SteelBlue;
-            this.Cancel_Button.Location = new System.Drawing.Point(274, 292);
-            this.Cancel_Button.Name = "Cancel_Button";
-            this.Cancel_Button.Size = new System.Drawing.Size(120, 40);
-            this.Cancel_Button.TabIndex = 52;
-            this.Cancel_Button.Text = "Cancel";
-            this.Cancel_Button.UseVisualStyleBackColor = true;
+            this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.cancelButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelButton.ForeColor = System.Drawing.Color.SteelBlue;
+            this.cancelButton.Location = new System.Drawing.Point(220, 151);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(120, 40);
+            this.cancelButton.TabIndex = 6;
+            this.cancelButton.Text = "Cancel";
+            this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
-            // Submit_Button
+            // saveButton
             // 
-            this.Submit_Button.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.Submit_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Submit_Button.ForeColor = System.Drawing.Color.SteelBlue;
-            this.Submit_Button.Location = new System.Drawing.Point(132, 292);
-            this.Submit_Button.Name = "Submit_Button";
-            this.Submit_Button.Size = new System.Drawing.Size(121, 40);
-            this.Submit_Button.TabIndex = 51;
-            this.Submit_Button.Text = "Submit";
-            this.Submit_Button.UseVisualStyleBackColor = true;
+            this.saveButton.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.saveButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveButton.ForeColor = System.Drawing.Color.SteelBlue;
+            this.saveButton.Location = new System.Drawing.Point(93, 151);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(121, 40);
+            this.saveButton.TabIndex = 5;
+            this.saveButton.Text = "Save";
+            this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // CheckNumber_Label
             // 
             this.CheckNumber_Label.AutoSize = true;
             this.CheckNumber_Label.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CheckNumber_Label.ForeColor = System.Drawing.Color.SteelBlue;
-            this.CheckNumber_Label.Location = new System.Drawing.Point(29, 182);
+            this.CheckNumber_Label.Location = new System.Drawing.Point(23, 67);
             this.CheckNumber_Label.Name = "CheckNumber_Label";
             this.CheckNumber_Label.Size = new System.Drawing.Size(107, 20);
             this.CheckNumber_Label.TabIndex = 50;
@@ -114,72 +118,54 @@
             this.AccountNumber_Label.AutoSize = true;
             this.AccountNumber_Label.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AccountNumber_Label.ForeColor = System.Drawing.Color.SteelBlue;
-            this.AccountNumber_Label.Location = new System.Drawing.Point(16, 80);
+            this.AccountNumber_Label.Location = new System.Drawing.Point(10, 13);
             this.AccountNumber_Label.Name = "AccountNumber_Label";
-            this.AccountNumber_Label.Size = new System.Drawing.Size(120, 20);
+            this.AccountNumber_Label.Size = new System.Drawing.Size(118, 20);
             this.AccountNumber_Label.TabIndex = 49;
-            this.AccountNumber_Label.Text = "Account Number:";
+            this.AccountNumber_Label.Text = "Routing Number:";
             // 
-            // Payments_Label
+            // checkNumComboBox
             // 
-            this.Payments_Label.AutoSize = true;
-            this.Payments_Label.Font = new System.Drawing.Font("Segoe UI", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Payments_Label.ForeColor = System.Drawing.Color.SteelBlue;
-            this.Payments_Label.Location = new System.Drawing.Point(12, 9);
-            this.Payments_Label.Name = "Payments_Label";
-            this.Payments_Label.Size = new System.Drawing.Size(167, 45);
-            this.Payments_Label.TabIndex = 48;
-            this.Payments_Label.Text = "Payments";
+            this.checkNumComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.checkNumComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.checkNumComboBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkNumComboBox.FormattingEnabled = true;
+            this.checkNumComboBox.Location = new System.Drawing.Point(136, 66);
+            this.checkNumComboBox.Name = "checkNumComboBox";
+            this.checkNumComboBox.Size = new System.Drawing.Size(204, 21);
+            this.checkNumComboBox.TabIndex = 3;
+            this.checkNumComboBox.TextChanged += new System.EventHandler(this.fieldsChanged);
             // 
-            // comboBox1
+            // paidCheckBox
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(143, 181);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(63, 21);
-            this.comboBox1.TabIndex = 55;
-            // 
-            // Paid_Label
-            // 
-            this.Paid_Label.AutoSize = true;
-            this.Paid_Label.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Paid_Label.ForeColor = System.Drawing.Color.SteelBlue;
-            this.Paid_Label.Location = new System.Drawing.Point(95, 235);
-            this.Paid_Label.Name = "Paid_Label";
-            this.Paid_Label.Size = new System.Drawing.Size(41, 20);
-            this.Paid_Label.TabIndex = 57;
-            this.Paid_Label.Text = "Paid:";
-            this.Paid_Label.Click += new System.EventHandler(this.Paid_Label_Click);
-            // 
-            // Paid_Checkbox
-            // 
-            this.Paid_Checkbox.AutoSize = true;
-            this.Paid_Checkbox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Paid_Checkbox.Location = new System.Drawing.Point(143, 241);
-            this.Paid_Checkbox.Name = "Paid_Checkbox";
-            this.Paid_Checkbox.Size = new System.Drawing.Size(15, 14);
-            this.Paid_Checkbox.TabIndex = 58;
-            this.Paid_Checkbox.UseVisualStyleBackColor = true;
+            this.paidCheckBox.AutoSize = true;
+            this.paidCheckBox.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.paidCheckBox.ForeColor = System.Drawing.Color.SteelBlue;
+            this.paidCheckBox.Location = new System.Drawing.Point(136, 93);
+            this.paidCheckBox.Name = "paidCheckBox";
+            this.paidCheckBox.Size = new System.Drawing.Size(52, 21);
+            this.paidCheckBox.TabIndex = 4;
+            this.paidCheckBox.Text = "Paid";
+            this.paidCheckBox.UseVisualStyleBackColor = true;
             // 
             // ManagePayment_Form
             // 
+            this.AcceptButton = this.saveButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(411, 346);
-            this.Controls.Add(this.Paid_Checkbox);
-            this.Controls.Add(this.Paid_Label);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.RoutingNumber_Combobox);
-            this.Controls.Add(this.AccountNumber_Combobox);
+            this.CancelButton = this.cancelButton;
+            this.ClientSize = new System.Drawing.Size(352, 203);
+            this.Controls.Add(this.paidCheckBox);
+            this.Controls.Add(this.checkNumComboBox);
+            this.Controls.Add(this.accountNumComboBox);
+            this.Controls.Add(this.routingNumComboBox);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.Cancel_Button);
-            this.Controls.Add(this.Submit_Button);
+            this.Controls.Add(this.cancelButton);
+            this.Controls.Add(this.saveButton);
             this.Controls.Add(this.CheckNumber_Label);
             this.Controls.Add(this.AccountNumber_Label);
-            this.Controls.Add(this.Payments_Label);
-            this.MaximumSize = new System.Drawing.Size(427, 385);
-            this.MinimumSize = new System.Drawing.Size(427, 385);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "ManagePayment_Form";
             this.Text = "Manage Payments";
             this.Load += new System.EventHandler(this.ManagePayment_Form_Load);
@@ -190,16 +176,14 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox RoutingNumber_Combobox;
-        private System.Windows.Forms.ComboBox AccountNumber_Combobox;
+        private System.Windows.Forms.ComboBox accountNumComboBox;
+        private System.Windows.Forms.ComboBox routingNumComboBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button Cancel_Button;
-        private System.Windows.Forms.Button Submit_Button;
+        private System.Windows.Forms.Button cancelButton;
+        private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Label CheckNumber_Label;
         private System.Windows.Forms.Label AccountNumber_Label;
-        private System.Windows.Forms.Label Payments_Label;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label Paid_Label;
-        private System.Windows.Forms.CheckBox Paid_Checkbox;
+        private System.Windows.Forms.ComboBox checkNumComboBox;
+        private System.Windows.Forms.CheckBox paidCheckBox;
     }
 }

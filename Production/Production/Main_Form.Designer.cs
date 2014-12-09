@@ -35,7 +35,7 @@
             this.editMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editChecksMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editAccountsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.managePaymentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.managePaymentsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.logOutMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,7 +45,7 @@
             this.resetDatabaseMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newBadCheckButton = new System.Windows.Forms.Button();
-            this.ManagePayments_Button = new System.Windows.Forms.Button();
+            this.managePaymentsButton = new System.Windows.Forms.Button();
             this.PrintLetters_Button = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -65,7 +65,7 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newBadCheckMenuItem,
             this.editMenuItem,
-            this.managePaymentsToolStripMenuItem,
+            this.managePaymentsMenuItem,
             this.printToolStripMenuItem,
             this.toolStripSeparator1,
             this.logOutMenuItem,
@@ -108,12 +108,12 @@
             this.editAccountsMenuItem.Text = "&Accounts...";
             this.editAccountsMenuItem.Click += new System.EventHandler(this.editAccountsMenuItem_Click);
             // 
-            // managePaymentsToolStripMenuItem
+            // managePaymentsMenuItem
             // 
-            this.managePaymentsToolStripMenuItem.Enabled = false;
-            this.managePaymentsToolStripMenuItem.Name = "managePaymentsToolStripMenuItem";
-            this.managePaymentsToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.managePaymentsToolStripMenuItem.Text = "&Manage Payments...";
+            this.managePaymentsMenuItem.Name = "managePaymentsMenuItem";
+            this.managePaymentsMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.managePaymentsMenuItem.Text = "&Manage Payments...";
+            this.managePaymentsMenuItem.Click += new System.EventHandler(this.managePaymentsMenuItem_Click);
             // 
             // printToolStripMenuItem
             // 
@@ -181,17 +181,17 @@
             this.newBadCheckButton.UseVisualStyleBackColor = true;
             this.newBadCheckButton.Click += new System.EventHandler(this.newBadCheckButton_Click);
             // 
-            // ManagePayments_Button
+            // managePaymentsButton
             // 
-            this.ManagePayments_Button.Enabled = false;
-            this.ManagePayments_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ManagePayments_Button.ForeColor = System.Drawing.Color.SteelBlue;
-            this.ManagePayments_Button.Location = new System.Drawing.Point(52, 116);
-            this.ManagePayments_Button.Name = "ManagePayments_Button";
-            this.ManagePayments_Button.Size = new System.Drawing.Size(189, 44);
-            this.ManagePayments_Button.TabIndex = 2;
-            this.ManagePayments_Button.Text = "Manage Payments";
-            this.ManagePayments_Button.UseVisualStyleBackColor = true;
+            this.managePaymentsButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.managePaymentsButton.ForeColor = System.Drawing.Color.SteelBlue;
+            this.managePaymentsButton.Location = new System.Drawing.Point(52, 116);
+            this.managePaymentsButton.Name = "managePaymentsButton";
+            this.managePaymentsButton.Size = new System.Drawing.Size(189, 44);
+            this.managePaymentsButton.TabIndex = 2;
+            this.managePaymentsButton.Text = "Manage Payments";
+            this.managePaymentsButton.UseVisualStyleBackColor = true;
+            this.managePaymentsButton.Click += new System.EventHandler(this.managePaymentsButton_Click);
             // 
             // PrintLetters_Button
             // 
@@ -211,7 +211,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(291, 249);
             this.Controls.Add(this.PrintLetters_Button);
-            this.Controls.Add(this.ManagePayments_Button);
+            this.Controls.Add(this.managePaymentsButton);
             this.Controls.Add(this.newBadCheckButton);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -242,9 +242,9 @@
         private System.Windows.Forms.ToolStripMenuItem editAccountsMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editChecksMenuItem;
         private System.Windows.Forms.Button newBadCheckButton;
-        private System.Windows.Forms.Button ManagePayments_Button;
+        private System.Windows.Forms.Button managePaymentsButton;
         private System.Windows.Forms.ToolStripMenuItem logOutMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem managePaymentsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem managePaymentsMenuItem;
         private System.Windows.Forms.Button PrintLetters_Button;
         private System.Windows.Forms.ToolStripMenuItem resetDatabaseMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manageUsersMenuItem;

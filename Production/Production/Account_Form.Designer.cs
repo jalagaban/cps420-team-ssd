@@ -56,7 +56,7 @@
             this.RoutingNumber_Label.AutoSize = true;
             this.RoutingNumber_Label.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RoutingNumber_Label.ForeColor = System.Drawing.Color.SteelBlue;
-            this.RoutingNumber_Label.Location = new System.Drawing.Point(14, 69);
+            this.RoutingNumber_Label.Location = new System.Drawing.Point(14, 72);
             this.RoutingNumber_Label.Name = "RoutingNumber_Label";
             this.RoutingNumber_Label.Size = new System.Drawing.Size(120, 20);
             this.RoutingNumber_Label.TabIndex = 27;

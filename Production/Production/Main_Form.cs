@@ -24,7 +24,7 @@ namespace CpS_420_Inception_Project
             ShowAuthenticationDialog();
         }
 
-        private void ShowNewBadCheckWindow()
+        private void ShowNewBadCheckDialog()
         {
             Check_Form form = new Check_Form(Check_Form.ActionMode.Create);
             form.ShowDialog();
@@ -46,10 +46,16 @@ namespace CpS_420_Inception_Project
             }
         }
 
+        private void ShowManagePaymentDialog()
+        {
+            ManagePayment_Form form = new ManagePayment_Form();
+            form.ShowDialog();
+        }
+
         private void DisableAdmin()
         {
-            ManagePayments_Button.Enabled = false;
-            managePaymentsToolStripMenuItem.Enabled = false;
+            managePaymentsButton.Enabled = false;
+            managePaymentsMenuItem.Enabled = false;
             PrintLetters_Button.Enabled = false;
             printToolStripMenuItem.Enabled = false;
             manageUsersMenuItem.Enabled = false;
@@ -58,12 +64,12 @@ namespace CpS_420_Inception_Project
 
         private void newBadCheckButton_Click(object sender, EventArgs e)
         {
-            ShowNewBadCheckWindow();
+            ShowNewBadCheckDialog();
         }
 
         private void newBadCheckMenuItem_Click(object sender, EventArgs e)
         {
-            ShowNewBadCheckWindow();
+            ShowNewBadCheckDialog();
         }
 
         private void editChecksMenuItem_Click(object sender, EventArgs e)
@@ -107,6 +113,16 @@ namespace CpS_420_Inception_Project
         {
             UserAccount_Form form = new UserAccount_Form();
             form.ShowDialog();
+        }
+
+        private void managePaymentsMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowManagePaymentDialog();
+        }
+
+        private void managePaymentsButton_Click(object sender, EventArgs e)
+        {
+            ShowManagePaymentDialog();
         }
     }
 
