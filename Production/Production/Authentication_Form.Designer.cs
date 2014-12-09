@@ -109,7 +109,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelButton;
-            this.ClientSize = new System.Drawing.Size(427, 212);
+            this.ClientSize = new System.Drawing.Size(427, 211);
             this.ControlBox = false;
             this.Controls.Add(this.LoginImage_Picturebox);
             this.Controls.Add(this.cancelButton);
@@ -126,6 +126,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Authentication_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.LoginImage_Picturebox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
