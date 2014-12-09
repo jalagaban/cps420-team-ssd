@@ -53,6 +53,17 @@ namespace CpS_420_Inception_Project
             }
         }
 
+        public Account_Form(ActionMode mode, string routingNum, string accountNum) : this(mode)
+        {
+            routingNumComboBox.Text = routingNum;
+            accountNumComboBox.Text = accountNum;
+            if (Mode == ActionMode.Create)
+            {
+                routingNumComboBox.Enabled = false;
+                accountNumComboBox.Enabled = false;
+            }
+        }
+
         private void Account_Form_Load(object sender, EventArgs e)
         {
             PopulateRoutingNumDropdown();
