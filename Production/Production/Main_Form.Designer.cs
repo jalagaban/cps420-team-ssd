@@ -39,6 +39,7 @@
             this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.logOutMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.changePwdMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageUsersMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.resetDatabaseMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,7 +47,6 @@
             this.newBadCheckButton = new System.Windows.Forms.Button();
             this.ManagePayments_Button = new System.Windows.Forms.Button();
             this.PrintLetters_Button = new System.Windows.Forms.Button();
-            this.changePwdMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -97,14 +97,14 @@
             // editChecksMenuItem
             // 
             this.editChecksMenuItem.Name = "editChecksMenuItem";
-            this.editChecksMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.editChecksMenuItem.Size = new System.Drawing.Size(133, 22);
             this.editChecksMenuItem.Text = "&Checks...";
             this.editChecksMenuItem.Click += new System.EventHandler(this.editChecksMenuItem_Click);
             // 
             // editAccountsMenuItem
             // 
             this.editAccountsMenuItem.Name = "editAccountsMenuItem";
-            this.editAccountsMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.editAccountsMenuItem.Size = new System.Drawing.Size(133, 22);
             this.editAccountsMenuItem.Text = "&Accounts...";
             this.editAccountsMenuItem.Click += new System.EventHandler(this.editAccountsMenuItem_Click);
             // 
@@ -135,12 +135,19 @@
             this.logOutMenuItem.Text = "&Log Out";
             this.logOutMenuItem.Click += new System.EventHandler(this.logOutMenuItem_Click);
             // 
+            // changePwdMenuItem
+            // 
+            this.changePwdMenuItem.Name = "changePwdMenuItem";
+            this.changePwdMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.changePwdMenuItem.Text = "Change Password...";
+            this.changePwdMenuItem.Click += new System.EventHandler(this.changePwdMenuItem_Click);
+            // 
             // manageUsersMenuItem
             // 
-            this.manageUsersMenuItem.Enabled = false;
             this.manageUsersMenuItem.Name = "manageUsersMenuItem";
             this.manageUsersMenuItem.Size = new System.Drawing.Size(187, 22);
             this.manageUsersMenuItem.Text = "Manage Users...";
+            this.manageUsersMenuItem.Click += new System.EventHandler(this.manageUsersMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
@@ -197,13 +204,6 @@
             this.PrintLetters_Button.TabIndex = 3;
             this.PrintLetters_Button.Text = "Print Letters";
             this.PrintLetters_Button.UseVisualStyleBackColor = true;
-            // 
-            // changePwdMenuItem
-            // 
-            this.changePwdMenuItem.Name = "changePwdMenuItem";
-            this.changePwdMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.changePwdMenuItem.Text = "Change Password...";
-            this.changePwdMenuItem.Click += new System.EventHandler(this.changePwdMenuItem_Click);
             // 
             // Main_Form
             // 
