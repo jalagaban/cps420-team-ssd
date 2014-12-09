@@ -225,6 +225,11 @@
             // 
             this.amountField.DecimalPlaces = 2;
             this.amountField.Location = new System.Drawing.Point(136, 124);
+            this.amountField.Maximum = new decimal(new int[] {
+            20000000,
+            0,
+            0,
+            0});
             this.amountField.Name = "amountField";
             this.amountField.Size = new System.Drawing.Size(204, 20);
             this.amountField.TabIndex = 5;
