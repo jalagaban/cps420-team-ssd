@@ -33,6 +33,7 @@ namespace CpS_420_Inception_Project
         private void ShowAuthenticationDialog()
         {
             Authentication_Form form = new Authentication_Form();
+            
             form.ShowDialog(this);
 
             if (form.DialogResult == DialogResult.Cancel)
