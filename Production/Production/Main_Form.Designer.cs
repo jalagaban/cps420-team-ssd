@@ -117,11 +117,11 @@
             // 
             // printToolStripMenuItem
             // 
-            this.printToolStripMenuItem.Enabled = false;
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
             this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
             this.printToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.printToolStripMenuItem.Text = "&Print Letters...";
+            this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -195,7 +195,6 @@
             // 
             // PrintLetters_Button
             // 
-            this.PrintLetters_Button.Enabled = false;
             this.PrintLetters_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PrintLetters_Button.ForeColor = System.Drawing.Color.SteelBlue;
             this.PrintLetters_Button.Location = new System.Drawing.Point(52, 185);
@@ -204,12 +203,13 @@
             this.PrintLetters_Button.TabIndex = 3;
             this.PrintLetters_Button.Text = "Print Letters";
             this.PrintLetters_Button.UseVisualStyleBackColor = true;
+            this.PrintLetters_Button.Click += new System.EventHandler(this.PrintLetters_Button_Click);
             // 
             // Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(291, 249);
+            this.ClientSize = new System.Drawing.Size(291, 248);
             this.Controls.Add(this.PrintLetters_Button);
             this.Controls.Add(this.managePaymentsButton);
             this.Controls.Add(this.newBadCheckButton);

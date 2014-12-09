@@ -103,6 +103,16 @@ namespace CpS_420_Inception_Project
             ShowAuthenticationDialog();
         }
 
+        private void PrintLetters_Button_Click(object sender, EventArgs e)
+        {
+            PrintLetters pl = PrintLetters.PrintAgent;
+            pl.PrintDocuments();
+        }
+
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PrintLetters pl = PrintLetters.PrintAgent;
+            pl.PrintDocuments();
         private void changePwdMenuItem_Click(object sender, EventArgs e)
         {
             ChangePassword_Form form = new ChangePassword_Form();
