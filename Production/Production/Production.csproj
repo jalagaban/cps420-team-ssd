@@ -88,6 +88,7 @@
     <Compile Include="Check.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="DatabaseAgent.cs" />
+    <Compile Include="Document.cs" />
     <Compile Include="Main_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +101,8 @@
     <Compile Include="ManagePayment_Form.Designer.cs">
       <DependentUpon>ManagePayment_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="PrintLetters.cs" />
+    <Compile Include="PrintManager.cs" />
     <Compile Include="Store.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Authentication_Form.cs">

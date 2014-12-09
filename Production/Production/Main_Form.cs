@@ -96,6 +96,18 @@ namespace CpS_420_Inception_Project
             this.InitializeComponent();
             ShowAuthenticationDialog();
         }
+
+        private void PrintLetters_Button_Click(object sender, EventArgs e)
+        {
+            PrintLetters pl = PrintLetters.PrintAgent;
+            pl.PrintDocuments();
+        }
+
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PrintLetters pl = PrintLetters.PrintAgent;
+            pl.PrintDocuments();
+        }
     }
 
     class variables
