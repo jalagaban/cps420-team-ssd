@@ -96,6 +96,12 @@ namespace CpS_420_Inception_Project
             this.InitializeComponent();
             ShowAuthenticationDialog();
         }
+
+        private void changePwdMenuItem_Click(object sender, EventArgs e)
+        {
+            ChangePassword_Form form = new ChangePassword_Form();
+            form.ShowDialog();
+        }
     }
 
     class variables
