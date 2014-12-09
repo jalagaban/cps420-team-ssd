@@ -81,7 +81,8 @@
             // newBadCheckMenuItem
             // 
             this.newBadCheckMenuItem.Name = "newBadCheckMenuItem";
-            this.newBadCheckMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.newBadCheckMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.newBadCheckMenuItem.Size = new System.Drawing.Size(226, 22);
             this.newBadCheckMenuItem.Text = "&New Bad Check...";
             this.newBadCheckMenuItem.Click += new System.EventHandler(this.newBadCheckMenuItem_Click);
             // 
@@ -91,7 +92,7 @@
             this.editChecksMenuItem,
             this.editAccountsMenuItem});
             this.editMenuItem.Name = "editMenuItem";
-            this.editMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.editMenuItem.Size = new System.Drawing.Size(226, 22);
             this.editMenuItem.Text = "Edit";
             // 
             // editChecksMenuItem
@@ -111,7 +112,8 @@
             // managePaymentsMenuItem
             // 
             this.managePaymentsMenuItem.Name = "managePaymentsMenuItem";
-            this.managePaymentsMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.managePaymentsMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M)));
+            this.managePaymentsMenuItem.Size = new System.Drawing.Size(226, 22);
             this.managePaymentsMenuItem.Text = "&Manage Payments...";
             this.managePaymentsMenuItem.Click += new System.EventHandler(this.managePaymentsMenuItem_Click);
             // 
@@ -119,45 +121,45 @@
             // 
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
             this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
             this.printToolStripMenuItem.Text = "&Print Letters...";
             this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(184, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(223, 6);
             // 
             // logOutMenuItem
             // 
             this.logOutMenuItem.Name = "logOutMenuItem";
-            this.logOutMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.logOutMenuItem.Size = new System.Drawing.Size(226, 22);
             this.logOutMenuItem.Text = "&Log Out";
             this.logOutMenuItem.Click += new System.EventHandler(this.logOutMenuItem_Click);
             // 
             // changePwdMenuItem
             // 
             this.changePwdMenuItem.Name = "changePwdMenuItem";
-            this.changePwdMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.changePwdMenuItem.Size = new System.Drawing.Size(226, 22);
             this.changePwdMenuItem.Text = "Change Password...";
             this.changePwdMenuItem.Click += new System.EventHandler(this.changePwdMenuItem_Click);
             // 
             // manageUsersMenuItem
             // 
             this.manageUsersMenuItem.Name = "manageUsersMenuItem";
-            this.manageUsersMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.manageUsersMenuItem.Size = new System.Drawing.Size(226, 22);
             this.manageUsersMenuItem.Text = "Manage Users...";
             this.manageUsersMenuItem.Click += new System.EventHandler(this.manageUsersMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(184, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(223, 6);
             // 
             // resetDatabaseMenuItem
             // 
             this.resetDatabaseMenuItem.Name = "resetDatabaseMenuItem";
-            this.resetDatabaseMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.resetDatabaseMenuItem.Size = new System.Drawing.Size(226, 22);
             this.resetDatabaseMenuItem.Text = "Reset Database";
             this.resetDatabaseMenuItem.Click += new System.EventHandler(this.resetDatabaseMenuItem_Click);
             // 
@@ -165,7 +167,7 @@
             // 
             this.exitMenuItem.Name = "exitMenuItem";
             this.exitMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
-            this.exitMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.exitMenuItem.Size = new System.Drawing.Size(226, 22);
             this.exitMenuItem.Text = "E&xit";
             this.exitMenuItem.Click += new System.EventHandler(this.exitMenuItem_Click);
             // 
@@ -209,7 +211,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(291, 248);
+            this.ClientSize = new System.Drawing.Size(291, 249);
             this.Controls.Add(this.PrintLetters_Button);
             this.Controls.Add(this.managePaymentsButton);
             this.Controls.Add(this.newBadCheckButton);
