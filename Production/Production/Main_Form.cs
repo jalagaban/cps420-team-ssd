@@ -90,6 +90,14 @@ namespace CpS_420_Inception_Project
             form.ShowDialog();
         }
 
+
+
+        private void companyInfoMenuItem_Click(object sender, EventArgs e)
+        {
+            CompanyInfo_Form form = new CompanyInfo_Form();
+            form.ShowDialog();
+        }
+
         private void resetDatabaseMenuItem_Click(object sender, EventArgs e)
         {
             DatabaseAgent.DefaultAgent.ResetTestData();

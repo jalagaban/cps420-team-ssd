@@ -35,6 +35,7 @@
             this.editMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editChecksMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editAccountsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editStoreMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.managePaymentsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -47,7 +48,7 @@
             this.newBadCheckButton = new System.Windows.Forms.Button();
             this.managePaymentsButton = new System.Windows.Forms.Button();
             this.PrintLetters_Button = new System.Windows.Forms.Button();
-            this.editStoreMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.companyInfoMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,7 +93,8 @@
             this.editMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.editChecksMenuItem,
             this.editAccountsMenuItem,
-            this.editStoreMenuItem});
+            this.editStoreMenuItem,
+            this.companyInfoMenuItem});
             this.editMenuItem.Name = "editMenuItem";
             this.editMenuItem.Size = new System.Drawing.Size(226, 22);
             this.editMenuItem.Text = "Edit";
@@ -100,16 +102,23 @@
             // editChecksMenuItem
             // 
             this.editChecksMenuItem.Name = "editChecksMenuItem";
-            this.editChecksMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.editChecksMenuItem.Size = new System.Drawing.Size(159, 22);
             this.editChecksMenuItem.Text = "&Checks...";
             this.editChecksMenuItem.Click += new System.EventHandler(this.editChecksMenuItem_Click);
             // 
             // editAccountsMenuItem
             // 
             this.editAccountsMenuItem.Name = "editAccountsMenuItem";
-            this.editAccountsMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.editAccountsMenuItem.Size = new System.Drawing.Size(159, 22);
             this.editAccountsMenuItem.Text = "&Accounts...";
             this.editAccountsMenuItem.Click += new System.EventHandler(this.editAccountsMenuItem_Click);
+            // 
+            // editStoreMenuItem
+            // 
+            this.editStoreMenuItem.Name = "editStoreMenuItem";
+            this.editStoreMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.editStoreMenuItem.Text = "Store...";
+            this.editStoreMenuItem.Click += new System.EventHandler(this.editStoreMenuItem_Click);
             // 
             // managePaymentsMenuItem
             // 
@@ -209,12 +218,12 @@
             this.PrintLetters_Button.UseVisualStyleBackColor = true;
             this.PrintLetters_Button.Click += new System.EventHandler(this.PrintLetters_Button_Click);
             // 
-            // editStoreMenuItem
+            // companyInfoMenuItem
             // 
-            this.editStoreMenuItem.Name = "editStoreMenuItem";
-            this.editStoreMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.editStoreMenuItem.Text = "Store...";
-            this.editStoreMenuItem.Click += new System.EventHandler(this.editStoreMenuItem_Click);
+            this.companyInfoMenuItem.Name = "companyInfoMenuItem";
+            this.companyInfoMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.companyInfoMenuItem.Text = "Company Info...";
+            this.companyInfoMenuItem.Click += new System.EventHandler(this.companyInfoMenuItem_Click);
             // 
             // Main_Form
             // 
@@ -262,6 +271,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem changePwdMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editStoreMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem companyInfoMenuItem;
     }
 }
 
