@@ -31,6 +31,7 @@ namespace ProductionTest
 
             Assert.AreEqual<string>("Greenville", config.GetValue("company_city"), "incorrect value retrieved for key");
             Assert.AreEqual<string>("Walmart", config.GetValue("company_name"), "incorrect value retrieved for key");
+            Assert.AreEqual<string>("15", config.GetValue("company_fee"), "incorrect value retrieved");
 
             DatabaseAgent.DefaultAgent.ResetTestData();
         }

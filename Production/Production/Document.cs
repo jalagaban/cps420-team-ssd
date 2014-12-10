@@ -23,7 +23,11 @@ namespace Production
 
         public int ChkAmt { get; set; }
 
+        public int total { get; set; }
+
         public DateTime ChkDate { get; set; }
+
+        public DateTime DueDate { get; set; }
 
         public string StoreName { get; set; }
 
@@ -38,6 +42,8 @@ namespace Production
         public string CompZip { get; set; }
 
         public int CompFee { get; set; }
+
+        public string CompPhoneNum { get; set; }
 
 
     }
