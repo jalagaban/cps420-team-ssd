@@ -38,8 +38,13 @@ namespace CpS_420_Inception_Project
             }
             else
             {
-                MessageBox.Show("Couldn't login", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Invalid Username or Password", "Login Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void Authentication_Form_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

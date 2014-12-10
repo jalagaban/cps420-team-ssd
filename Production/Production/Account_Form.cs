@@ -101,8 +101,8 @@ namespace CpS_420_Inception_Project
                     streetTextBox.Text.Length > 0 &&
                     cityTextBox.Text.Length > 0 &&
                     stateComboBox.Text.Length > 0 &&
-                    zipTextBox.Text.Length > 0 &&
-                    phoneTextBox.Text.Length > 0);
+                    zipTextBox.Text.Length > 0);// &&
+                    //phoneTextBox.Text.Length > 0);
 
                 bool validAccount = DatabaseAgent.DefaultAgent.AccountExists(Tuple.Create(routingNumComboBox.Text,
                                                                                       accountNumComboBox.Text));

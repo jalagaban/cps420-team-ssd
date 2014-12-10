@@ -112,13 +112,17 @@ namespace CpS_420_Inception_Project
         private void PrintLetters_Button_Click(object sender, EventArgs e)
         {
             PrintLetters pl = PrintLetters.PrintAgent;
-            pl.PrintDocuments();
+            PrintManager pm = PrintManager.DefaultPrintManager;
+            List<Document> documents = pm.GetLettersToPrint();
+            pl.PrintDocuments(documents);
         }
 
         private void printToolStripMenuItem_Click(object sender, EventArgs e)
         {
             PrintLetters pl = PrintLetters.PrintAgent;
-            pl.PrintDocuments();
+            PrintManager pm = PrintManager.DefaultPrintManager;
+            List<Document> documents = pm.GetLettersToPrint();
+            pl.PrintDocuments(documents);
         }
 
         private void changePwdMenuItem_Click(object sender, EventArgs e)

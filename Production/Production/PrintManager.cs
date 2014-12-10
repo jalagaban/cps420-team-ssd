@@ -31,8 +31,18 @@ namespace Production
             Config config = Config.GlobalConfig;
 
             Check chk = db.GetCheck(i); // get Check from database
-            Account ac = db.GetAccount(Tuple.Create(i.Item1, i.Item2)); // get Account from database
-            Store str = db.GetStore(chk.StoreID);
+
+            Account ac = new Account();
+            if (db.AccountExists(Tuple.Create(i.Item1, i.Item2)) == true)
+            {
+                ac = db.GetAccount(Tuple.Create(i.Item1, i.Item2)); // get Account from database
+            }
+
+            Store str = new Store();
+            if (db.StoreExists(chk.StoreID))
+            {
+                str = db.GetStore(chk.StoreID); //get store name
+            }
 
             Document doc = new Document();
             doc.FirstName = ac.FirstName;
@@ -54,14 +64,30 @@ namespace Production
             doc.CompZip = config.GetValue("company_zip");
             doc.CompFee = Convert.ToInt32(config.GetValue("company_fee"));
 
+            doc.total = doc.ChkAmt + doc.CompFee;
+            doc.CompPhoneNum = config.GetValue("company_phone");
+            doc.DueDate = getDate(chk);
             return doc;
+        }
+        public DateTime getDate(Check chk)
+        {
+            DateTime curDate = DateTime.Now;
+            DateTime dueDate = curDate.AddDays(20); //return latest due date (curDate + 20 days) if all are null
+            if (chk.LetterCDate != null) { return (DateTime)chk.LetterCDate; }
+            else if (chk.LetterBDate != null) { return (DateTime)chk.LetterBDate; }
+            else if (chk.LetterADate != null) { return (DateTime)chk.LetterADate; }
+            return dueDate;
         }
         //Determines if check is paid or not
         public bool PaidBool(Tuple<string, string, string> i)
         {
             DatabaseAgent db = DatabaseAgent.DefaultAgent;
-            Check chk = db.GetCheck(i);
-            if (chk.IsPaid == true) { return true; }
+            if (db.CheckExists(i) == true)
+            {
+                Check chk = db.GetCheck(i);
+                if (chk.IsPaid == true) { return true; }
+            }
+            else { return true; }
             return false;
         }
 
