@@ -31,8 +31,18 @@ namespace Production
             Config config = Config.GlobalConfig;
 
             Check chk = db.GetCheck(i); // get Check from database
-            Account ac = db.GetAccount(Tuple.Create(i.Item1, i.Item2)); // get Account from database
-            Store str = db.GetStore(chk.StoreID);
+
+            Account ac = new Account();
+            if (db.AccountExists(Tuple.Create(i.Item1, i.Item2)) == true)
+            {
+                ac = db.GetAccount(Tuple.Create(i.Item1, i.Item2)); // get Account from database
+            }
+
+            Store str = new Store();
+            if (db.StoreExists(chk.StoreID))
+            {
+                str = db.GetStore(chk.StoreID); //get store name
+            }
 
             Document doc = new Document();
             doc.FirstName = ac.FirstName;
@@ -60,8 +70,12 @@ namespace Production
         public bool PaidBool(Tuple<string, string, string> i)
         {
             DatabaseAgent db = DatabaseAgent.DefaultAgent;
-            Check chk = db.GetCheck(i);
-            if (chk.IsPaid == true) { return true; }
+            if (db.CheckExists(i) == true)
+            {
+                Check chk = db.GetCheck(i);
+                if (chk.IsPaid == true) { return true; }
+            }
+            else { return true; }
             return false;
         }
 

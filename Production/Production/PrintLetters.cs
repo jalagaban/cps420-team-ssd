@@ -30,11 +30,13 @@ namespace CpS_420_Inception_Project
                 return printAgent;
             }
         }
-        int counter = 0;
+        private int counter = 0;
+        private List<Document> documents;
 
         //Used: http://www.codeproject.com/Tips/453871/Simple-Receipt-Like-Printing-Using-the-Csharp-Prin as reference
-        public void PrintDocuments()
+        public void PrintDocuments(List<Document> d)
         {
+            documents = d;
             PrintDialog pd = new PrintDialog();
             PrintDocument doc = new PrintDocument();
             Font font = new Font("Calibri", 12);
@@ -55,7 +57,7 @@ namespace CpS_420_Inception_Project
                 PrintPreviewDialog pp = new PrintPreviewDialog();
                 pp.Document = doc;
                 result = pp.ShowDialog();
-                if (result == DialogResult.OK)
+               if (result == DialogResult.OK)
                 {
                     doc.Print();
                 }
@@ -73,18 +75,20 @@ namespace CpS_420_Inception_Project
             int Offset = 40;
 
             graphics.DrawString("DEMAND LETTER", new Font("Calibri", 18), new SolidBrush(Color.Black), startX, startY + Offset);
-            PrintManager pm = PrintManager.DefaultPrintManager;
-            List<Document> documents = pm.GetLettersToPrint();
 
             while (counter < documents.Count)
             {
                 Offset = Offset + 20;
-                graphics.DrawString("Test", new Font("Calibri", 12), new SolidBrush(Color.Black), startX, startY + Offset);
+                graphics.DrawString("Test " + counter , font, new SolidBrush(Color.Black), startX, startY + Offset);
 
-                if (counter == documents.Count - 1) { e.HasMorePages = false; }
-                else { e.HasMorePages = true; return; }
+                if (counter == documents.Count - 1) { e.HasMorePages = false; break; }
+                else
+                {
+                    e.HasMorePages = true;
+                    counter++; 
+                    return;
+                }
 
-                counter++;
             }
 
         }
