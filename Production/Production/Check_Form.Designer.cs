@@ -250,7 +250,7 @@
             this.acceptButton1.Visible = false;
             this.acceptButton1.Click += new System.EventHandler(this.acceptButton1_Click);
             // 
-            // Check_Form
+            // Store_Form
             // 
             this.AcceptButton = this.acceptButton2;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -276,7 +276,7 @@
             this.Controls.Add(this.AccountNumber_Label);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
-            this.Name = "Check_Form";
+            this.Name = "Store_Form";
             this.Text = "New Bad Check";
             this.Load += new System.EventHandler(this.Check_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.amountField)).EndInit();

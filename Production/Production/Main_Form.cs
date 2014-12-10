@@ -84,6 +84,12 @@ namespace CpS_420_Inception_Project
             form.ShowDialog();
         }
 
+        private void editStoreMenuItem_Click(object sender, EventArgs e)
+        {
+            Store_Form form = new Store_Form(Store_Form.ActionMode.Edit);
+            form.ShowDialog();
+        }
+
         private void resetDatabaseMenuItem_Click(object sender, EventArgs e)
         {
             DatabaseAgent.DefaultAgent.ResetTestData();

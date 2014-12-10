@@ -126,14 +126,28 @@ namespace CpS_420_Inception_Project
             ComposeCheck();
 
             bool validAccount = DatabaseAgent.DefaultAgent.AccountExists(check.AccountKey);
-            Account_Form form = new Account_Form(Account_Form.ActionMode.Create, routingNumComboBox.Text, accountNumComboBox.Text);
+            Account_Form accountForm = new Account_Form(Account_Form.ActionMode.Create, routingNumComboBox.Text, accountNumComboBox.Text);
             if (!validAccount)
             {
-                form.ShowDialog();
+                accountForm.ShowDialog();
             }
 
-            if (form.DialogResult == DialogResult.Cancel)
+            Store_Form storeForm = new Store_Form(Store_Form.ActionMode.Create, storeNumComboBox.Text);
+            if (accountForm.DialogResult == DialogResult.OK)
             {
+                bool validStore = DatabaseAgent.DefaultAgent.StoreExists(storeNumComboBox.Text);
+                if (!validStore)
+                {
+                    storeForm.ShowDialog();
+                }
+            }
+
+            if (storeForm.DialogResult == DialogResult.Cancel || accountForm.DialogResult == DialogResult.Cancel)
+            {
+                if (accountForm.DialogResult == DialogResult.OK)
+                {
+                    DatabaseAgent.DefaultAgent.DeleteAccount(new Tuple<string, string>(routingNumComboBox.Text, accountNumComboBox.Text));
+                }
                 this.DialogResult = DialogResult.Cancel;
             }
             else
@@ -147,9 +161,23 @@ namespace CpS_420_Inception_Project
 
         private void UpdateCheck()
         {
-            ComposeCheck();
-            DatabaseAgent.DefaultAgent.UpdateCheck(check);
+            bool validStore = DatabaseAgent.DefaultAgent.StoreExists(storeNumComboBox.Text);
+            Store_Form form = new Store_Form(Store_Form.ActionMode.Create, storeNumComboBox.Text);
+            if (!validStore)
+            {
+                form.ShowDialog();
+            }
 
+            if (form.DialogResult == DialogResult.Cancel)
+            {
+                this.DialogResult = DialogResult.Cancel;
+            }
+            else
+            {
+                ComposeCheck();
+                DatabaseAgent.DefaultAgent.UpdateCheck(check);
+            }
+            
             this.DialogResult = DialogResult.OK;
             Close();
         }
