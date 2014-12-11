@@ -71,11 +71,31 @@ namespace Production
         }
         public DateTime getDate(Check chk)
         {
+            DatabaseAgent db = DatabaseAgent.DefaultAgent;
+
             DateTime curDate = DateTime.Now;
-            DateTime dueDate = curDate.AddDays(20); //return latest due date (curDate + 20 days) if all are null
-            if (chk.LetterCDate != null) { return (DateTime)chk.LetterCDate; }
-            else if (chk.LetterBDate != null) { return (DateTime)chk.LetterBDate; }
-            else if (chk.LetterADate != null) { return (DateTime)chk.LetterADate; }
+            
+            DateTime dueDate = curDate.AddDays(20); //return latest due date (curDate + 20 days)
+            //Find latest date to send letter
+            if (chk.LetterADate == null)
+            {
+                chk.LetterADate = dueDate;
+                db.UpdateCheck(chk);
+                return (DateTime)chk.LetterADate;
+            }
+            else if (chk.LetterBDate == null && (curDate - (DateTime)chk.LetterADate).TotalDays >= 20)
+            {
+                chk.LetterBDate = dueDate;
+                db.UpdateCheck(chk);
+                return (DateTime)chk.LetterBDate;
+            }
+            else if (chk.LetterCDate == null && (curDate - (DateTime)chk.LetterBDate).TotalDays >= 20)
+            {
+                chk.LetterCDate = dueDate;
+                db.UpdateCheck(chk);
+                return (DateTime)chk.LetterCDate;
+            }
+
             return dueDate;
         }
         //Determines if check is paid or not
