@@ -81,7 +81,7 @@ namespace CpS_420_Inception_Project
             {
                 //Debtor address
                 Offset = Offset + 45;
-                graphics.DrawString( Convert.ToString(DateTime.Now), font, sb, startX, startY + Offset);
+                graphics.DrawString( DateTime.Now.ToString("MM/dd/yyyy"), font, sb, startX, startY + Offset);
                 Offset = Offset + 20;
                 graphics.DrawString(documents[counter].FirstName + ' ' + documents[counter].LastName, font, sb, startX, startY + Offset);
                 Offset = Offset + 20;
@@ -123,6 +123,7 @@ namespace CpS_420_Inception_Project
                 Offset = Offset + 45;
                 graphics.DrawString(documents[counter].CompName, font, sb, startX, startY + Offset);
 
+                //Goes to next page
                 if (counter == documents.Count - 1) { e.HasMorePages = false; break; }
                 else
                 {

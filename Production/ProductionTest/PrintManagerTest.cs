@@ -27,11 +27,22 @@ namespace ProductionTest
             db.ResetTestData();
             PrintManager pm = PrintManager.DefaultPrintManager;
 
-            Check chk = db.GetCheck(Tuple.Create("1111111111111112", "111111111111112", "11"));
+            Check chk = new Check();
+            chk.RoutingNum = "12345678910";
+            chk.AccountNum = "01987654321";
+            chk.CheckNum = "3";
+            chk.Amount = 100;
+            chk.IsPaid = false;
+            chk.Date = new DateTime(2014, 12, 8);
+            chk.StoreID = "StrWalm335";
+            chk.CashierID = "bleh";
+            chk.LetterADate = new DateTime (2014, 11, 10);
+            DateTime testDate = DateTime.Now.AddDays(20);
 
-            DateTime dt = pm.getDate(chk);
-            DateTime test1 = new DateTime (2014, 11, 22);
-            Assert.AreEqual<DateTime>(dt, test1, "incorrect date");
+            DateTime chkDate = pm.getDate(chk);
+
+            Assert.AreEqual<DateTime>(testDate, chkDate, "wrong date");
+
         }
     }
 }
