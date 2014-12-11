@@ -144,11 +144,20 @@ namespace CpS_420_Inception_Project
 
         private void DeleteAccount()
         {
-            DatabaseAgent.DefaultAgent.DeleteAccount(Tuple.Create(routingNumComboBox.Text,
-                                                                accountNumComboBox.Text));
+            DatabaseAgent db = DatabaseAgent.DefaultAgent;
+            Tuple<string, string> key = Tuple.Create(routingNumComboBox.Text,
+                                                          accountNumComboBox.Text);
+            if (db.AccountIsReferenced(key))
+            {
+                MessageBox.Show("This account is referenced by one or more checks and cannot be deleted.", "Can't Delete Account", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                db.DeleteAccount(key);
 
-            this.DialogResult = DialogResult.OK;
-            Close();
+                this.DialogResult = DialogResult.OK;
+                Close();
+            }
         }
 
         private void ComposeAccount()

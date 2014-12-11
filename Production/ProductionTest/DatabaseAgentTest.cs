@@ -167,6 +167,19 @@ namespace ProductionTest
         }
 
         [TestMethod]
+        public void TestAccountIsReferenced()
+        {
+            DatabaseAgent db = DatabaseAgent.DefaultAgent;
+
+            db.ResetTestData();
+
+            Assert.IsTrue(db.AccountIsReferenced(Tuple.Create("1111111111111111", "111111111111111")), "expected account not referenced");
+            Assert.IsFalse(db.AccountIsReferenced(Tuple.Create("1111111111111128", "111111111111128")), "unexpected account referenced");
+
+            db.ResetProduction();
+        }
+
+        [TestMethod]
         public void TestGetAccount()
         {
             DatabaseAgent db = DatabaseAgent.DefaultAgent;
@@ -280,6 +293,19 @@ namespace ProductionTest
             Assert.IsFalse(db.StoreExists("StrWalg231"), "unexpected store found");
             Assert.IsFalse(db.StoreExists("StrTar535"), "unexpected store found");
             Assert.IsFalse(db.StoreExists("a"), "unexpected store found");
+
+            db.ResetProduction();
+        }
+
+        [TestMethod]
+        public void TestStoreIsReferenced()
+        {
+            DatabaseAgent db = DatabaseAgent.DefaultAgent;
+
+            db.ResetTestData();
+
+            Assert.IsTrue(db.StoreIsReferenced("StrWalm225"), "expected store not referenced");
+            Assert.IsFalse(db.StoreIsReferenced("StrWalg231"), "unexpected store referenced");
 
             db.ResetProduction();
         }

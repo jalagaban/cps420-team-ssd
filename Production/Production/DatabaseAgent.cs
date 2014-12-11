@@ -259,7 +259,31 @@ namespace Production
             }
 
             return result;
-        } 
+        }
+
+        public bool AccountIsReferenced(Tuple<string, string> key)
+        {
+            bool result = false;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                SqlCommand cmd = new SqlCommand("select 1 from [CheckPasser].[dbo].[Check] where [RoutNum] = @Rout AND [AcctNum] = @Acct", connection);
+
+                cmd.Parameters.AddWithValue("@Rout", key.Item1);
+                cmd.Parameters.AddWithValue("@Acct", key.Item2);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    result = true;
+                }
+            }
+
+            return result;
+        }
 
         public Account GetAccount(Tuple<string, string> key)
         {
@@ -388,6 +412,29 @@ namespace Production
                 connection.Open();
 
                 SqlCommand cmd = new SqlCommand("select 1 from [CheckPasser].[dbo].[Store] where [StoreID] = @ID", connection);
+
+                cmd.Parameters.AddWithValue("@ID", ID);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    result = true;
+                }
+            }
+
+            return result;
+        }
+
+        public bool StoreIsReferenced(string ID)
+        {
+            bool result = false;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                SqlCommand cmd = new SqlCommand("select 1 from [CheckPasser].[dbo].[Check] where [StoreID] = @ID", connection);
 
                 cmd.Parameters.AddWithValue("@ID", ID);
 

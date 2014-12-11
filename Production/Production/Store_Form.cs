@@ -137,10 +137,19 @@ namespace CpS_420_Inception_Project
 
         private void DeleteStore()
         {
-            DatabaseAgent.DefaultAgent.DeleteStore(storeNumComboBox.Text);
+            DatabaseAgent db = DatabaseAgent.DefaultAgent;
+            string storeNum = storeNumComboBox.Text;
+            if (db.StoreIsReferenced(storeNum))
+            {
+                MessageBox.Show("This store is referenced by one or more checks and cannot be deleted.", "Can't Delete Store", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                DatabaseAgent.DefaultAgent.DeleteStore(storeNum);
 
-            this.DialogResult = DialogResult.OK;
-            Close();
+                this.DialogResult = DialogResult.OK;
+                Close();
+            }
         }
 
         private void ComposeStore()
