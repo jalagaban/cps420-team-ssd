@@ -62,7 +62,11 @@ namespace Production
             doc.CompCity = config.GetValue("company_city");
             doc.CompState = config.GetValue("company_state");
             doc.CompZip = config.GetValue("company_zip");
-            doc.CompFee = Convert.ToInt32(config.GetValue("company_fee"));
+            string fee = config.GetValue("company_fee");
+            if (fee == null)
+                doc.CompFee = 0;
+            else
+                doc.CompFee = Convert.ToInt32(fee);
 
             doc.total = doc.ChkAmt + doc.CompFee;
             doc.CompPhoneNum = config.GetValue("company_phone");
