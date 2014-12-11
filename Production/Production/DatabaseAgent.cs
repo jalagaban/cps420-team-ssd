@@ -41,6 +41,19 @@ namespace Production
 
         }
 
+        public void ResetProduction()
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                SqlCommand cmd = new SqlCommand("[dbo].[sp_ResetProduction]", connection);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.ExecuteReader();
+            }
+
+        }
+
         
         /* Check Access */
 

@@ -33,7 +33,7 @@ namespace ProductionTest
             Assert.AreEqual<string>("Walmart", config.GetValue("company_name"), "incorrect value retrieved for key");
             Assert.AreEqual<string>("15", config.GetValue("company_fee"), "incorrect value retrieved");
 
-            DatabaseAgent.DefaultAgent.ResetTestData();
+            DatabaseAgent.DefaultAgent.ResetProduction();
         }
 
         [TestMethod]
@@ -45,7 +45,7 @@ namespace ProductionTest
 
             Assert.IsTrue(config.ValueExists("company_city"), "existing value reported as non-existing");
 
-            DatabaseAgent.DefaultAgent.ResetTestData();
+            DatabaseAgent.DefaultAgent.ResetProduction();
         }
 
         [TestMethod]
@@ -58,7 +58,7 @@ namespace ProductionTest
             config.DeleteValue("company_city");
             Assert.IsFalse(config.ValueExists("company_city"), "value not deleted");
 
-            DatabaseAgent.DefaultAgent.ResetTestData();
+            DatabaseAgent.DefaultAgent.ResetProduction();
         }
     }
 }

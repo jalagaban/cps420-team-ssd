@@ -18,7 +18,7 @@ namespace ProductionTest
             Assert.IsFalse(auth.AttemptLogin("nouser", "wut"), "login successful for bad credentials");
             Assert.IsTrue(auth.AttemptLogin("BWill321", "password"), "login unsuccessful for valid credentials");
 
-            DatabaseAgent.DefaultAgent.ResetTestData();
+            DatabaseAgent.DefaultAgent.ResetProduction();
         }
 
         [TestMethod]
@@ -39,7 +39,7 @@ namespace ProductionTest
 
             Assert.AreEqual<User>(user, auth.CurrentUser, "incorrect current user");
 
-            DatabaseAgent.DefaultAgent.ResetTestData();
+            DatabaseAgent.DefaultAgent.ResetProduction();
         }
 
         [TestMethod]
@@ -57,8 +57,8 @@ namespace ProductionTest
             user.IsAdmin = false;
 
             Assert.AreEqual<User>(user, auth.GetUser("BWill321"), "expected user not retrieved");
-            
-            DatabaseAgent.DefaultAgent.ResetTestData();
+
+            DatabaseAgent.DefaultAgent.ResetProduction();
         }
 
         [TestMethod]
@@ -79,7 +79,7 @@ namespace ProductionTest
 
             Assert.AreEqual<User>(user, auth.GetUser("wall-e"), "user not successfully added");
 
-            DatabaseAgent.DefaultAgent.ResetTestData();
+            DatabaseAgent.DefaultAgent.ResetProduction();
         }
 
         [TestMethod]
@@ -100,7 +100,7 @@ namespace ProductionTest
 
             Assert.AreEqual<User>(user, auth.GetUser("BWill321"), "user not successfully updated");
 
-            DatabaseAgent.DefaultAgent.ResetTestData();
+            DatabaseAgent.DefaultAgent.ResetProduction();
         }
 
         [TestMethod]
@@ -113,7 +113,7 @@ namespace ProductionTest
             auth.DeleteUser("BWill321");
             Assert.IsFalse(auth.UserExists("BWill321"), "user not successfully deleted");
 
-            DatabaseAgent.DefaultAgent.ResetTestData();
+            DatabaseAgent.DefaultAgent.ResetProduction();
         }
 
         [TestMethod]
@@ -129,7 +129,7 @@ namespace ProductionTest
             Assert.IsTrue(usernames.Contains("cacree101"), "expected username not found");
             Assert.IsFalse(usernames.Contains("notauser"), "unexpected username found");
 
-            DatabaseAgent.DefaultAgent.ResetTestData();
+            DatabaseAgent.DefaultAgent.ResetProduction();
         }
     }
 }

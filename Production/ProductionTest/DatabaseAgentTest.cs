@@ -22,6 +22,8 @@ namespace ProductionTest
             Assert.IsTrue(keys.Contains(Tuple.Create("1111111111111111", "111111111111111", "11")), "expected key not present");
             Assert.IsTrue(keys.Contains(Tuple.Create("1111111111111117", "111111111111117", "11")), "expected key not present");
             Assert.IsTrue(keys.Contains(Tuple.Create("1111111111111119", "111111111111119", "11")), "expected key not present");
+
+            db.ResetProduction();
         }
 
         [TestMethod]
@@ -35,6 +37,8 @@ namespace ProductionTest
             Assert.IsTrue(db.CheckExists(Tuple.Create("1111111111111117", "111111111111117", "11")), "expected check not found");
             Assert.IsFalse(db.CheckExists(Tuple.Create("1111111111111128", "111111111111128", "11")), "unexpected check found");
             Assert.IsFalse(db.CheckExists(Tuple.Create("1111111111111171", "111111111111171", "19")), "unexpected check found");
+
+            db.ResetProduction();
         }
 
         [TestMethod]
@@ -50,13 +54,15 @@ namespace ProductionTest
             check.CheckNum = "11";
             check.Amount = 1650;
             check.Date = new DateTime(2014, 10, 31);
-            check.IsPaid = true;
+            check.IsPaid = false;
             check.StoreID = "StrWalm225";
             check.CashierID = "CshJTrot245";
             check.LetterADate = new DateTime(2014, 11, 2);
             check.LetterBDate = new DateTime(2014, 11, 22);
             check.LetterCDate = null;
             Assert.AreEqual<Check>(check, db.GetCheck(check.Key), "expected check not fetched from database");
+
+            db.ResetProduction();
         }
 
         [TestMethod]
@@ -80,6 +86,8 @@ namespace ProductionTest
             check.LetterCDate = new DateTime(2014, 12, 15);
             db.AddCheck(check);
             Assert.AreEqual<Check>(check, db.GetCheck(check.Key), "check not added to database");
+
+            db.ResetProduction();
         }
 
         [TestMethod]
@@ -106,6 +114,8 @@ namespace ProductionTest
 
             db.UpdateCheck(check);
             Assert.AreEqual<Check>(check, db.GetCheck(check.Key), "check not updated");
+
+            db.ResetProduction();
         }
 
         [TestMethod]
@@ -118,6 +128,8 @@ namespace ProductionTest
             Tuple<string, string, string> key = Tuple.Create("1111111111111114", "111111111111114", "11");
             db.DeleteCheck(key);
             Assert.IsFalse(db.CheckExists(key), "check not deleted");
+
+            db.ResetProduction();
         }
 
         // Account
@@ -135,6 +147,8 @@ namespace ProductionTest
             Assert.IsTrue(keys.Contains(Tuple.Create("1111111111111117", "111111111111117")), "expected key not present");
             Assert.IsTrue(keys.Contains(Tuple.Create("1111111111111121", "111111111111121")), "expected key not present");
             Assert.IsTrue(keys.Contains(Tuple.Create("1111111111111128", "111111111111128")), "expected key not present");
+
+            db.ResetProduction();
         }
 
         [TestMethod]
@@ -148,6 +162,8 @@ namespace ProductionTest
             Assert.IsTrue(db.AccountExists(Tuple.Create("1111111111111121", "111111111111121")), "expected account not found");
             Assert.IsFalse(db.AccountExists(Tuple.Create("1111111111111150", "111111111111150")), "unexpected account found");
             Assert.IsFalse(db.AccountExists(Tuple.Create("1111111111111171", "111111111111171")), "unexpected account found");
+
+            db.ResetProduction();
         }
 
         [TestMethod]
@@ -168,6 +184,8 @@ namespace ProductionTest
             account.Zipcode = "29615";
             account.PhoneNum = "867-5309";
             Assert.AreEqual<Account>(account, db.GetAccount(account.Key), "expected account not fetched from database");
+
+            db.ResetProduction();
         }
 
         [TestMethod]
@@ -190,6 +208,8 @@ namespace ProductionTest
 
             db.AddAccount(account);
             Assert.AreEqual<Account>(account, db.GetAccount(account.Key), "account not added to database");
+
+            db.ResetProduction();
         }
 
         [TestMethod]
@@ -214,6 +234,8 @@ namespace ProductionTest
 
             db.UpdateAccount(account);
             Assert.AreEqual<Account>(account, db.GetAccount(account.Key), "account not updated");
+
+            db.ResetProduction();
         }
 
         [TestMethod]
@@ -226,6 +248,8 @@ namespace ProductionTest
             Tuple<string, string> key = Tuple.Create("1111111111111114", "111111111111114");
             db.DeleteAccount(key);
             Assert.IsFalse(db.AccountExists(key), "account not deleted");
+
+            db.ResetProduction();
         }
 
         // Store
@@ -240,6 +264,8 @@ namespace ProductionTest
             Assert.AreEqual<int>(2, keys.Count, "invalid number of keys");
             Assert.IsTrue(keys.Contains("StrWalm225"), "expected key not present");
             Assert.IsTrue(keys.Contains("StrWalg337"), "expected key not present");
+
+            db.ResetProduction();
         }
         
         [TestMethod]
@@ -254,6 +280,8 @@ namespace ProductionTest
             Assert.IsFalse(db.StoreExists("StrWalg231"), "unexpected store found");
             Assert.IsFalse(db.StoreExists("StrTar535"), "unexpected store found");
             Assert.IsFalse(db.StoreExists("a"), "unexpected store found");
+
+            db.ResetProduction();
         }
 
         [TestMethod]
@@ -271,6 +299,8 @@ namespace ProductionTest
             store.State = "SC";
             store.Zipcode = "29615";
             Assert.AreEqual<Store>(store, db.GetStore(store.ID), "expected store not fetched from database");
+
+            db.ResetProduction();
         }
 
         [TestMethod]
@@ -290,6 +320,8 @@ namespace ProductionTest
 
             db.AddStore(store);
             Assert.AreEqual<Store>(store, db.GetStore(store.ID), "store not added to database");
+
+            db.ResetProduction();
         }
 
         [TestMethod]
@@ -311,6 +343,8 @@ namespace ProductionTest
 
             db.UpdateStore(store);
             Assert.AreEqual<Store>(store, db.GetStore(store.ID), "store not updated");
+
+            db.ResetProduction();
         }
 
         [TestMethod]
@@ -323,6 +357,8 @@ namespace ProductionTest
             String ID = "StrWalm225";
             db.DeleteStore(ID);
             Assert.IsFalse(db.StoreExists(ID), "store not deleted");
+
+            db.ResetProduction();
         }
     }
 }
